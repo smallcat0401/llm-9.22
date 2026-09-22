@@ -1,0 +1,16 @@
+[debug]
+model_id = "Qwen/Qwen3.5-0.8B"
+purpose = "End-to-end compatibility, SFT, and minimal GRPO smoke tests"
+max_sequence_length = 1024
+
+[formal_candidate]
+model_id = "Qwen/Qwen3.5-4B"
+purpose = "Formal baseline, search, SFT, and later GRPO experiments"
+max_sequence_length = 1024
+
+[rtx4060]
+allow_08b_sft = true
+allow_08b_grpo_smoke = true
+allow_4b_quantized_inference = true
+allow_4b_formal_grpo = false
+

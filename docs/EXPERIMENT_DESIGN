@@ -1,0 +1,144 @@
+# Experiment Design
+
+## 1. Research Question
+
+Can successful reasoning and tool-use trajectories discovered through
+test-time search be distilled into a model's more stable single-pass
+reasoning behavior through supervised fine-tuning and verifiable
+reinforcement learning?
+
+---
+
+## 2. Experimental Pipeline
+
+starting policy
+→ best-of-N test-time search
+→ verified trajectories
+→ trajectory SFT
+→ GRPO / RLVR
+→ controlled evaluation and ablation
+
+---
+
+## 3. Model Roles
+
+### Qwen3.5-0.8B — Development Model
+
+The 0.8B model is used for rapid iteration and end-to-end pipeline
+validation.
+
+It is responsible for validating:
+
+- dataset preprocessing
+- chat template construction
+- trajectory serialization
+- baseline evaluation
+- SFT training
+- reward computation
+- group sampling
+- GRPO training
+- checkpointing
+- logging and evaluation
+
+The goal of this stage is not to maximize benchmark performance.
+
+Instead, it answers:
+
+> Does the entire post-training pipeline work correctly?
+
+---
+
+### Qwen3.5-4B — Formal Experiment Model
+
+The 4B model is used for formal experiments after the pipeline has been
+validated on the smaller model.
+
+Primary experiments include:
+
+- formal baseline evaluation
+- best-of-N search
+- trajectory SFT
+- post-SFT evaluation
+- ablation studies
+- error analysis
+
+This stage answers:
+
+> Does the training recipe produce meaningful improvements on a more
+> capable model?
+
+---
+
+## 4. Why Two Model Scales?
+
+The training algorithms are fundamentally the same across the 0.8B and
+4B models.
+
+The smaller model is not used because it requires a different training
+method. It is used because it enables faster iteration and cheaper
+failure during pipeline development.
+
+The 4B model is introduced only after the infrastructure and training
+logic have been validated.
+
+This avoids spending most of the compute budget debugging large-model
+training runs.
+
+---
+
+## 5. GRPO Scope
+
+GRPO is first validated on Qwen3.5-0.8B.
+
+The smoke test verifies:
+
+- multi-response sampling
+- reward computation
+- group-relative advantage estimation
+- policy loss computation
+- gradient updates
+- checkpointing and evaluation
+
+Formal 4B GRPO is not required for the initial project milestone.
+
+The RTX 4060 environment is intentionally not used to force a large-scale
+4B GRPO run under unrealistic memory constraints.
+
+If additional compute becomes available, 4B GRPO can be added as an
+extension experiment.
+
+---
+
+## 6. Compute Policy
+
+RTX 4060:
+
+Qwen3.5-0.8B
+- SFT: allowed
+- GRPO smoke test: allowed
+- evaluation: allowed
+
+Qwen3.5-4B
+- quantized inference: allowed
+- best-of-N search: allowed
+- SFT: allowed when feasible with LoRA / QLoRA
+- formal GRPO: disabled locally
+
+---
+
+## 7. Experimental Principle
+
+Development experiments optimize for:
+
+- correctness
+- reproducibility
+- iteration speed
+
+Formal experiments optimize for:
+
+- controlled comparison
+- evaluation quality
+- ablation
+- interpretability of results
+
+The development model should not be excessively hyperparameter-tuned.

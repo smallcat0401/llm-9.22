@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.pem
+*.key
+
+# Local scratch space
+tmp/
+
+# Models, caches, checkpoints, and experiment outputs
+.cache/
+models/
+checkpoints/
+outputs/
+wandb/
+artifacts/raw/
+artifacts/checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Generated datasets. Keep only tiny reviewed fixtures in Git.
+data/generated/
+
