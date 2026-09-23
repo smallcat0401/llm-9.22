@@ -27,7 +27,9 @@ class Split(StrEnum):
 
 
 def _require_non_empty(name: str, value: str) -> None:
-    if not value or not value.strip():
+    if not isinstance(value, str):
+        raise TypeError(f"{name} must be a string")
+    if not value.strip():
         raise ValueError(f"{name} must be a non-empty string")
 
 
@@ -160,4 +162,3 @@ def demo_task() -> Task:
         ground_truth={"type": "number", "value": 25.0, "tolerance": 1e-6},
         metadata={"seed": 7, "difficulty": "easy"},
     )
-

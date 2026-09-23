@@ -43,6 +43,18 @@ class TaskTests(unittest.TestCase):
                 ground_truth={"value": 2},
             )
 
+    def test_identifiers_must_be_strings(self) -> None:
+        with self.assertRaisesRegex(TypeError, "task_id must be a string"):
+            Task(
+                task_id=123,  # type: ignore[arg-type]
+                family_id="family",
+                kind=TaskKind.NO_TOOL,
+                split=Split.TRAIN,
+                prompt="Answer directly.",
+                allowed_tools=(),
+                ground_truth={"value": 1},
+            )
+
 
 class TrajectoryTests(unittest.TestCase):
     def test_call_and_observation_must_align(self) -> None:
@@ -72,4 +84,3 @@ class TrajectoryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

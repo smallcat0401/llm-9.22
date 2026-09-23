@@ -1,0 +1,87 @@
+{
+  "record_type": "measured_smoke_result",
+  "measured_on": "2026-09-23",
+  "environment": {
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "gpu_memory_mib": 8188,
+    "driver_version": "591.86",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0"
+  },
+  "task": {
+    "task_id": "real-model-calculator-001",
+    "family_id": "revenue-calculator-v1",
+    "kind": "calculator",
+    "split": "test",
+    "prompt": "Use the calculator tool to compute the total revenue from selling 37 items at 24.5 currency units each. Then return the final numeric answer.",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "ground_truth": {
+      "type": "number",
+      "value": 906.5,
+      "tolerance": 1e-06
+    }
+  },
+  "raw_outputs": [
+    "{\"type\":\"tool_call\",\"name\":\"calculator\",\"arguments\":{\"expression\": \"37 * 24.5\"}}",
+    "{\"type\":\"final\",\"answer\":\"906.5\"}"
+  ],
+  "trajectory": {
+    "trajectory_id": "real-model-trajectory-001",
+    "task_id": "real-model-calculator-001",
+    "steps": [
+      {
+        "index": 0,
+        "tool_call": {
+          "call_id": "call-1",
+          "name": "calculator",
+          "arguments": {
+            "expression": "37 * 24.5"
+          }
+        },
+        "observation": {
+          "call_id": "call-1",
+          "ok": true,
+          "content": {
+            "value": 906.5
+          },
+          "error_code": null
+        }
+      }
+    ],
+    "final_answer": "906.5",
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "seed": 7,
+    "metadata": {
+      "termination_reason": "final_answer",
+      "rejected_tool_calls": 0
+    }
+  },
+  "verification": {
+    "passed": true,
+    "predicted_value": 906.5,
+    "target_value": 906.5,
+    "absolute_error": 0.0,
+    "allowed_error": 1e-06,
+    "error_code": null
+  },
+  "rollout": {
+    "termination_reason": "final_answer",
+    "protocol_error": null,
+    "task_success": true,
+    "turns": 2
+  },
+  "runtime": {
+    "load_seconds": 5.726,
+    "rollout_seconds": 2.311,
+    "cuda_baseline_memory_mib": 1627.0,
+    "cuda_peak_memory_mib": 1687.2
+  },
+  "notes": [
+    "Optional causal_conv1d and flash-linear-attention kernels were not installed.",
+    "Transformers used its correct but slower reference PyTorch implementations."
+  ]
+}

@@ -47,7 +47,21 @@ little interview value in memorizing it.
 ## Current files
 
 - `src/verifiable_posttraining/schemas.py`: Tier A reference implementation.
+- `src/verifiable_posttraining/tools/calculator.py`: Tier A safe arithmetic boundary.
+- `src/verifiable_posttraining/verifier.py`: Tier A numeric normalization and outcome verification.
+- `src/verifiable_posttraining/environment.py`: Tier B episode lifecycle with Tier A safety checks.
+- `src/verifiable_posttraining/model_protocol.py`: Tier B model/action conversion with a
+  Tier A untrusted-input boundary.
+- `src/verifiable_posttraining/prompting.py`: Tier B framework-independent chat construction.
+- `src/verifiable_posttraining/rollout.py`: Tier B multi-turn generation/environment loop.
+- `src/verifiable_posttraining/transformers_backend.py`: Tier B Qwen/Transformers loading and
+  generation adapter.
 - `src/verifiable_posttraining/doctor.py`: Tier C utility.
 - `src/verifiable_posttraining/cli.py`: Tier C utility.
-- `tests/test_schemas.py`: Tier A tests; explain why each invalid case is rejected.
-
+- `tests/test_schemas.py`, `tests/test_calculator.py`, and `tests/test_verifier.py`:
+  Tier A tests; explain why each invalid case is rejected.
+- `tests/test_environment.py`: Tier B lifecycle tests; be able to predict every state transition.
+- `tests/test_model_protocol.py`: protocol boundary tests; explain why malformed and ambiguous
+  model outputs are rejected instead of repaired silently.
+- `tests/test_prompting.py` and `tests/test_rollout.py`: prompt leakage and rollout lifecycle tests.
+- `tests/test_transformers_backend.py`: generation slicing and sampling configuration tests.
