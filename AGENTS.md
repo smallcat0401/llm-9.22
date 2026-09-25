@@ -62,8 +62,23 @@ move to rented hardware after the pipeline is validated.
   adapters/checkpoints separately.
 - Keep commands reproducible from a clean clone.
 
+## Local Windows Python environment
+
+- The project interpreter is `.venv\Scripts\python.exe` (Python 3.11.9).
+- Its base interpreter is installed outside the repository under the current
+  Windows user's `AppData\Local\Programs\Python\Python311` directory.
+- A restricted coding-agent sandbox may report `No Python at ...` because it
+  cannot read that external directory. This is a permission artifact, not
+  evidence that Python or the virtual environment is missing.
+- If a project Python command fails with that message, rerun the same command
+  with the required sandbox escalation. Do not reinstall Python, recreate the
+  virtual environment, or tell the owner that Python is missing before this
+  elevated verification.
+- Do not rely on `py -3.11` for agent checks on this machine; invoke the
+  repository-local interpreter explicitly. VS Code should also select
+  `.venv\Scripts\python.exe`.
+
 ## Current state
 
 Phase 0 scaffold is present. Read `PROJECT_CONTEXT.md` and
 `docs/FOUR_DAY_GPU_SPRINT.md` before starting GPU work.
-
