@@ -1,0 +1,16 @@
+{
+  "evaluation_status": "superseded_invalid_native_eos",
+  "audit_note": "Native-v1 parsing could overwrite valid answers with trailing document EOS. Native results and capability conclusions are invalid; training metrics are unaffected. See native_v2_* metrics and native_parser_audit.json.",
+  "adapter_path": "outputs\\grpo\\qwen3_5_0_8b_calculator_tool_13step_seed35\\adapter",
+  "evaluation_seconds": 26.49351060000481,
+  "load_seconds": 7.933901100012008,
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "protocol": "transformers-native-calculator-v1",
+  "run_id": "qwen3.5-0.8b-native-calculator-post-tool-grpo-seed35",
+  "task_count": 25,
+  "task_success_count": 0,
+  "task_success_rate": 0.0,
+  "tool_called_count": 0,
+  "tool_succeeded_count": 0,
+  "typed_final_count": 0
+}

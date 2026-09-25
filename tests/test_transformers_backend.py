@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import MagicMock, patch
 
 import torch
 
@@ -70,6 +71,32 @@ class TransformersBackendTests(unittest.TestCase):
     def test_invalid_settings_fail_fast(self) -> None:
         with self.assertRaisesRegex(ValueError, "max_new_tokens"):
             GenerationSettings(max_new_tokens=0)
+
+    def test_four_bit_loading_uses_nf4_double_quantization(self) -> None:
+        fake_model = MagicMock()
+        with (
+            patch("transformers.AutoProcessor.from_pretrained") as processor_loader,
+            patch("transformers.AutoModelForMultimodalLM.from_pretrained") as model_loader,
+            patch("transformers.BitsAndBytesConfig") as quantization_config,
+        ):
+            processor_loader.return_value = MagicMock()
+            model_loader.return_value = fake_model
+            policy = TransformersPolicy.from_pretrained(
+                "Qwen/Qwen3.5-4B",
+                cache_dir="cache",
+                load_in_4bit=True,
+            )
+
+        self.assertIs(policy.model, fake_model)
+        quantization_config.assert_called_once()
+        config_kwargs = quantization_config.call_args.kwargs
+        self.assertTrue(config_kwargs["load_in_4bit"])
+        self.assertEqual(config_kwargs["bnb_4bit_quant_type"], "nf4")
+        self.assertTrue(config_kwargs["bnb_4bit_use_double_quant"])
+        self.assertIs(
+            model_loader.call_args.kwargs["quantization_config"],
+            quantization_config.return_value,
+        )
 
 
 if __name__ == "__main__":

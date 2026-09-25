@@ -168,6 +168,10 @@ multi-response generation
 docs/EXPERIMENT_DESIGN.md
 ```
 
+4B 租卡前先在 RTX 4060 上进行 NF4 推理-only Search-Gap Gate。只有
+`pass@N - pass@1 >= 0.10` 且 verified task 数量达到预设门槛，才进入
+正式 4B QLoRA SFT。具体命令见 `docs/FOUR_B_SEARCH_GATE.md`。
+
 ---
 
 ## 项目结构
@@ -290,6 +294,59 @@ PYTHONPATH=src python -m verifiable_posttraining.cli schema-demo
 
 ---
 
+## 当前实测进度
+
+RTX 4060 上的 0.8B `Search → QLoRA SFT → Evaluation → GRPO smoke`
+已经完整跑通。当前关键结果：
+
+- train Best-of-4：pass@1 `18.67%`，pass@4 `54.00%`；
+- 80 条 verified trajectory 已生成。审计发现旧训练选择器实际只使用 41 条；
+  修复后 full80 QLoRA 确认使用 `80/80`，平均 loss 下降 `78.98%`；
+- 历史 41 条 adapter 的冻结 GSM8K 配对外部评测：严格成功 `0/200 → 24/200`，协议错误
+  `200/200 → 10/200`；
+- 冻结 v1 内部评测保留了 `18/75 → 28/75` 以及 SQL `17/25 → 0/25`
+  的负面结果；随后 v3 SQL 标量聚合协议把同一 SFT adapter 修复到 `24/25`；
+- 原始 20 步 GRPO 仅 `1/20` 个 group 有非零 reward 方差；加入训练题筛选、
+  16-response 高温采样和权重 `0.25` 的数值接近度辅助奖励后达到 `12/12`；
+- 同协议的 75 题对照为 SFT `52/75`；三个独立 GRPO 训练种子（17、23、41）
+  均为 `53/75`，且均达到 `12/12` 有效奖励步。这是可复现的小规模正向
+  信号，但训练仅覆盖 4 道题，尚不能声称广泛泛化提升。
+- 扩展到全部 37 道未进入 SFT 的 train/no-tool 题后，GRPO 达到 `37/37`
+  有效奖励步，测试仍为 `53/75`。训练覆盖扩大但准确率未继续上升；
+- 原生 calculator tool-GRPO 已完成：13 个训练 group 均有非零奖励方差，
+  峰值显存 `5,137.4 MiB`。修正 native evaluator 的 EOS bug 后，held-out
+  calculator 贪心答案正确率在 SFT 与 GRPO 上均为 `2/25`，但工具闭环均为
+  `0/25`；sampled pass@4 的答案正确均为 `3/25`，工具闭环均为 `1/25`。
+  这保留为受控负结果：13 步 GRPO 尚未测出相对 SFT 的提升。
+- 从修正 full80 adapter 继续训练全部 `37/37` 条原生 calculator 轨迹后，
+  held-out 贪心工具调用从 `0/25` 升至 `25/25`。审计发现旧 `1e-6`
+  容差错误拒绝了两位小数百分比；修正后有效工具闭环从 `0/25` 升至
+  `25/25`，sampled effective-tool-path pass@4 为 `24/25`。
+  同一修正 verifier 下，full80 与 native37 的 75 题结果均为 `75/75`；
+  该合成测试已饱和，旧 `53/75` 是过严容差下的历史分数。
+- 同协议 GSM8K 配对外部评测为 full80 `20/200`、native37 `21/200`；两者
+  calculator 均为 `16/100`。原生轨迹解决了调用格式，但尚未提升外部数学正确率。
+- 从 native37 进行 13 步 result-aware GRPO 后，sampled 有效工具 episode
+  从 `65/100` 升至 `72/100`，但 pass@4 仍为 `24/25`；GSM8K 则从
+  `21/200` 降至 `20/200`。这是局部稳定性信号，不是广泛泛化提升。
+- 独立的多步 calculator v2 课程按家族划分 `72 train / 24 validation / 24 test`。
+  reference-program SFT 的 validation 保持 `12/24`；test 从 `2/24` 升至
+  `12/24`，但混合浓度 `0→12`、加班税后 `2→0`，迁移明显不均衡，因此
+  首次长训练未通过模型选择门槛。随后审计确认原 validation 的 `supplies`
+  文案与减法 reference expression 有歧义。
+- 仅修正 validation 文案后，native37 为 `21/24`。将 37 条原轨迹与 72 条
+  curriculum train 轨迹混合回放，validation 选择 step-20（`23/24`，而
+  step-40 为 `22/24`）。
+- 在随后冻结的 36 题全新 holdout 上，native37 → mixed step-20 为
+  `4/36 → 6/36`，旧 percent-change 能力保持 `25/25`；GSM8K 配对评测
+  为 `21/200 → 22/200`。这是幅度很小且跨 family 不均匀的正向消融，
+  不能视为稳定的广泛提升；native37 仍是保守正式基线。
+
+完整配置、失败分析和复现命令见 `docs/GPU_RUN_REPORT.md`。模型 adapter、
+raw outputs 和 checkpoints 位于 Git 忽略目录，不会提交到仓库。
+
+---
+
 ## 学习目标
 
 这个项目不仅要求“代码能跑”，还要求能够真正解释核心 Post-training 流程。
@@ -344,4 +401,3 @@ docs/LEARNING_MAP.md
 - 是否出现过拟合或 reward hacking。
 
 ---
-

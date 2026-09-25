@@ -1,0 +1,814 @@
+{
+  "record_count": 100,
+  "category_counts": {
+    "success": 16,
+    "no_tool_call": 0,
+    "tool_execution_failed": 1,
+    "wrong_tool_result": 71,
+    "invalid_final": 0,
+    "correct_tool_result_bad_final": 0,
+    "protocol_error": 12
+  },
+  "records": [
+    {
+      "task_id": "gsm8k-test-0562-calculator",
+      "category": "success",
+      "expression": "32 + 5 * 10",
+      "tool_value": 82.0,
+      "predicted_value": 82.0,
+      "target_value": 82.0
+    },
+    {
+      "task_id": "gsm8k-test-0701-calculator",
+      "category": "wrong_tool_result",
+      "expression": "12+7+12*2+12*3",
+      "tool_value": 79.0,
+      "predicted_value": 79.0,
+      "target_value": 200.0
+    },
+    {
+      "task_id": "gsm8k-test-1233-calculator",
+      "category": "wrong_tool_result",
+      "expression": "60 * (1 - 2/5) * 0.25 * 3",
+      "tool_value": 27.0,
+      "predicted_value": 27.0,
+      "target_value": 81.0
+    },
+    {
+      "task_id": "gsm8k-test-1246-calculator",
+      "category": "success",
+      "expression": "40*4*21",
+      "tool_value": 3360.0,
+      "predicted_value": 3360.0,
+      "target_value": 3360.0
+    },
+    {
+      "task_id": "gsm8k-test-0471-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 80.0
+    },
+    {
+      "task_id": "gsm8k-test-0603-calculator",
+      "category": "wrong_tool_result",
+      "expression": "120 * 2 * 3/4 * 12",
+      "tool_value": 2160.0,
+      "predicted_value": 2160.0,
+      "target_value": 1800.0
+    },
+    {
+      "task_id": "gsm8k-test-0285-calculator",
+      "category": "wrong_tool_result",
+      "expression": "9 + 2 * 3",
+      "tool_value": 15.0,
+      "predicted_value": 15.0,
+      "target_value": 21.0
+    },
+    {
+      "task_id": "gsm8k-test-1241-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 8.0
+    },
+    {
+      "task_id": "gsm8k-test-1062-calculator",
+      "category": "wrong_tool_result",
+      "expression": "200+300+4*30+6*2",
+      "tool_value": 632.0,
+      "predicted_value": 632.0,
+      "target_value": 482.0
+    },
+    {
+      "task_id": "gsm8k-test-0151-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(5*25)+(3*25)+(1*25)*100",
+      "tool_value": 2700.0,
+      "predicted_value": 2700.0,
+      "target_value": 5.0
+    },
+    {
+      "task_id": "gsm8k-test-0658-calculator",
+      "category": "wrong_tool_result",
+      "expression": "30 - 20 + 30 / 2",
+      "tool_value": 25.0,
+      "predicted_value": 25.0,
+      "target_value": 120.0
+    },
+    {
+      "task_id": "gsm8k-test-0103-calculator",
+      "category": "success",
+      "expression": "42/3*10",
+      "tool_value": 140.0,
+      "predicted_value": 140.0,
+      "target_value": 140.0
+    },
+    {
+      "task_id": "gsm8k-test-0954-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 34.0
+    },
+    {
+      "task_id": "gsm8k-test-0659-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 3.0
+    },
+    {
+      "task_id": "gsm8k-test-0830-calculator",
+      "category": "wrong_tool_result",
+      "expression": "18*4*2*6*15*4",
+      "tool_value": 51840.0,
+      "predicted_value": 51840.0,
+      "target_value": 1128.0
+    },
+    {
+      "task_id": "gsm8k-test-0456-calculator",
+      "category": "wrong_tool_result",
+      "expression": "15 + 0.6 * 60",
+      "tool_value": 51.0,
+      "predicted_value": 51.0,
+      "target_value": 78.0
+    },
+    {
+      "task_id": "gsm8k-test-0534-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(60+4*60) / 2",
+      "tool_value": 150.0,
+      "predicted_value": 150.0,
+      "target_value": 300.0
+    },
+    {
+      "task_id": "gsm8k-test-0736-calculator",
+      "category": "wrong_tool_result",
+      "expression": "100-23-10",
+      "tool_value": 67.0,
+      "predicted_value": 67.0,
+      "target_value": 3.0
+    },
+    {
+      "task_id": "gsm8k-test-1205-calculator",
+      "category": "wrong_tool_result",
+      "expression": "4*3",
+      "tool_value": 12.0,
+      "predicted_value": 12.0,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-1058-calculator",
+      "category": "wrong_tool_result",
+      "expression": "100 + 50 * 2",
+      "tool_value": 200.0,
+      "predicted_value": 200.0,
+      "target_value": 250.0
+    },
+    {
+      "task_id": "gsm8k-test-0118-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-1100-calculator",
+      "category": "wrong_tool_result",
+      "expression": "30 + 2 * 15 * 5",
+      "tool_value": 180.0,
+      "predicted_value": 180.0,
+      "target_value": 5.0
+    },
+    {
+      "task_id": "gsm8k-test-0912-calculator",
+      "category": "wrong_tool_result",
+      "expression": "45 * 4",
+      "tool_value": 180.0,
+      "predicted_value": 180.0,
+      "target_value": 6.0
+    },
+    {
+      "task_id": "gsm8k-test-0930-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 14.0
+    },
+    {
+      "task_id": "gsm8k-test-0718-calculator",
+      "category": "wrong_tool_result",
+      "expression": "0.30*0.20*0.30",
+      "tool_value": 0.018,
+      "predicted_value": 1.8,
+      "target_value": 2.0
+    },
+    {
+      "task_id": "gsm8k-test-0740-calculator",
+      "category": "tool_execution_failed",
+      "expression": "50-10-5=45",
+      "tool_value": null,
+      "predicted_value": 45.0,
+      "target_value": 25.0
+    },
+    {
+      "task_id": "gsm8k-test-1018-calculator",
+      "category": "wrong_tool_result",
+      "expression": "10*3+18",
+      "tool_value": 48.0,
+      "predicted_value": 48.0,
+      "target_value": 60.0
+    },
+    {
+      "task_id": "gsm8k-test-0582-calculator",
+      "category": "wrong_tool_result",
+      "expression": "76000*0.70",
+      "tool_value": 53200.0,
+      "predicted_value": 53200.0,
+      "target_value": 129200.0
+    },
+    {
+      "task_id": "gsm8k-test-0310-calculator",
+      "category": "wrong_tool_result",
+      "expression": "6000 - (6*100) - (3*50) - 700 - 2000",
+      "tool_value": 2550.0,
+      "predicted_value": 2550.0,
+      "target_value": 2050.0
+    },
+    {
+      "task_id": "gsm8k-test-0626-calculator",
+      "category": "wrong_tool_result",
+      "expression": "20/1000*60",
+      "tool_value": 1.2,
+      "predicted_value": 1.2,
+      "target_value": 72.0
+    },
+    {
+      "task_id": "gsm8k-test-1080-calculator",
+      "category": "wrong_tool_result",
+      "expression": "5 * 4 * 60",
+      "tool_value": 1200.0,
+      "predicted_value": 1200.0,
+      "target_value": 72000.0
+    },
+    {
+      "task_id": "gsm8k-test-0302-calculator",
+      "category": "wrong_tool_result",
+      "expression": "50 - 50 - 10",
+      "tool_value": -10.0,
+      "predicted_value": -10.0,
+      "target_value": 15.0
+    },
+    {
+      "task_id": "gsm8k-test-0291-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(4+8)*5/10",
+      "tool_value": 6.0,
+      "predicted_value": 6.0,
+      "target_value": 2.0
+    },
+    {
+      "task_id": "gsm8k-test-0000-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(16-3)*2+4*4",
+      "tool_value": 42.0,
+      "predicted_value": 42.0,
+      "target_value": 18.0
+    },
+    {
+      "task_id": "gsm8k-test-0431-calculator",
+      "category": "wrong_tool_result",
+      "expression": "2+16-6-11-2",
+      "tool_value": -1.0,
+      "predicted_value": -1.0,
+      "target_value": 1.0
+    },
+    {
+      "task_id": "gsm8k-test-0749-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(54-6)*12",
+      "tool_value": 576.0,
+      "predicted_value": 576.0,
+      "target_value": 3.0
+    },
+    {
+      "task_id": "gsm8k-test-1225-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(3*2)-2",
+      "tool_value": 4.0,
+      "predicted_value": 4.0,
+      "target_value": 3.0
+    },
+    {
+      "task_id": "gsm8k-test-0412-calculator",
+      "category": "wrong_tool_result",
+      "expression": "12*30",
+      "tool_value": 360.0,
+      "predicted_value": 360.0,
+      "target_value": 5.0
+    },
+    {
+      "task_id": "gsm8k-test-0953-calculator",
+      "category": "wrong_tool_result",
+      "expression": "10 - 6 + 60 - 5",
+      "tool_value": 59.0,
+      "predicted_value": 59.0,
+      "target_value": 452.0
+    },
+    {
+      "task_id": "gsm8k-test-0083-calculator",
+      "category": "success",
+      "expression": "3*25*8",
+      "tool_value": 600.0,
+      "predicted_value": 600.0,
+      "target_value": 600.0
+    },
+    {
+      "task_id": "gsm8k-test-0111-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(16/10)*2*64",
+      "tool_value": 204.8,
+      "predicted_value": 204.8,
+      "target_value": 16.0
+    },
+    {
+      "task_id": "gsm8k-test-1184-calculator",
+      "category": "wrong_tool_result",
+      "expression": "850 * 18",
+      "tool_value": 15300.0,
+      "predicted_value": 15300.0,
+      "target_value": 306.0
+    },
+    {
+      "task_id": "gsm8k-test-0198-calculator",
+      "category": "wrong_tool_result",
+      "expression": "20*3+20-20*2*2",
+      "tool_value": 0.0,
+      "predicted_value": 0.0,
+      "target_value": 320.0
+    },
+    {
+      "task_id": "gsm8k-test-0022-calculator",
+      "category": "wrong_tool_result",
+      "expression": "8+3+2+3*2",
+      "tool_value": 19.0,
+      "predicted_value": 19.0,
+      "target_value": 7.0
+    },
+    {
+      "task_id": "gsm8k-test-0413-calculator",
+      "category": "wrong_tool_result",
+      "expression": "0.05 * 50000",
+      "tool_value": 2500.0,
+      "predicted_value": 2500.0,
+      "target_value": 25.0
+    },
+    {
+      "task_id": "gsm8k-test-1239-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(8*15*5)/8*100",
+      "tool_value": 7500.0,
+      "predicted_value": 93.75,
+      "target_value": 50.0
+    },
+    {
+      "task_id": "gsm8k-test-1315-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 5.0
+    },
+    {
+      "task_id": "gsm8k-test-1160-calculator",
+      "category": "wrong_tool_result",
+      "expression": "5168+1907+2136-1907",
+      "tool_value": 7304.0,
+      "predicted_value": 7304.0,
+      "target_value": 1125.0
+    },
+    {
+      "task_id": "gsm8k-test-0376-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 15.0
+    },
+    {
+      "task_id": "gsm8k-test-0874-calculator",
+      "category": "success",
+      "expression": "33 * 4",
+      "tool_value": 132.0,
+      "predicted_value": 132.0,
+      "target_value": 132.0
+    },
+    {
+      "task_id": "gsm8k-test-0667-calculator",
+      "category": "success",
+      "expression": "4*12+5",
+      "tool_value": 53.0,
+      "predicted_value": 53.0,
+      "target_value": 53.0
+    },
+    {
+      "task_id": "gsm8k-test-0097-calculator",
+      "category": "wrong_tool_result",
+      "expression": "32 * 3 / 2",
+      "tool_value": 48.0,
+      "predicted_value": 48.0,
+      "target_value": 12.0
+    },
+    {
+      "task_id": "gsm8k-test-0677-calculator",
+      "category": "wrong_tool_result",
+      "expression": "44+20+3*5",
+      "tool_value": 79.0,
+      "predicted_value": 79.0,
+      "target_value": 36.0
+    },
+    {
+      "task_id": "gsm8k-test-0311-calculator",
+      "category": "wrong_tool_result",
+      "expression": "5*3+3*2*7",
+      "tool_value": 57.0,
+      "predicted_value": 57.0,
+      "target_value": 91.0
+    },
+    {
+      "task_id": "gsm8k-test-1257-calculator",
+      "category": "success",
+      "expression": "56 * 2.00 / 8",
+      "tool_value": 14.0,
+      "predicted_value": 14.0,
+      "target_value": 14.0
+    },
+    {
+      "task_id": "gsm8k-test-0994-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(20*2+20+20*2)/60",
+      "tool_value": 1.6666666666666667,
+      "predicted_value": 1.6666666666666667,
+      "target_value": 2.0
+    },
+    {
+      "task_id": "gsm8k-test-0614-calculator",
+      "category": "wrong_tool_result",
+      "expression": "20*52*0.15",
+      "tool_value": 156.0,
+      "predicted_value": 156.0,
+      "target_value": 312.0
+    },
+    {
+      "task_id": "gsm8k-test-1055-calculator",
+      "category": "wrong_tool_result",
+      "expression": "120 * 1.6",
+      "tool_value": 192.0,
+      "predicted_value": 192.0,
+      "target_value": 2304.0
+    },
+    {
+      "task_id": "gsm8k-test-0747-calculator",
+      "category": "wrong_tool_result",
+      "expression": "500 * 0.5 - 500 * 0.4",
+      "tool_value": 50.0,
+      "predicted_value": 50.0,
+      "target_value": 350.0
+    },
+    {
+      "task_id": "gsm8k-test-0032-calculator",
+      "category": "success",
+      "expression": "10 * 0.5 * 7",
+      "tool_value": 35.0,
+      "predicted_value": 35.0,
+      "target_value": 35.0
+    },
+    {
+      "task_id": "gsm8k-test-0908-calculator",
+      "category": "success",
+      "expression": "30 - 1/5 * 30 - 10",
+      "tool_value": 14.0,
+      "predicted_value": 14.0,
+      "target_value": 14.0
+    },
+    {
+      "task_id": "gsm8k-test-0208-calculator",
+      "category": "wrong_tool_result",
+      "expression": "4*3*5",
+      "tool_value": 60.0,
+      "predicted_value": 60.0,
+      "target_value": 76.0
+    },
+    {
+      "task_id": "gsm8k-test-1284-calculator",
+      "category": "wrong_tool_result",
+      "expression": "5 + 5 * 2 - 5",
+      "tool_value": 10.0,
+      "predicted_value": 10.0,
+      "target_value": 25.0
+    },
+    {
+      "task_id": "gsm8k-test-1041-calculator",
+      "category": "wrong_tool_result",
+      "expression": "16*6.50+6*6",
+      "tool_value": 140.0,
+      "predicted_value": 140.0,
+      "target_value": 101.0
+    },
+    {
+      "task_id": "gsm8k-test-0475-calculator",
+      "category": "wrong_tool_result",
+      "expression": "240/3",
+      "tool_value": 80.0,
+      "predicted_value": 80.0,
+      "target_value": 20.0
+    },
+    {
+      "task_id": "gsm8k-test-0853-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(90/2)*60/60",
+      "tool_value": 45.0,
+      "predicted_value": 45.0,
+      "target_value": 15.0
+    },
+    {
+      "task_id": "gsm8k-test-0368-calculator",
+      "category": "wrong_tool_result",
+      "expression": "3 * 8",
+      "tool_value": 24.0,
+      "predicted_value": 24.0,
+      "target_value": 18.0
+    },
+    {
+      "task_id": "gsm8k-test-0728-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(15+45+40+50)/150*100",
+      "tool_value": 100.0,
+      "predicted_value": 100.0,
+      "target_value": 40.0
+    },
+    {
+      "task_id": "gsm8k-test-0881-calculator",
+      "category": "wrong_tool_result",
+      "expression": "18 - 10",
+      "tool_value": 8.0,
+      "predicted_value": 8.0,
+      "target_value": 16.0
+    },
+    {
+      "task_id": "gsm8k-test-0977-calculator",
+      "category": "wrong_tool_result",
+      "expression": "8*4*8",
+      "tool_value": 256.0,
+      "predicted_value": 256.0,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-0902-calculator",
+      "category": "success",
+      "expression": "1.50*5+0.50",
+      "tool_value": 8.0,
+      "predicted_value": 8.0,
+      "target_value": 8.0
+    },
+    {
+      "task_id": "gsm8k-test-0483-calculator",
+      "category": "success",
+      "expression": "3*20-20",
+      "tool_value": 40.0,
+      "predicted_value": 40.0,
+      "target_value": 40.0
+    },
+    {
+      "task_id": "gsm8k-test-0428-calculator",
+      "category": "wrong_tool_result",
+      "expression": "36/2-40",
+      "tool_value": -22.0,
+      "predicted_value": -22.0,
+      "target_value": 26.0
+    },
+    {
+      "task_id": "gsm8k-test-0681-calculator",
+      "category": "wrong_tool_result",
+      "expression": "68-5+12+23",
+      "tool_value": 98.0,
+      "predicted_value": 98.0,
+      "target_value": 298.0
+    },
+    {
+      "task_id": "gsm8k-test-1265-calculator",
+      "category": "wrong_tool_result",
+      "expression": "6 * 4 * 2",
+      "tool_value": 48.0,
+      "predicted_value": 48.0,
+      "target_value": 36.0
+    },
+    {
+      "task_id": "gsm8k-test-0515-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 160.0
+    },
+    {
+      "task_id": "gsm8k-test-0001-calculator",
+      "category": "wrong_tool_result",
+      "expression": "2 + 1/2",
+      "tool_value": 2.5,
+      "predicted_value": 2.5,
+      "target_value": 3.0
+    },
+    {
+      "task_id": "gsm8k-test-0607-calculator",
+      "category": "wrong_tool_result",
+      "expression": "24.00 * 120 / 1",
+      "tool_value": 2880.0,
+      "predicted_value": 2880.0,
+      "target_value": 10.0
+    },
+    {
+      "task_id": "gsm8k-test-0591-calculator",
+      "category": "wrong_tool_result",
+      "expression": "10*2+(10*2)*(1/4)*44",
+      "tool_value": 240.0,
+      "predicted_value": 240.0,
+      "target_value": 220.0
+    },
+    {
+      "task_id": "gsm8k-test-0214-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(4*2-4)/4",
+      "tool_value": 1.0,
+      "predicted_value": 1.0,
+      "target_value": 8.0
+    },
+    {
+      "task_id": "gsm8k-test-0635-calculator",
+      "category": "wrong_tool_result",
+      "expression": "10 - 60",
+      "tool_value": -50.0,
+      "predicted_value": -50.0,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-1134-calculator",
+      "category": "wrong_tool_result",
+      "expression": "4*8+60",
+      "tool_value": 92.0,
+      "predicted_value": 92.0,
+      "target_value": 7.0
+    },
+    {
+      "task_id": "gsm8k-test-1120-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(2*12*70)/2",
+      "tool_value": 840.0,
+      "predicted_value": 840.0,
+      "target_value": 560.0
+    },
+    {
+      "task_id": "gsm8k-test-1227-calculator",
+      "category": "success",
+      "expression": "3*12+1*6+4*6",
+      "tool_value": 66.0,
+      "predicted_value": 66.0,
+      "target_value": 66.0
+    },
+    {
+      "task_id": "gsm8k-test-0086-calculator",
+      "category": "wrong_tool_result",
+      "expression": "4 + 3 * 2 / 2",
+      "tool_value": 7.0,
+      "predicted_value": 7.0,
+      "target_value": 22.0
+    },
+    {
+      "task_id": "gsm8k-test-1057-calculator",
+      "category": "wrong_tool_result",
+      "expression": "4 + 4 * 0.5 * 4",
+      "tool_value": 12.0,
+      "predicted_value": 12.0,
+      "target_value": 24.0
+    },
+    {
+      "task_id": "gsm8k-test-0704-calculator",
+      "category": "success",
+      "expression": "100 * 3 / 5 - 10",
+      "tool_value": 50.0,
+      "predicted_value": 50.0,
+      "target_value": 50.0
+    },
+    {
+      "task_id": "gsm8k-test-0075-calculator",
+      "category": "wrong_tool_result",
+      "expression": "16/2",
+      "tool_value": 8.0,
+      "predicted_value": 8.0,
+      "target_value": 60.0
+    },
+    {
+      "task_id": "gsm8k-test-1273-calculator",
+      "category": "success",
+      "expression": "52-4-21",
+      "tool_value": 27.0,
+      "predicted_value": 27.0,
+      "target_value": 27.0
+    },
+    {
+      "task_id": "gsm8k-test-0734-calculator",
+      "category": "wrong_tool_result",
+      "expression": "2+4+3+2*3",
+      "tool_value": 15.0,
+      "predicted_value": 15.0,
+      "target_value": 17.0
+    },
+    {
+      "task_id": "gsm8k-test-0671-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-0578-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 48.0
+    },
+    {
+      "task_id": "gsm8k-test-0359-calculator",
+      "category": "wrong_tool_result",
+      "expression": "10 - 1.5 * 40 / 0.05",
+      "tool_value": -1190.0,
+      "predicted_value": -1190.0,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-0521-calculator",
+      "category": "wrong_tool_result",
+      "expression": "100-12*3+1/4*100",
+      "tool_value": 89.0,
+      "predicted_value": 89.0,
+      "target_value": 39.0
+    },
+    {
+      "task_id": "gsm8k-test-0165-calculator",
+      "category": "success",
+      "expression": "1500 - 1090 - 157 - 74 - 102",
+      "tool_value": 77.0,
+      "predicted_value": 77.0,
+      "target_value": 77.0
+    },
+    {
+      "task_id": "gsm8k-test-0033-calculator",
+      "category": "wrong_tool_result",
+      "expression": "110-30",
+      "tool_value": 80.0,
+      "predicted_value": 80.0,
+      "target_value": 70.0
+    },
+    {
+      "task_id": "gsm8k-test-0490-calculator",
+      "category": "wrong_tool_result",
+      "expression": "4 + 2 * 8",
+      "tool_value": 20.0,
+      "predicted_value": 20.0,
+      "target_value": 4.0
+    },
+    {
+      "task_id": "gsm8k-test-1235-calculator",
+      "category": "wrong_tool_result",
+      "expression": "(6000/50*3)/3*100",
+      "tool_value": 12000.0,
+      "predicted_value": 12000.0,
+      "target_value": 60.0
+    },
+    {
+      "task_id": "gsm8k-test-0398-calculator",
+      "category": "protocol_error",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 168.0
+    },
+    {
+      "task_id": "gsm8k-test-0305-calculator",
+      "category": "success",
+      "expression": "0.20*20",
+      "tool_value": 4.0,
+      "predicted_value": 4.0,
+      "target_value": 4.0
+    }
+  ]
+}

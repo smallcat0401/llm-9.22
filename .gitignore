@@ -36,5 +36,8 @@ artifacts/checkpoints/
 *.pth
 
 # Generated datasets. Keep only tiny reviewed fixtures in Git.
-data/generated/
-
+data/generated/*
+!data/generated/qwen3_5_4b_sft_train_path_aligned_merged112.jsonl
+!data/generated/gsm8k_external_eval_seed7.jsonl
+!data/generated/gsm8k_train_validation_seed131.jsonl
+data/external/

@@ -1,0 +1,22 @@
+[grpo]
+run_id = "qwen3.5-0.8b-grpo-calculator-result-from-native37-seed47"
+model_id = "Qwen/Qwen3.5-0.8B"
+adapter_path = "outputs/sft/qwen3_5_0_8b_native_calculator_full37_from_full80_seed43/adapter"
+dataset_path = "data/generated/pilot_tasks.jsonl"
+sft_dataset_path = "data/generated/sft_native_calculator_seed7.jsonl"
+output_dir = "outputs/grpo/qwen3_5_0_8b_calculator_result_from_native37_seed47/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_0_8b_grpo_calculator_result_from_native37_seed47.json"
+seed = 47
+prompt_count = 13
+max_steps = 13
+num_generations = 8
+max_completion_length = 128
+learning_rate = 0.000001
+temperature = 1.4
+top_p = 0.97
+format_reward_weight = 0.1
+closeness_reward_weight = 0.25
+tool_trace_reward_weight = 0.05
+tool_result_reward_weight = 0.5
+task_kind = "calculator"
+enable_calculator_tool = true

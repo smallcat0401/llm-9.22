@@ -1,0 +1,45 @@
+{
+  "audit": {
+    "invalid_protocol": "transformers-native-calculator-v1",
+    "invalid_reason": "Generation stopped at document EOS 248044 rather than chat EOS 248046, allowing trailing <|endoftext|> to overwrite valid parsed content.",
+    "replacement_protocol": "transformers-native-calculator-v2-chat-eos"
+  },
+  "conclusion": "The corrected evaluator finds limited native calculator capability, but no measurable improvement from the 13-step calculator GRPO adapter over its SFT control.",
+  "greedy": {
+    "grpo": {
+      "outcome_success": 2,
+      "task_count": 25,
+      "tool_assisted_success": 0,
+      "tool_calls": 0
+    },
+    "sft": {
+      "outcome_success": 2,
+      "task_count": 25,
+      "tool_assisted_success": 0,
+      "tool_calls": 0
+    }
+  },
+  "sample_pass_at_4": {
+    "episode_count_per_model": 100,
+    "grpo": {
+      "outcome_pass_at_4": 3,
+      "outcome_successful_episodes": 8,
+      "successful_tool_executions": 18,
+      "tool_assisted_pass_at_4": 1,
+      "tool_assisted_successful_episodes": 1,
+      "tool_calls": 19
+    },
+    "sft": {
+      "outcome_pass_at_4": 3,
+      "outcome_successful_episodes": 8,
+      "successful_tool_executions": 17,
+      "tool_assisted_pass_at_4": 1,
+      "tool_assisted_successful_episodes": 1,
+      "tool_calls": 19
+    },
+    "task_count": 25,
+    "temperature": 1.4,
+    "top_p": 0.97
+  },
+  "seed": 17
+}

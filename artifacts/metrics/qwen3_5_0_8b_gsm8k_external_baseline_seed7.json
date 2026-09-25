@@ -1,0 +1,45 @@
+{
+  "status": "measured_pre_sft_external_baseline",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "dataset_manifest": "artifacts/dataset_manifests/gsm8k_external_eval_seed7.json",
+  "evaluation": {
+    "source_questions": 100,
+    "paired_tasks": 200,
+    "conditions": ["no_tool", "calculator_available"],
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_model_turns": 5,
+    "max_tool_calls": 4,
+    "seed": 7
+  },
+  "metrics": {
+    "task_success_count": 0,
+    "task_success_rate": 0.0,
+    "verifier_pass_count": 4,
+    "verifier_pass_rate": 0.02,
+    "protocol_error_count": 200,
+    "protocol_error_rate": 1.0,
+    "recorded_tool_call_count": 0,
+    "tool_selection_accuracy": 0.5,
+    "success_by_condition": {
+      "no_tool": {"tasks": 100, "strict_successes": 0, "verifier_passes": 2},
+      "calculator_available": {
+        "tasks": 100,
+        "strict_successes": 0,
+        "verifier_passes": 2
+      }
+    }
+  },
+  "output_audit": {
+    "answer_only_json_prefix": 200,
+    "unknown_action_type": 199,
+    "malformed_json": 1,
+    "note": "All outputs used an answer-only JSON shape instead of the required typed action envelope."
+  },
+  "runtime": {
+    "load_seconds": 5.935,
+    "evaluation_seconds": 87.892,
+    "average_episode_seconds": 0.439,
+    "cuda_peak_memory_mib": 1696.6
+  }
+}

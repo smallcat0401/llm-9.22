@@ -1,0 +1,23 @@
+{
+  "evaluation_status": "superseded_invalid_native_eos",
+  "audit_note": "Native-v1 parsing could overwrite valid answers with trailing document EOS. Native results and capability conclusions are invalid; training metrics are unaffected. See native_v2_* metrics and native_parser_audit.json.",
+  "adapter_path": "outputs\\sft\\qwen3_5_0_8b_qlora_full_seed7\\adapter",
+  "decoding": "sample",
+  "episode_count": 100,
+  "episode_success_rate": 0.0,
+  "evaluation_seconds": 169.46401099997456,
+  "load_seconds": 7.93486269999994,
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "num_samples": 4,
+  "protocol": "transformers-native-calculator-v1",
+  "run_id": "qwen3.5-0.8b-native-calculator-post-sft-sample4-seed17",
+  "task_count": 25,
+  "task_pass_at_n_count": 0,
+  "task_pass_at_n_rate": 0.0,
+  "task_success_count": 0,
+  "temperature": 1.4,
+  "tool_called_count": 19,
+  "tool_succeeded_count": 17,
+  "top_p": 0.97,
+  "typed_final_count": 0
+}

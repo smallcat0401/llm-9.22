@@ -1,0 +1,15 @@
+{
+  "conclusion": "Validation selected step 20. On the fresh frozen holdout it improved 4/36 to 6/36 and retained 25/25 on the old percent-change family, but transfer was heterogeneous and absolute accuracy remained low. GSM8K paired accuracy moved only 21/200 to 22/200. This is weak positive ablation evidence, not a stable broad gain.",
+  "fresh_holdout": {
+    "mixed_step20": {"success": "6/36", "by_family": {"tiered_utility": "5/12", "event_net_cost": "1/12", "service_tax_tip": "0/12"}, "tool_execution_failures": 5, "wrong_tool_results": 25},
+    "native37": {"success": "4/36", "by_family": {"tiered_utility": "2/12", "event_net_cost": "0/12", "service_tax_tip": "2/12"}, "tool_execution_failures": 3, "wrong_tool_results": 29},
+    "sha256": "35fea2c45e3dedce50310238e859e47b159148562e5949255c8255d3a924de84"
+  },
+  "gsm8k_paired": {
+    "mixed_step20": {"calculator": "18/100", "no_tool": "4/100", "protocol_errors": 8, "total": "22/200"},
+    "native37": {"calculator": "16/100", "no_tool": "5/100", "protocol_errors": 11, "total": "21/200"}
+  },
+  "old_percent_change_regression_check": {"mixed_step20": "25/25", "native37": "25/25"},
+  "training": {"checkpoint_selection": "validation only", "elapsed_seconds": 74.84645219999948, "examples": 109, "final_loss": 0.04367548546288162, "initial_loss": 0.14302457389263012, "learning_rate": 0.00002, "peak_cuda_memory_mib": 4857.16015625, "selected_checkpoint": 20, "steps": 40},
+  "validation_corrected_prompt": {"mixed_step20": "23/24", "mixed_step40": "22/24", "native37": "21/24"}
+}

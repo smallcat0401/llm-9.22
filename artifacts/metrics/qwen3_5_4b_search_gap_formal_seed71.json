@@ -1,0 +1,123 @@
+{
+  "status": "measured",
+  "run_id": "qwen3.5-4b-search-gap-formal-seed71",
+  "model": "Qwen/Qwen3.5-4B",
+  "quantization": "bitsandbytes NF4 4-bit",
+  "dataset": {
+    "path": "data/generated/gsm8k_search_screen_seed71.jsonl",
+    "source_split": "train",
+    "distinct_source_questions": 50,
+    "paired_conditions": [
+      "no_tool",
+      "calculator"
+    ],
+    "task_count": 100,
+    "samples_per_task": 8,
+    "candidate_count": 800
+  },
+  "strict_trajectory_metrics": {
+    "pass_at_1": {
+      "count": 10,
+      "rate": 0.1
+    },
+    "pass_at_2": {
+      "count": 19,
+      "rate": 0.19
+    },
+    "pass_at_4": {
+      "count": 31,
+      "rate": 0.31
+    },
+    "pass_at_8": {
+      "count": 43,
+      "rate": 0.43
+    },
+    "absolute_search_gain": 0.33,
+    "verified_candidate_count": 100,
+    "verified_candidate_yield": 0.125,
+    "selected_verified_trajectories": 43,
+    "by_condition": {
+      "no_tool": {
+        "pass_at_1": 0.06,
+        "pass_at_8": 0.28
+      },
+      "calculator": {
+        "pass_at_1": 0.14,
+        "pass_at_8": 0.58
+      }
+    }
+  },
+  "outcome_only_audit": {
+    "pass_at_1": {
+      "count": 14,
+      "rate": 0.14
+    },
+    "pass_at_8": {
+      "count": 48,
+      "rate": 0.48
+    },
+    "absolute_search_gain": 0.34,
+    "numerically_correct_but_protocol_invalid_candidates": 30,
+    "note": "Outcome verification is reported separately. Protocol-invalid rows are not eligible verified trajectories."
+  },
+  "paired_source_audit": {
+    "distinct_source_questions": 50,
+    "strict_either_condition_pass_at_1": {
+      "count": 9,
+      "rate": 0.18
+    },
+    "strict_either_condition_pass_at_8": {
+      "count": 32,
+      "rate": 0.64
+    },
+    "absolute_search_gain": 0.46,
+    "note": "This is diagnostic only because each source question has two prompt/tool conditions. The preregistered gate uses the 100 condition-specific tasks."
+  },
+  "tool_use_audit": {
+    "calculator_candidates": 400,
+    "calculator_candidates_with_executed_tool_calls": 100,
+    "candidate_tool_use_rate": 0.25,
+    "strict_successful_calculator_candidates_with_tool": 48,
+    "strict_successful_calculator_candidates_without_tool": 28,
+    "selected_verified_trajectories_with_tool": 20,
+    "selected_verified_trajectories_total": 43
+  },
+  "sft_path_alignment_audit": {
+    "path_aligned_success_candidates": 72,
+    "path_aligned_no_tool_candidates": 24,
+    "path_aligned_calculator_candidates": 48,
+    "distinct_tasks_with_path_aligned_success": 40,
+    "selected_no_tool_tasks": 14,
+    "selected_calculator_tasks": 26,
+    "note": "The 43 generic verifier selections are not the final SFT set. Re-selection from all 800 candidates can retain 40 task-appropriate demonstrations; calculator successes that never called the available tool are excluded."
+  },
+  "error_audit": {
+    "strict_success_candidates": 100,
+    "wrong_answer_candidates": 659,
+    "invalid_answer_candidates": 11,
+    "protocol_error_terminations": 107,
+    "final_answer_terminations": 693
+  },
+  "gate": {
+    "minimum_absolute_gain": 0.1,
+    "minimum_verified_tasks": 30,
+    "observed_absolute_gain": 0.33,
+    "observed_verified_tasks": 43,
+    "passed": true
+  },
+  "runtime": {
+    "model_load_seconds": 32.622,
+    "search_seconds": 1086.765,
+    "average_candidate_seconds": 1.358,
+    "cuda_peak_memory_mib": 3329.5
+  },
+  "raw_output_hashes_sha256": {
+    "metrics.json": "65AB6D7E420DB73D2729D796A433FE204FCD873B662FA055CF018959CFCC0FD0",
+    "candidates.jsonl": "1DF920DC1EA43ED8B5C5E2DDB2D7130067C3C313B9575A8EFD45DBD3F7F9F59B",
+    "verified_trajectories.jsonl": "FD03E03FAC46D9AAEFD0E9BA0A41F84C4A17A568CA67F9F6781C010E9D9E9168"
+  },
+  "curated_sft_hashes_sha256": {
+    "qwen3_5_4b_sft_path_aligned_records_seed71.jsonl": "CD31A09E53BAEBDC40E15C4C6795B43DB8B136C86F8293C7CDE3D3800A2B3DC3",
+    "qwen3_5_4b_sft_train_path_aligned_seed71.jsonl": "1D16B209A66FCECA733CF15F174B6FA2FA8D81CA67E154A8EC74B10BFFEB2920"
+  }
+}

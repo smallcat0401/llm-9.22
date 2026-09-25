@@ -117,6 +117,19 @@ def evaluate_expression(expression: str) -> int | float:
     return float(value)
 
 
+def calculator(expression: str) -> int | float:
+    """Evaluate a bounded arithmetic expression with the safe calculator.
+
+    Args:
+        expression: Arithmetic containing only numbers, parentheses, and +, -, *, /.
+
+    Returns:
+        The exact integer result or a finite floating-point result.
+    """
+
+    return evaluate_expression(expression)
+
+
 def execute_calculator(call: ToolCall) -> Observation:
     """Execute one calculator call and convert every expected failure to an observation."""
 

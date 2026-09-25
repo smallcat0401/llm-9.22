@@ -1,0 +1,33 @@
+{
+  "run_id": "qwen3.5-0.8b-grpo-curriculum-screen-best-of-8-seed17",
+  "source_candidates": "outputs/search/qwen3_5_0_8b_grpo_curriculum_screen_best_of_8_seed17/candidates.jsonl",
+  "selection_rule": "train/no-tool tasks absent from SFT with between 1 and 7 strict successes among 8 samples",
+  "screen": {
+    "task_count": 50,
+    "candidate_count": 400,
+    "strict_success_count": 307,
+    "mixed_tasks_after_sft_exclusion": 4
+  },
+  "selected": [
+    {
+      "task_id": "direct-subtract-v1-013",
+      "strict_successes": 1,
+      "samples": 8
+    },
+    {
+      "task_id": "direct-subtract-v1-002",
+      "strict_successes": 2,
+      "samples": 8
+    },
+    {
+      "task_id": "direct-subtract-v1-017",
+      "strict_successes": 3,
+      "samples": 8
+    },
+    {
+      "task_id": "direct-percent-v1-019",
+      "strict_successes": 5,
+      "samples": 8
+    }
+  ]
+}

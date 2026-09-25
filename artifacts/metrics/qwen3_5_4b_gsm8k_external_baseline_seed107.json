@@ -1,0 +1,62 @@
+{
+  "config": {
+    "adapter_path": null,
+    "dataset": "data/generated/gsm8k_external_eval_seed7.jsonl",
+    "kinds": [
+      "calculator",
+      "no_tool"
+    ],
+    "load_in_4bit": true,
+    "max_model_turns": 3,
+    "max_new_tokens": 256,
+    "max_tool_calls": 2,
+    "model_id": "Qwen/Qwen3.5-4B",
+    "prompt_protocol_version": "v3-sql-scalar-aggregate",
+    "run_id": "qwen3.5-4b-gsm8k-external-baseline-seed107",
+    "seed": 107,
+    "splits": [
+      "test"
+    ]
+  },
+  "metrics": {
+    "average_recorded_tool_calls": 0.06,
+    "failed_tool_call_count": 0,
+    "invalid_tool_call_rate": 0.0,
+    "no_tool_task_count": 100,
+    "over_tool_rate": 0.0,
+    "over_tool_task_count": 0,
+    "protocol_error_count": 22,
+    "protocol_error_rate": 0.11,
+    "recorded_tool_call_count": 12,
+    "rejected_tool_call_count": 0,
+    "success_by_kind": {
+      "calculator": {
+        "success_rate": 0.27,
+        "successes": 27,
+        "tasks": 100
+      },
+      "no_tool": {
+        "success_rate": 0.11,
+        "successes": 11,
+        "tasks": 100
+      }
+    },
+    "task_count": 200,
+    "task_success_count": 38,
+    "task_success_rate": 0.19,
+    "termination_counts": {
+      "final_answer": 178,
+      "protocol_error": 22
+    },
+    "tool_selection_accuracy": 0.55,
+    "tool_selection_correct_count": 110,
+    "verifier_pass_count": 46,
+    "verifier_pass_rate": 0.23
+  },
+  "runtime": {
+    "average_episode_seconds": 1.187,
+    "cuda_peak_memory_mib": 3327.5,
+    "evaluation_seconds": 237.487,
+    "load_seconds": 32.141
+  }
+}

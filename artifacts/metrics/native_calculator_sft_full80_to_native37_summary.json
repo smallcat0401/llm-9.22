@@ -1,0 +1,45 @@
+{
+  "conclusion": "After correcting the percent-change rounding tolerance, native trajectory SFT raises greedy effective tool-path success from 0/25 to 25/25. Sampled effective tool-path pass@4 is 24/25, but 32/100 sampled episodes still produce a wrong expression result. On the matched 200-task GSM8K pair it does not improve calculator accuracy (16/100 for both adapters).",
+  "custom_protocol_v3_corrected_tolerance_rescore": {
+    "full80_control": {"by_kind": {"calculator": 25, "no_tool": 25, "sql": 25}, "protocol_errors": 0, "success": 75, "tasks": 75},
+    "full80_then_native37": {"by_kind": {"calculator": 25, "no_tool": 25, "sql": 25}, "protocol_errors": 0, "success": 75, "tasks": 75}
+  },
+  "native_heldout_v2_strict_tolerance_superseded": {
+    "status": "superseded because 1e-6 rejected correctly rounded two-decimal percentages",
+    "greedy": {
+      "full80_control": {"numeric_outcome_success": 2, "tasks": 25, "tool_assisted_success": 0, "tool_calls": 0},
+      "full80_then_native37": {"numeric_outcome_success": 3, "tasks": 25, "tool_assisted_success": 3, "tool_calls": 25}
+    },
+    "sample4": {
+      "episodes_per_model": 100,
+      "full80_control": {"numeric_outcome_pass_at_4": 2, "successful_tool_executions": 5, "tool_assisted_pass_at_4": 0, "tool_calls": 7},
+      "full80_then_native37": {"numeric_outcome_pass_at_4": 3, "successful_tool_executions": 97, "tool_assisted_pass_at_4": 3, "tool_calls": 100},
+      "tasks": 25,
+      "temperature": 1.4,
+      "top_p": 0.97
+    }
+  },
+  "native_heldout_v3_tolerance_rescore": {
+    "greedy": {
+      "full80_control": {"effective_tool_path_success": 0, "numeric_outcome_success": 3, "tasks": 25, "tool_calls": 0},
+      "full80_then_native37": {"effective_tool_path_success": 25, "numeric_outcome_success": 25, "tasks": 25, "tool_calls": 25}
+    },
+    "sample4": {
+      "episodes_per_model": 100,
+      "full80_control": {"effective_tool_path_episodes": 2, "effective_tool_path_pass_at_4": 2, "numeric_outcome_pass_at_4": 5, "tool_calls": 7},
+      "full80_then_native37": {"effective_tool_path_episodes": 65, "effective_tool_path_pass_at_4": 24, "numeric_outcome_pass_at_4": 24, "tool_calls": 100, "wrong_tool_result_episodes": 32},
+      "tasks": 25,
+      "temperature": 1.4,
+      "top_p": 0.97
+    }
+  },
+  "gsm8k_external_v3": {
+    "full80_control": {"by_kind": {"calculator": 16, "no_tool": 4}, "protocol_errors": 12, "success": 20, "tasks": 200},
+    "full80_then_native37": {"by_kind": {"calculator": 16, "no_tool": 5}, "protocol_errors": 11, "success": 21, "tasks": 200},
+    "seed": 7
+  },
+  "training": {
+    "corrected_full80": {"actual_examples": 80, "final_loss": 0.030132942710770293, "initial_loss": 0.1433324921876192, "loss_reduction_fraction": 0.7897689334018771, "peak_cuda_memory_mib": 4057.509765625},
+    "native37_continuation": {"actual_examples": 37, "final_loss": 0.013010107333110156, "initial_loss": 0.03948473896047002, "loss_reduction_fraction": 0.6705028911009093, "peak_cuda_memory_mib": 4459.849609375, "starting_adapter": "corrected_full80"}
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "run_id": "qwen3.5-0.8b-debug102-seed7",
+  "status": "measured_representative_failures",
+  "cases": [
+    {
+      "task_id": "direct-subtract-v1-003",
+      "failure_class": "correct_outcome_invalid_protocol",
+      "prompt": "Answer directly without tools: what is 533 - 23?",
+      "raw_outputs": ["{\"answer\":\"510\"}"],
+      "target": 510,
+      "verifier_passed": true,
+      "task_success": false,
+      "protocol_error": "unknown_action_type"
+    },
+    {
+      "task_id": "calculator-average-v1-000",
+      "failure_class": "wrong_direct_answer_without_requested_tool",
+      "prompt": "Use the calculator: find the mean of 10, 20, and 30.",
+      "raw_outputs": ["{\"type\":\"final\",\"answer\":\"10\"}"],
+      "target": 20.0,
+      "predicted": 10.0,
+      "task_success": false
+    },
+    {
+      "task_id": "sql-region-product-quarter-revenue-v1-004",
+      "failure_class": "valid_sql_syntax_wrong_time_semantics",
+      "prompt": "Find Q1 revenue for region 'north' and product 'gadget'.",
+      "raw_outputs": [
+        "{\"type\":\"tool_call\",\"name\":\"sql\",\"arguments\":{\"query\":\"SELECT SUM(units * unit_price) as revenue FROM sales WHERE month='Q1' AND region='north' AND product='gadget' \"}}",
+        "{\"type\":\"final\",\"answer\":\"null\"}"
+      ],
+      "target": 382.5,
+      "tool_observation": null,
+      "task_success": false
+    }
+  ]
+}

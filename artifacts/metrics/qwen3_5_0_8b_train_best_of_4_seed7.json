@@ -1,0 +1,82 @@
+{
+  "status": "measured_full_train_split_search",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "dataset": "pilot_tasks_seed7",
+  "selection": {
+    "split": "train",
+    "task_count": 150,
+    "tasks_per_kind": 50,
+    "selection_rule": "first_strict_task_success"
+  },
+  "generation": {
+    "samples_per_task": 4,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 20,
+    "max_new_tokens": 256,
+    "max_model_turns": 3,
+    "max_tool_calls": 2,
+    "seed": 7
+  },
+  "metrics": {
+    "candidate_count": 600,
+    "verified_candidate_count": 128,
+    "verified_candidate_yield": 0.21333333333333335,
+    "pass_at_1_count": 28,
+    "pass_at_1": 0.18666666666666668,
+    "pass_at_4_count": 81,
+    "pass_at_4": 0.54,
+    "absolute_search_gain": 0.3533333333333334,
+    "mean_verified_candidates_per_task": 0.8533333333333334,
+    "success_by_kind": {
+      "no_tool": {"tasks": 50, "pass_at_1": 0.02, "pass_at_4": 0.26},
+      "calculator": {"tasks": 50, "pass_at_1": 0.32, "pass_at_4": 0.76},
+      "sql": {"tasks": 50, "pass_at_1": 0.22, "pass_at_4": 0.6}
+    }
+  },
+  "family_breakdown": {
+    "direct-subtract-v1": {
+      "tasks": 25,
+      "verified_candidates": 0,
+      "pass_at_1_count": 0,
+      "pass_at_4_count": 0
+    },
+    "direct-percent-v1": {
+      "tasks": 25,
+      "verified_candidates": 18,
+      "pass_at_1_count": 1,
+      "pass_at_4_count": 13
+    },
+    "calculator-average-v1": {
+      "tasks": 25,
+      "verified_candidates": 36,
+      "pass_at_1_count": 11,
+      "pass_at_4_count": 21
+    },
+    "calculator-discount-v1": {
+      "tasks": 25,
+      "verified_candidates": 25,
+      "pass_at_1_count": 5,
+      "pass_at_4_count": 17
+    },
+    "sql-region-month-revenue-v1": {
+      "tasks": 25,
+      "verified_candidates": 33,
+      "pass_at_1_count": 5,
+      "pass_at_4_count": 18
+    },
+    "sql-region-month-average-price-v1": {
+      "tasks": 25,
+      "verified_candidates": 16,
+      "pass_at_1_count": 6,
+      "pass_at_4_count": 12
+    }
+  },
+  "runtime": {
+    "load_seconds": 5.56,
+    "search_seconds": 562.627,
+    "average_candidate_seconds": 0.938,
+    "cuda_peak_memory_mib": 1701.4
+  }
+}

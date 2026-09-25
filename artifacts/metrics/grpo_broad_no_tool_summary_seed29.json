@@ -1,0 +1,30 @@
+{
+  "status": "measured",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "prompt_protocol_version": "v3-sql-scalar-aggregate",
+  "training": {
+    "seed": 29,
+    "eligible_train_no_tool_tasks": 37,
+    "sft_overlap_count": 0,
+    "optimizer_steps": 37,
+    "nonzero_group_reward_variance_steps": 37,
+    "changed_trainable_tensors": 372,
+    "peak_cuda_memory_mib": 6584.814453125,
+    "elapsed_seconds": 479.12569350001286,
+    "artifact": "artifacts/metrics/qwen3_5_0_8b_grpo_broad_no_tool_37step_seed29.json"
+  },
+  "evaluation": {
+    "task_count": 75,
+    "task_success_count": 53,
+    "task_success_rate": 0.7066666666666667,
+    "protocol_error_count": 0,
+    "by_kind_successes": {"no_tool": 24, "calculator": 4, "sql": 25},
+    "artifact": "artifacts/metrics/qwen3_5_0_8b_pilot_test_post_grpo_broad_prompt_v3_trainseed29.json"
+  },
+  "comparison": {
+    "sft_control_success_count": 52,
+    "four_prompt_grpo_success_count": 53,
+    "broad_no_tool_grpo_success_count": 53
+  },
+  "interpretation": "Broader no-tool coverage preserved effective GRPO signal and test accuracy but did not improve beyond the four-prompt curriculum; calculator/tool-use coverage is the next bottleneck."
+}

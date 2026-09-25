@@ -1,0 +1,36 @@
+{
+  "status": "measured_smoke_not_formal_baseline",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "dataset": "pilot_tasks_seed7",
+  "sample_count": 3,
+  "samples_per_kind": 1,
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 128,
+    "max_model_turns": 3,
+    "max_tool_calls": 2,
+    "seed": 7
+  },
+  "metrics": {
+    "task_success_count": 1,
+    "task_success_rate": 0.3333333333333333,
+    "verifier_pass_count": 2,
+    "verifier_pass_rate": 0.6666666666666666,
+    "protocol_error_count": 2,
+    "protocol_error_rate": 0.6666666666666666,
+    "tool_selection_correct_count": 1,
+    "tool_selection_accuracy": 0.3333333333333333,
+    "recorded_tool_call_count": 0,
+    "over_tool_task_count": 0
+  },
+  "runtime": {
+    "load_seconds": 5.916,
+    "evaluation_seconds": 6.628,
+    "average_episode_seconds": 2.209,
+    "cuda_peak_memory_mib": 1687.2
+  },
+  "observed_failures": [
+    "no-tool answer had the correct number but omitted the required type field",
+    "SQL tool call was truncated at the 128-token generation limit and failed JSON parsing"
+  ]
+}

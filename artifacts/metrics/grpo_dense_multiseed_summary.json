@@ -1,0 +1,46 @@
+{
+  "status": "measured",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "prompt_protocol_version": "v3-sql-scalar-aggregate",
+  "sft_control": {
+    "task_success_count": 52,
+    "task_count": 75,
+    "by_kind_successes": {"no_tool": 24, "calculator": 4, "sql": 24}
+  },
+  "grpo_training_seeds": [
+    {
+      "seed": 17,
+      "nonzero_group_reward_variance_steps": 12,
+      "reward_steps": 12,
+      "task_success_count": 53,
+      "by_kind_successes": {"no_tool": 24, "calculator": 4, "sql": 25}
+    },
+    {
+      "seed": 23,
+      "nonzero_group_reward_variance_steps": 12,
+      "reward_steps": 12,
+      "task_success_count": 53,
+      "by_kind_successes": {"no_tool": 24, "calculator": 4, "sql": 25}
+    },
+    {
+      "seed": 41,
+      "nonzero_group_reward_variance_steps": 12,
+      "reward_steps": 12,
+      "task_success_count": 53,
+      "by_kind_successes": {"no_tool": 24, "calculator": 4, "sql": 25}
+    }
+  ],
+  "aggregate": {
+    "training_runs": 3,
+    "runs_with_all_steps_nonzero_variance": 3,
+    "mean_task_success_count": 53.0,
+    "min_task_success_count": 53,
+    "max_task_success_count": 53,
+    "population_standard_deviation": 0.0,
+    "mean_delta_vs_sft": 1.0
+  },
+  "interpretation": {
+    "supported": "Effective group-relative reward signal and a 53/75 greedy result reproduced in all three training seeds.",
+    "limitation": "All runs trained on the same four no-tool prompts, and the one-task test difference occurred on SQL; this does not establish broad RL generalization."
+  }
+}

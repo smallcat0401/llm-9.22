@@ -1,0 +1,214 @@
+{
+  "record_count": 25,
+  "category_counts": {
+    "success": 0,
+    "no_tool_call": 25,
+    "tool_execution_failed": 0,
+    "wrong_tool_result": 0,
+    "invalid_final": 0,
+    "correct_tool_result_bad_final": 0,
+    "protocol_error": 0
+  },
+  "records": [
+    {
+      "task_id": "calculator-percent-change-v1-000",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 25.0,
+      "target_value": 25.0
+    },
+    {
+      "task_id": "calculator-percent-change-v1-001",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 13.95,
+      "target_value": 27.906976744186046
+    },
+    {
+      "task_id": "calculator-percent-change-v1-002",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 33.33,
+      "target_value": 30.434782608695656
+    },
+    {
+      "task_id": "calculator-percent-change-v1-003",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 41.84,
+      "target_value": 32.6530612244898
+    },
+    {
+      "task_id": "calculator-percent-change-v1-004",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 33.33,
+      "target_value": 34.61538461538461
+    },
+    {
+      "task_id": "calculator-percent-change-v1-005",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 43.64,
+      "target_value": 36.36363636363637
+    },
+    {
+      "task_id": "calculator-percent-change-v1-006",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 43.48,
+      "target_value": 37.93103448275862
+    },
+    {
+      "task_id": "calculator-percent-change-v1-007",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 110.0,
+      "target_value": 39.34426229508197
+    },
+    {
+      "task_id": "calculator-percent-change-v1-008",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 43.75,
+      "target_value": 40.625
+    },
+    {
+      "task_id": "calculator-percent-change-v1-009",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 44.18,
+      "target_value": 41.7910447761194
+    },
+    {
+      "task_id": "calculator-percent-change-v1-010",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 42.86,
+      "target_value": 42.857142857142854
+    },
+    {
+      "task_id": "calculator-percent-change-v1-011",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 43.46,
+      "target_value": 43.83561643835616
+    },
+    {
+      "task_id": "calculator-percent-change-v1-012",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 46.05,
+      "target_value": 44.73684210526316
+    },
+    {
+      "task_id": "calculator-percent-change-v1-013",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 46.0,
+      "target_value": 45.56962025316456
+    },
+    {
+      "task_id": "calculator-percent-change-v1-014",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 46.3,
+      "target_value": 46.34146341463415
+    },
+    {
+      "task_id": "calculator-percent-change-v1-015",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 150.0,
+      "target_value": 47.05882352941176
+    },
+    {
+      "task_id": "calculator-percent-change-v1-016",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 45.9,
+      "target_value": 47.72727272727273
+    },
+    {
+      "task_id": "calculator-percent-change-v1-017",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 45.45,
+      "target_value": 48.35164835164835
+    },
+    {
+      "task_id": "calculator-percent-change-v1-018",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 45.94,
+      "target_value": 48.93617021276596
+    },
+    {
+      "task_id": "calculator-percent-change-v1-019",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 45.0,
+      "target_value": 49.48453608247423
+    },
+    {
+      "task_id": "calculator-percent-change-v1-020",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 50.0,
+      "target_value": 50.0
+    },
+    {
+      "task_id": "calculator-percent-change-v1-021",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 37.36,
+      "target_value": 50.48543689320388
+    },
+    {
+      "task_id": "calculator-percent-change-v1-022",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 45.5,
+      "target_value": 50.943396226415096
+    },
+    {
+      "task_id": "calculator-percent-change-v1-023",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 45.5,
+      "target_value": 51.37614678899083
+    },
+    {
+      "task_id": "calculator-percent-change-v1-024",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 58.57,
+      "target_value": 51.78571428571429
+    }
+  ]
+}

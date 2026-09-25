@@ -1,0 +1,26 @@
+{
+  "status": "candidate_sft_dataset_pending_path_curation",
+  "source_run": "qwen3.5-0.8b-train-best-of-4-seed7",
+  "source_split": "train",
+  "examples": 81,
+  "unique_example_ids": 81,
+  "non_train_examples": 0,
+  "sha256": "DDAD8FC4E5298629CDBA9871452D9FC4EB1CA374CDE05E8B253FD7155DED8222",
+  "by_kind": {
+    "no_tool": 13,
+    "calculator": 38,
+    "sql": 30
+  },
+  "by_family": {
+    "direct-percent-v1": 13,
+    "calculator-average-v1": 21,
+    "calculator-discount-v1": 17,
+    "sql-region-month-revenue-v1": 18,
+    "sql-region-month-average-price-v1": 12
+  },
+  "message_shapes": {
+    "system_user_assistant": 16,
+    "system_user_assistant_tool_assistant": 65
+  },
+  "audit_note": "Three calculator examples are outcome-correct direct answers without a tool call; keep outcome validity separate from SFT path-quality filtering."
+}

@@ -1,0 +1,24 @@
+[sft]
+run_id = "qwen3.5-0.8b-sft-mixed-replay-v2-from-native37-seed61"
+model_id = "Qwen/Qwen3.5-0.8B"
+adapter_path = "outputs/sft/qwen3_5_0_8b_native_calculator_full37_from_full80_seed43/adapter"
+dataset_path = "data/generated/sft_native37_curriculum_v2_mixed.jsonl"
+output_dir = "outputs/sft/qwen3_5_0_8b_mixed_replay_v2_from_native37_seed61/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_0_8b_sft_mixed_replay_v2_from_native37_seed61.json"
+seed = 61
+sample_count = 109
+max_length = 768
+batch_size = 2
+gradient_accumulation_steps = 4
+max_steps = 40
+checkpoint_steps = [20]
+learning_rate = 0.00002
+lora_rank = 8
+lora_alpha = 16
+lora_dropout = 0.0
+max_grad_norm = 1.0
+target_modules = [
+  "q_proj", "k_proj", "v_proj", "o_proj",
+  "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "out_proj",
+  "gate_proj", "up_proj", "down_proj"
+]

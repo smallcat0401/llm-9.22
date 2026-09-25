@@ -1,0 +1,62 @@
+{
+  "status": "measured_debug_baseline_not_formal_test_result",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "dataset": "pilot_tasks_seed7",
+  "selection": {
+    "splits": ["train", "validation"],
+    "limit_per_kind": 34,
+    "note": "Deterministic first-N debug selection; not a representative formal benchmark sample."
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_model_turns": 3,
+    "max_tool_calls": 2,
+    "seed": 7
+  },
+  "metrics": {
+    "task_count": 102,
+    "task_success_count": 57,
+    "task_success_rate": 0.5588235294117647,
+    "verifier_pass_count": 78,
+    "verifier_pass_rate": 0.7647058823529411,
+    "protocol_error_count": 40,
+    "protocol_error_rate": 0.39215686274509803,
+    "tool_selection_correct_count": 91,
+    "tool_selection_accuracy": 0.8921568627450981,
+    "recorded_tool_call_count": 57,
+    "failed_tool_call_count": 0,
+    "rejected_tool_call_count": 0,
+    "invalid_tool_call_rate": 0.0,
+    "average_recorded_tool_calls": 0.5588235294117647,
+    "over_tool_task_count": 0,
+    "over_tool_rate": 0.0,
+    "success_by_kind": {
+      "no_tool": {"tasks": 34, "successes": 0, "success_rate": 0.0},
+      "calculator": {
+        "tasks": 34,
+        "successes": 32,
+        "success_rate": 0.9411764705882353
+      },
+      "sql": {
+        "tasks": 34,
+        "successes": 25,
+        "success_rate": 0.7352941176470589
+      }
+    }
+  },
+  "family_breakdown": {
+    "direct-subtract-v1": {"tasks": 25, "successes": 0, "verifier_passes": 12},
+    "direct-multiply-v1": {"tasks": 9, "successes": 0, "verifier_passes": 9},
+    "calculator-revenue-v1": {"tasks": 25, "successes": 25},
+    "calculator-average-v1": {"tasks": 9, "successes": 7},
+    "sql-region-month-revenue-v1": {"tasks": 25, "successes": 25},
+    "sql-region-product-quarter-revenue-v1": {"tasks": 9, "successes": 0}
+  },
+  "runtime": {
+    "load_seconds": 5.428,
+    "evaluation_seconds": 140.512,
+    "average_episode_seconds": 1.377,
+    "cuda_peak_memory_mib": 1701.4
+  }
+}

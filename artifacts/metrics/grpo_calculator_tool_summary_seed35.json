@@ -1,0 +1,48 @@
+{
+  "evaluation_status": "superseded_invalid_native_eos",
+  "audit_note": "Native-v1 parsing could overwrite valid answers with trailing document EOS. Native results and capability conclusions are invalid; training metrics are unaffected. See native_v2_* metrics and native_parser_audit.json.",
+  "conclusion": "Native calculator GRPO produced valid sampled training signal but no held-out greedy or sampled task-success improvement over the SFT control.",
+  "custom_protocol_v3": {
+    "post_grpo_by_kind": {
+      "calculator": 4,
+      "no_tool": 24,
+      "sql": 25
+    },
+    "post_grpo_success": 53,
+    "sft_success": 52,
+    "task_count": 75
+  },
+  "native_tool_greedy": {
+    "post_grpo_task_success": 0,
+    "post_grpo_tool_calls": 0,
+    "sft_task_success": 0,
+    "sft_tool_calls": 0,
+    "task_count": 25
+  },
+  "native_tool_sample4": {
+    "episode_count_per_model": 100,
+    "post_grpo": {
+      "successful_tool_executions": 18,
+      "task_pass_at_4": 0,
+      "tool_calls": 19
+    },
+    "sft": {
+      "successful_tool_executions": 17,
+      "task_pass_at_4": 0,
+      "tool_calls": 19
+    },
+    "task_count": 25,
+    "temperature": 1.4,
+    "top_p": 0.97
+  },
+  "protocol": "transformers-native-calculator-v1",
+  "training": {
+    "changed_trainable_tensors": 372,
+    "elapsed_seconds": 238.89611099998,
+    "nonzero_reward_variance_steps": 13,
+    "peak_cuda_memory_mib": 5137.36962890625,
+    "steps": 13,
+    "train_prompt_count": 13,
+    "training_seed": 35
+  }
+}

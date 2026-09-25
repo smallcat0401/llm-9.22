@@ -1,0 +1,376 @@
+{
+  "record_count": 36,
+  "category_counts": {
+    "success": 6,
+    "no_tool_call": 0,
+    "tool_execution_failed": 5,
+    "wrong_tool_result": 25,
+    "invalid_final": 0,
+    "correct_tool_result_bad_final": 0,
+    "protocol_error": 0
+  },
+  "by_family": {
+    "holdout-v1-tiered-utility": {
+      "record_count": 12,
+      "category_counts": {
+        "success": 5,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 7,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    },
+    "holdout-v1-event-net-cost": {
+      "record_count": 12,
+      "category_counts": {
+        "success": 1,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 11,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    },
+    "holdout-v1-service-tax-tip": {
+      "record_count": 12,
+      "category_counts": {
+        "success": 0,
+        "no_tool_call": 0,
+        "tool_execution_failed": 5,
+        "wrong_tool_result": 7,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    }
+  },
+  "records": [
+    {
+      "task_id": "holdout-v1-tiered-utility-000",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "success",
+      "expression": "12 + 100 * 0.18 + (140 - 100) * 0.31 - 3",
+      "tool_value": 39.4,
+      "predicted_value": 39.4,
+      "target_value": 39.4
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-001",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "13 + 100 * 0.18 + (150 - 100) * 0.31 + 4",
+      "tool_value": 50.5,
+      "predicted_value": 50.5,
+      "target_value": 42.5
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-002",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "success",
+      "expression": "14 + 100 * 0.18 + (160 - 100) * 0.31 - 5",
+      "tool_value": 45.6,
+      "predicted_value": 45.6,
+      "target_value": 45.6
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-003",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "15 + 100 * 0.18 - 100 * 0.31 + 6",
+      "tool_value": 8.0,
+      "predicted_value": 8.0,
+      "target_value": 48.7
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-004",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "success",
+      "expression": "16 + 100 * 0.18 + (180 - 100) * 0.31 - 3",
+      "tool_value": 55.8,
+      "predicted_value": 55.8,
+      "target_value": 55.8
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-005",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "17 + 100 * 0.18 + (190 - 100) * 0.31 + 4",
+      "tool_value": 66.9,
+      "predicted_value": 66.9,
+      "target_value": 58.9
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-006",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "success",
+      "expression": "18 + 100 * 0.18 + (200 - 100) * 0.31 - 5",
+      "tool_value": 62.0,
+      "predicted_value": 62.0,
+      "target_value": 62.0
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-007",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "19 + 100 * 0.18 + (210 - 100) * 0.31 + 6",
+      "tool_value": 77.1,
+      "predicted_value": 77.1,
+      "target_value": 65.1
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-008",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "20 + 0.18 * 100 + 0.31 * (220 - 100) + 3",
+      "tool_value": 78.2,
+      "predicted_value": 78.2,
+      "target_value": 72.2
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-009",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "21 + 100 * 0.18 + (230 - 100) * 0.31 + 4",
+      "tool_value": 83.3,
+      "predicted_value": 83.3,
+      "target_value": 75.3
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-010",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "wrong_tool_result",
+      "expression": "22 + 100 * 0.18 + (240 - 100) * 0.31 + 5",
+      "tool_value": 88.4,
+      "predicted_value": 88.4,
+      "target_value": 78.4
+    },
+    {
+      "task_id": "holdout-v1-tiered-utility-011",
+      "family_id": "holdout-v1-tiered-utility",
+      "category": "success",
+      "expression": "23 + 0.18 * 100 + 0.31 * (250 - 100) - 6",
+      "tool_value": 81.5,
+      "predicted_value": 81.5,
+      "target_value": 81.5
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-000",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(18 * 16) + (7 * 9) - 80 + 35",
+      "tool_value": 306.0,
+      "predicted_value": 306.0,
+      "target_value": 396.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-001",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(19 * 17) + (8 * 10) - 85 - 38",
+      "tool_value": 280.0,
+      "predicted_value": 280.0,
+      "target_value": 450.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-002",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(20*18+9*11) - 90 - 41",
+      "tool_value": 328.0,
+      "predicted_value": 328.0,
+      "target_value": 508.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-003",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(21 * 19) + (10 * 9) - 95 - 44",
+      "tool_value": 350.0,
+      "predicted_value": 350.0,
+      "target_value": 540.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-004",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(22 * 16) + (11 * 10) - 47",
+      "tool_value": 415.0,
+      "predicted_value": 415.0,
+      "target_value": 515.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-005",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(23 * 17) + (7 * 11) - 105 - 50",
+      "tool_value": 313.0,
+      "predicted_value": 313.0,
+      "target_value": 523.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-006",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(24*18+8*9)-110+53",
+      "tool_value": 447.0,
+      "predicted_value": 447.0,
+      "target_value": 561.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-007",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(25 * 19) + (9 * 10) - 56",
+      "tool_value": 509.0,
+      "predicted_value": 509.0,
+      "target_value": 624.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-008",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "success",
+      "expression": "(26*16+10*11+120-59)",
+      "tool_value": 587.0,
+      "predicted_value": 587.0,
+      "target_value": 587.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-009",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(27 * 17) + (11 * 9) - 62",
+      "tool_value": 496.0,
+      "predicted_value": 496.0,
+      "target_value": 621.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-010",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(28 * 18) + (7 * 10) - 130 + 65",
+      "tool_value": 509.0,
+      "predicted_value": 509.0,
+      "target_value": 639.0
+    },
+    {
+      "task_id": "holdout-v1-event-net-cost-011",
+      "family_id": "holdout-v1-event-net-cost",
+      "category": "wrong_tool_result",
+      "expression": "(29 * 19) + (8 * 11) - 135 + 68",
+      "tool_value": 572.0,
+      "predicted_value": 572.0,
+      "target_value": 706.0
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-000",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "tool_execution_failed",
+      "expression": "(3*18+2*5)+6%*((3*18+2*5)+8)",
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 75.84
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-001",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "tool_execution_failed",
+      "expression": "(4*19+3*6)+7%*((4*19+3*6)+9)",
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 109.58000000000001
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-002",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(5*20+4*5)*0.08+10",
+      "tool_value": 19.6,
+      "predicted_value": 19.6,
+      "target_value": 139.60000000000002
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-003",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(6*21+2*6)*0.99+11",
+      "tool_value": 147.62,
+      "predicted_value": 147.62,
+      "target_value": 161.42000000000002
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-004",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "tool_execution_failed",
+      "expression": "(3*22+3*5)+6%*((3*22+3*5)+12)",
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 97.86
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-005",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "tool_execution_failed",
+      "expression": "(4*23+4*6)+7%*((4*23+4*6)+13)",
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 137.12
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-006",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(5*24+2*5)*0.08+14",
+      "tool_value": 24.4,
+      "predicted_value": 24.4,
+      "target_value": 154.4
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-007",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(6*25+3*6)*0.99+15",
+      "tool_value": 181.32,
+      "predicted_value": 181.32,
+      "target_value": 198.12
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-008",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "tool_execution_failed",
+      "expression": "(3*26+4*5)+6%*((3*26+4*5)+16)",
+      "tool_value": null,
+      "predicted_value": null,
+      "target_value": 119.88000000000001
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-009",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(4*27+2*6)*0.07+17",
+      "tool_value": 25.4,
+      "predicted_value": 25.4,
+      "target_value": 145.4
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-010",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(5*28+3*5)*0.08+18",
+      "tool_value": 30.4,
+      "predicted_value": 30.4,
+      "target_value": 185.4
+    },
+    {
+      "task_id": "holdout-v1-service-tax-tip-011",
+      "family_id": "holdout-v1-service-tax-tip",
+      "category": "wrong_tool_result",
+      "expression": "(6*29+4*6)*0.99+19",
+      "tool_value": 215.02,
+      "predicted_value": 215.02,
+      "target_value": 234.82000000000002
+    }
+  ]
+}

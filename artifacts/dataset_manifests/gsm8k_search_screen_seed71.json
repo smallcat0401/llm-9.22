@@ -1,0 +1,18 @@
+{
+  "dataset": "GSM8K",
+  "generated_dataset": "data/generated/gsm8k_search_screen_seed71.jsonl",
+  "generated_sha256": "4a846b00eb3e61516274e4350d7db0023924fb59236be3ccc27946e2dd05f4cb",
+  "license": "MIT",
+  "paired_task_count": 200,
+  "purpose": "train-only Qwen3.5-4B search-gap screen",
+  "source_example_count": 100,
+  "source_path": "data/external/gsm8k/train.jsonl",
+  "source_record_count": 7473,
+  "source_sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+  "source_split": "train",
+  "subset_seed": 71,
+  "task_counts": {
+    "calculator": 100,
+    "no_tool": 100
+  }
+}

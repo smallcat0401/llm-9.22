@@ -1,0 +1,22 @@
+[sft]
+run_id = "qwen3.5-0.8b-qlora-sft-full80-corrected-seed7"
+model_id = "Qwen/Qwen3.5-0.8B"
+dataset_path = "data/generated/sft_train_path_aligned_seed7.jsonl"
+output_dir = "outputs/sft/qwen3_5_0_8b_qlora_full80_corrected_seed7/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_0_8b_qlora_sft_full80_corrected_seed7.json"
+seed = 7
+sample_count = 80
+max_length = 1024
+max_steps = 160
+learning_rate = 0.0001
+batch_size = 2
+gradient_accumulation_steps = 4
+max_grad_norm = 1.0
+lora_rank = 8
+lora_alpha = 16
+lora_dropout = 0.0
+target_modules = [
+  "q_proj", "k_proj", "v_proj", "o_proj",
+  "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "out_proj",
+  "gate_proj", "up_proj", "down_proj",
+]

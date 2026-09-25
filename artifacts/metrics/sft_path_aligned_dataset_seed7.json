@@ -1,0 +1,31 @@
+{
+  "status": "final_pretraining_sft_dataset",
+  "source_run": "qwen3.5-0.8b-train-best-of-4-seed7",
+  "source_split": "train",
+  "curation_rule": "first strict success with clean task-aligned tool behavior",
+  "candidate_records": 600,
+  "strict_success_candidates": 128,
+  "path_aligned_success_candidates": 124,
+  "selected_examples": 80,
+  "unique_example_ids": 80,
+  "non_train_examples": 0,
+  "tool_tasks_without_tool": 0,
+  "no_tool_tasks_with_tool": 0,
+  "sha256": "95CD1AF0AEBC4BB80608E9C2DA205DFA5E7FA4645E02E4E181F94609A02520AB",
+  "by_kind": {
+    "no_tool": 13,
+    "calculator": 37,
+    "sql": 30
+  },
+  "by_family": {
+    "direct-percent-v1": 13,
+    "calculator-average-v1": 21,
+    "calculator-discount-v1": 16,
+    "sql-region-month-revenue-v1": 18,
+    "sql-region-month-average-price-v1": 12
+  },
+  "message_shapes": {
+    "no_tool_three_message": 13,
+    "tool_five_message": 67
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "conclusion": "The result-aware GRPO run improves sampled percent-change stability but does not improve external GSM8K accuracy. It is a useful local diagnostic, not evidence of broad RL generalization.",
+  "training": {
+    "steps": 13,
+    "groups_with_nonzero_reward_std": 6,
+    "groups_with_zero_reward_std": 7,
+    "changed_trainable_tensors": 372,
+    "max_parameter_delta": 0.00012200698256492615,
+    "peak_cuda_memory_mib": 3981.99951171875,
+    "elapsed_seconds": 133.120611499995
+  },
+  "native_percent_change": {
+    "greedy": {
+      "native37_control_effective_success": 25,
+      "post_grpo_effective_success": 25,
+      "tasks": 25
+    },
+    "sample4": {
+      "native37_control_effective_successful_episodes": 65,
+      "post_grpo_effective_successful_episodes": 72,
+      "native37_control_effective_pass_at_4": 24,
+      "post_grpo_effective_pass_at_4": 24,
+      "native37_control_outcome_successful_episodes": 70,
+      "post_grpo_outcome_successful_episodes": 80,
+      "native37_control_outcome_pass_at_4": 24,
+      "post_grpo_outcome_pass_at_4": 25,
+      "episodes": 100,
+      "tasks": 25
+    }
+  },
+  "custom_protocol_v3_rescored": {
+    "corrected_full80": 75,
+    "native37_control": 75,
+    "post_grpo": 75,
+    "tasks": 75
+  },
+  "gsm8k_external": {
+    "native37_control": {"success": 21, "calculator": 16, "no_tool": 5, "protocol_errors": 11, "tasks": 200},
+    "post_grpo": {"success": 20, "calculator": 15, "no_tool": 5, "protocol_errors": 10, "tasks": 200}
+  }
+}

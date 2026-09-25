@@ -1,0 +1,39 @@
+{
+  "status": "validation_gate_failed_keep_native37_as_formal_branch",
+  "data": {
+    "tasks": 120,
+    "families": 10,
+    "train": 72,
+    "validation": 24,
+    "test": 24,
+    "split_rule": "family-level explicit assignment",
+    "training_provenance": "deterministic synthetic reference programs; not Best-of-N trajectories"
+  },
+  "training": {
+    "initial_loss": 0.2053266732643048,
+    "final_loss": 0.0000573342922507436,
+    "loss_reduction_fraction": 0.9997207654936436,
+    "peak_cuda_memory_mib": 4857.16015625,
+    "elapsed_seconds": 364.7954049000109
+  },
+  "validation": {
+    "native37_control": {"success": 12, "tasks": 24},
+    "post_sft": {"success": 12, "tasks": 24}
+  },
+  "test": {
+    "native37_control": {
+      "success": 2,
+      "tasks": 24,
+      "overtime_take_home": 2,
+      "mixture_concentration": 0
+    },
+    "post_sft": {
+      "success": 12,
+      "tasks": 24,
+      "overtime_take_home": 0,
+      "mixture_concentration": 12,
+      "tool_execution_failures": 4
+    }
+  },
+  "conclusion": "Reference-program SFT transfers the percentage/weighted-mixture skill but not uniformly: validation is flat and overtime performance regresses. Do not promote this adapter to the formal branch."
+}

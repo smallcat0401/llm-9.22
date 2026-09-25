@@ -1,0 +1,58 @@
+{
+  "status": "measured",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "seed": 7,
+  "external_gsm8k_paired_200": {
+    "protocol": {
+      "max_model_turns": 5,
+      "max_new_tokens": 256,
+      "max_tool_calls": 4
+    },
+    "pre_sft": {
+      "protocol_error_count": 200,
+      "task_success_count": 0,
+      "task_success_rate": 0.0,
+      "tool_selection_accuracy": 0.5,
+      "verifier_pass_count": 4
+    },
+    "post_sft": {
+      "protocol_error_count": 10,
+      "task_success_count": 24,
+      "task_success_rate": 0.12,
+      "tool_selection_accuracy": 0.95,
+      "verifier_pass_count": 24
+    }
+  },
+  "internal_family_held_out_test_75": {
+    "pre_sft": {
+      "by_kind_successes": {"calculator": 1, "no_tool": 0, "sql": 17},
+      "protocol_error_count": 32,
+      "task_success_count": 18,
+      "task_success_rate": 0.24
+    },
+    "post_sft": {
+      "by_kind_successes": {"calculator": 4, "no_tool": 24, "sql": 0},
+      "protocol_error_count": 0,
+      "task_success_count": 28,
+      "task_success_rate": 0.37333333333333335
+    },
+    "post_grpo_mini": {
+      "by_kind_successes": {"calculator": 4, "no_tool": 25, "sql": 0},
+      "protocol_error_count": 0,
+      "task_success_count": 29,
+      "task_success_rate": 0.38666666666666666
+    }
+  },
+  "grpo_mini_diagnostic": {
+    "changed_trainable_tensors": 372,
+    "max_parameter_delta": 0.0001220703125,
+    "mean_sampled_outcome_reward": 0.5125,
+    "nonzero_advantage_steps": 1,
+    "reward_steps": 20
+  },
+  "interpretation": {
+    "supported": "SFT strongly improved typed-protocol adherence and overall strict success on both frozen evaluations.",
+    "important_regression": "Internal held-out SQL success fell from 17/25 to 0/25; all post-SFT SQL queries omitted aggregation and returned multiple row values.",
+    "not_supported": "The mini GRPO run is not evidence of stable RL improvement because only 1 of 20 groups had non-zero reward variance."
+  }
+}

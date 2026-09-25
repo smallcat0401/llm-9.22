@@ -1,0 +1,9 @@
+{
+  "dataset": "data/generated/calculator_final_holdout_v1.jsonl",
+  "evaluation_only": true,
+  "families": 3,
+  "generation": {"examples_per_family": 12, "generator": "generate_calculator_holdout_v1"},
+  "sha256": "35fea2c45e3dedce50310238e859e47b159148562e5949255c8255d3a924de84",
+  "split": "test",
+  "tasks": 36
+}

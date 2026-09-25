@@ -1,0 +1,18 @@
+[grpo]
+run_id = "qwen3.5-0.8b-grpo-broad-no-tool-37step-seed29"
+model_id = "Qwen/Qwen3.5-0.8B"
+adapter_path = "outputs/sft/qwen3_5_0_8b_qlora_full_seed7/adapter"
+dataset_path = "data/generated/pilot_tasks.jsonl"
+sft_dataset_path = "data/generated/sft_train_path_aligned_seed7.jsonl"
+output_dir = "outputs/grpo/qwen3_5_0_8b_broad_no_tool_37step_seed29/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_0_8b_grpo_broad_no_tool_37step_seed29.json"
+seed = 29
+prompt_count = 37
+max_steps = 37
+num_generations = 16
+max_completion_length = 96
+learning_rate = 0.000001
+temperature = 1.8
+top_p = 0.98
+format_reward_weight = 0.1
+closeness_reward_weight = 0.25

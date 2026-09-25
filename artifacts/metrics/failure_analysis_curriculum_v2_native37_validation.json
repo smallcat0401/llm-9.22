@@ -1,0 +1,206 @@
+{
+  "record_count": 24,
+  "category_counts": {
+    "success": 12,
+    "no_tool_call": 0,
+    "tool_execution_failed": 0,
+    "wrong_tool_result": 12,
+    "invalid_final": 0,
+    "correct_tool_result_bad_final": 0,
+    "protocol_error": 0
+  },
+  "records": [
+    {
+      "task_id": "curriculum-v2-weighted-grade-000",
+      "category": "success",
+      "expression": "(70*0.50)+(80*0.35)+(60*0.15)",
+      "tool_value": 72.0,
+      "predicted_value": 72.0,
+      "target_value": 72.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-001",
+      "category": "success",
+      "expression": "(71*0.50)+(81*0.35)+(61*0.15)",
+      "tool_value": 73.0,
+      "predicted_value": 73.0,
+      "target_value": 73.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-002",
+      "category": "success",
+      "expression": "(72*0.50)+(82*0.35)+(62*0.15)",
+      "tool_value": 74.0,
+      "predicted_value": 74.0,
+      "target_value": 74.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-003",
+      "category": "success",
+      "expression": "(73*0.50)+(83*0.35)+(63*0.15)",
+      "tool_value": 75.0,
+      "predicted_value": 75.0,
+      "target_value": 75.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-004",
+      "category": "success",
+      "expression": "(74*0.50)+(84*0.35)+(64*0.15)",
+      "tool_value": 76.0,
+      "predicted_value": 76.0,
+      "target_value": 76.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-005",
+      "category": "success",
+      "expression": "(75*0.50)+(85*0.35)+(65*0.15)",
+      "tool_value": 77.0,
+      "predicted_value": 77.0,
+      "target_value": 77.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-006",
+      "category": "success",
+      "expression": "(76*0.50)+(86*0.35)+(66*0.15)",
+      "tool_value": 78.0,
+      "predicted_value": 78.0,
+      "target_value": 78.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-007",
+      "category": "success",
+      "expression": "(77*0.50)+(87*0.35)+(67*0.15)",
+      "tool_value": 79.0,
+      "predicted_value": 79.0,
+      "target_value": 79.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-008",
+      "category": "success",
+      "expression": "(78*0.50)+(88*0.35)+(68*0.15)",
+      "tool_value": 80.0,
+      "predicted_value": 80.0,
+      "target_value": 80.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-009",
+      "category": "success",
+      "expression": "(79*0.50)+(89*0.35)+(69*0.15)",
+      "tool_value": 81.0,
+      "predicted_value": 81.0,
+      "target_value": 81.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-010",
+      "category": "success",
+      "expression": "(0.5*80) + (0.35*90) + (0.15*70)",
+      "tool_value": 82.0,
+      "predicted_value": 82.0,
+      "target_value": 82.0
+    },
+    {
+      "task_id": "curriculum-v2-weighted-grade-011",
+      "category": "success",
+      "expression": "(81*0.50)+(91*0.35)+(71*0.15)",
+      "tool_value": 83.0,
+      "predicted_value": 83.0,
+      "target_value": 83.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-000",
+      "category": "wrong_tool_result",
+      "expression": "100 + 2 * 30 + 7 * 3",
+      "tool_value": 181.0,
+      "predicted_value": 181.0,
+      "target_value": 139.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-001",
+      "category": "wrong_tool_result",
+      "expression": "105 + 3 * 31 + 8 * 4",
+      "tool_value": 230.0,
+      "predicted_value": 230.0,
+      "target_value": 166.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-002",
+      "category": "wrong_tool_result",
+      "expression": "110 + 4 * 32 + 9 * 5",
+      "tool_value": 283.0,
+      "predicted_value": 283.0,
+      "target_value": 193.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-003",
+      "category": "wrong_tool_result",
+      "expression": "115 + 2 * 33 + 10 * 6",
+      "tool_value": 241.0,
+      "predicted_value": 241.0,
+      "target_value": 121.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-004",
+      "category": "wrong_tool_result",
+      "expression": "120 + 3*34 + 7*7",
+      "tool_value": 271.0,
+      "predicted_value": 271.0,
+      "target_value": 173.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-005",
+      "category": "wrong_tool_result",
+      "expression": "125 + 4 * 35 + 8 * 3",
+      "tool_value": 289.0,
+      "predicted_value": 289.0,
+      "target_value": 241.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-006",
+      "category": "wrong_tool_result",
+      "expression": "130 + 2 * 36 + 9 * 4",
+      "tool_value": 238.0,
+      "predicted_value": 238.0,
+      "target_value": 166.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-007",
+      "category": "wrong_tool_result",
+      "expression": "135 + 3 * 37 + 10 * 5",
+      "tool_value": 296.0,
+      "predicted_value": 296.0,
+      "target_value": 196.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-008",
+      "category": "wrong_tool_result",
+      "expression": "140 + 4 * 38 + 7 * 6",
+      "tool_value": 334.0,
+      "predicted_value": 334.0,
+      "target_value": 250.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-009",
+      "category": "wrong_tool_result",
+      "expression": "145 + 2 * 39 + 8 * 7",
+      "tool_value": 279.0,
+      "predicted_value": 279.0,
+      "target_value": 167.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-010",
+      "category": "wrong_tool_result",
+      "expression": "150 + 3 * 40 + 9 * 3",
+      "tool_value": 297.0,
+      "predicted_value": 297.0,
+      "target_value": 243.0
+    },
+    {
+      "task_id": "curriculum-v2-tank-balance-011",
+      "category": "wrong_tool_result",
+      "expression": "155 + 4 * 41 + 10 * 4",
+      "tool_value": 359.0,
+      "predicted_value": 359.0,
+      "target_value": 279.0
+    }
+  ]
+}

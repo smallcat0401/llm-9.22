@@ -1,0 +1,23 @@
+[sft]
+run_id = "qwen3.5-0.8b-native-calculator-sft-full-seed43"
+model_id = "Qwen/Qwen3.5-0.8B"
+adapter_path = "outputs/sft/qwen3_5_0_8b_qlora_full_seed7/adapter"
+dataset_path = "data/generated/sft_native_calculator_seed7.jsonl"
+output_dir = "outputs/sft/qwen3_5_0_8b_native_calculator_full_seed43/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_0_8b_native_calculator_sft_full_seed43.json"
+seed = 43
+sample_count = 37
+max_length = 768
+max_steps = 80
+learning_rate = 0.00005
+batch_size = 2
+gradient_accumulation_steps = 4
+max_grad_norm = 1.0
+lora_rank = 8
+lora_alpha = 16
+lora_dropout = 0.0
+target_modules = [
+  "q_proj", "k_proj", "v_proj", "o_proj",
+  "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "out_proj",
+  "gate_proj", "up_proj", "down_proj",
+]

@@ -1,0 +1,23 @@
+[grpo]
+run_id = "qwen3.5-0.8b-grpo-curriculum-20step-seed17"
+model_id = "Qwen/Qwen3.5-0.8B"
+adapter_path = "outputs/sft/qwen3_5_0_8b_qlora_full_seed7/adapter"
+dataset_path = "data/generated/pilot_tasks.jsonl"
+sft_dataset_path = "data/generated/sft_train_path_aligned_seed7.jsonl"
+output_dir = "outputs/grpo/qwen3_5_0_8b_curriculum_20step_seed17/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_0_8b_grpo_curriculum_20step_seed17.json"
+seed = 17
+prompt_count = 4
+task_ids = [
+  "direct-subtract-v1-013",
+  "direct-subtract-v1-002",
+  "direct-subtract-v1-017",
+  "direct-percent-v1-019",
+]
+max_steps = 20
+num_generations = 8
+max_completion_length = 96
+learning_rate = 0.000005
+temperature = 1.2
+top_p = 0.95
+format_reward_weight = 0.1

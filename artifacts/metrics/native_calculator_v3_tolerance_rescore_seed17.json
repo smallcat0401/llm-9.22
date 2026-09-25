@@ -1,0 +1,18 @@
+{
+  "protocol": "offline-rescore-current-task-tolerance-v3",
+  "source_generation": "native-v2 saved records; no model regeneration",
+  "task_change": {
+    "family": "calculator-percent-change-v1",
+    "old_tolerance": 0.000001,
+    "new_tolerance": 0.005,
+    "reason": "accept a correctly rounded two-decimal percentage as stated by the current prompt"
+  },
+  "greedy": {
+    "full80_control": {"outcome_success": 3, "structured_tool_calls": 0, "effective_tool_path_success": 0, "tasks": 25},
+    "full80_then_native37": {"outcome_success": 25, "structured_tool_calls": 25, "effective_tool_path_success": 25, "tasks": 25}
+  },
+  "sample4": {
+    "full80_control": {"outcome_successful_episodes": 7, "outcome_pass_at_4": 5, "effective_tool_path_episodes": 2, "effective_tool_path_pass_at_4": 2, "episodes": 100, "tasks": 25},
+    "full80_then_native37": {"outcome_successful_episodes": 70, "outcome_pass_at_4": 24, "effective_tool_path_episodes": 65, "effective_tool_path_pass_at_4": 24, "wrong_tool_result_episodes": 32, "tool_execution_failed_episodes": 3, "episodes": 100, "tasks": 25}
+  }
+}

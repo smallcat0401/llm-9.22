@@ -1,0 +1,87 @@
+{
+  "status": "measured",
+  "model": "Qwen/Qwen3.5-4B",
+  "quantization": "bitsandbytes NF4 4-bit",
+  "batches": [
+    {
+      "run_id": "qwen3.5-4b-search-gap-formal-seed71",
+      "source_questions": 50,
+      "tasks": 100,
+      "pass_at_1_count": 10,
+      "pass_at_8_count": 43,
+      "absolute_search_gain": 0.33,
+      "path_aligned_selected": 40
+    },
+    {
+      "run_id": "qwen3.5-4b-search-expand-batch2-seed73",
+      "source_questions": 50,
+      "tasks": 100,
+      "pass_at_1_count": 19,
+      "pass_at_8_count": 42,
+      "absolute_search_gain": 0.23,
+      "path_aligned_selected": 32
+    },
+    {
+      "run_id": "qwen3.5-4b-search-expand-batch3-seed97",
+      "source_questions": 50,
+      "tasks": 100,
+      "pass_at_1_count": 14,
+      "pass_at_8_count": 46,
+      "absolute_search_gain": 0.32,
+      "path_aligned_selected": 40
+    }
+  ],
+  "aggregate": {
+    "distinct_source_questions": 150,
+    "condition_specific_tasks": 300,
+    "candidate_episodes": 2400,
+    "pass_at_1": {
+      "count": 43,
+      "rate": 0.14333333333333334
+    },
+    "pass_at_8": {
+      "count": 131,
+      "rate": 0.43666666666666665
+    },
+    "absolute_search_gain": 0.29333333333333333,
+    "verified_candidate_count": 381,
+    "verified_candidate_yield": 0.15875,
+    "by_condition": {
+      "no_tool": {
+        "tasks": 150,
+        "pass_at_1_count": 14,
+        "pass_at_1": 0.09333333333333334,
+        "pass_at_8_count": 43,
+        "pass_at_8": 0.2866666666666667,
+        "absolute_search_gain": 0.19333333333333333
+      },
+      "calculator": {
+        "tasks": 150,
+        "pass_at_1_count": 29,
+        "pass_at_1": 0.19333333333333333,
+        "pass_at_8_count": 88,
+        "pass_at_8": 0.5866666666666667,
+        "absolute_search_gain": 0.3933333333333333
+      }
+    }
+  },
+  "sft_dataset": {
+    "path": "data/generated/qwen3_5_4b_sft_train_path_aligned_merged112.jsonl",
+    "examples": 112,
+    "no_tool": 43,
+    "calculator": 69,
+    "with_tool_messages": 69,
+    "sha256": "7195515C94F5DC46616A33331147C7C9337953F77BF6E4B8E3D48B384C509B58"
+  },
+  "runtime": {
+    "total_search_seconds": 3399.665,
+    "total_model_load_seconds": 98.865,
+    "maximum_cuda_peak_memory_mib": 3346.7
+  },
+  "raw_metrics_hashes_sha256": {
+    "batch1": "65AB6D7E420DB73D2729D796A433FE204FCD873B662FA055CF018959CFCC0FD0",
+    "batch2": "CA60E9080A74B5A69251B71D0C89C895D0609E9EFB1CC357BDEAA6DC782284E0",
+    "batch3": "8EBC4256635172C67F94A0833CC9041EFF786298DCE5F31ECA6CE82601C911D5"
+  },
+  "interpretation": "Three source-disjoint batches independently pass the search gate. This demonstrates a repeatable search gap and provides SFT candidates; it does not yet demonstrate post-SFT pass@1 improvement."
+}

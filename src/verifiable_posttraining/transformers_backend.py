@@ -52,7 +52,9 @@ class TransformersPolicy:
         model_id: str,
         *,
         cache_dir: str | None = None,
+        adapter_path: str | None = None,
         local_files_only: bool = True,
+        load_in_4bit: bool = False,
         settings: GenerationSettings | None = None,
     ) -> "TransformersPolicy":
         from transformers import AutoModelForMultimodalLM, AutoProcessor
@@ -62,14 +64,33 @@ class TransformersPolicy:
             cache_dir=cache_dir,
             local_files_only=local_files_only,
         )
-        model = AutoModelForMultimodalLM.from_pretrained(
-            model_id,
-            cache_dir=cache_dir,
-            local_files_only=local_files_only,
-            device_map="auto",
-            dtype="auto",
-            low_cpu_mem_usage=True,
-        )
+        model_kwargs: dict[str, Any] = {
+            "cache_dir": cache_dir,
+            "local_files_only": local_files_only,
+            "device_map": "auto",
+            "dtype": "auto",
+            "low_cpu_mem_usage": True,
+        }
+        if load_in_4bit:
+            import torch
+            from transformers import BitsAndBytesConfig
+
+            model_kwargs["quantization_config"] = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_compute_dtype=torch.bfloat16,
+                bnb_4bit_use_double_quant=True,
+            )
+        model = AutoModelForMultimodalLM.from_pretrained(model_id, **model_kwargs)
+        if adapter_path is not None:
+            from peft import PeftModel
+
+            model = PeftModel.from_pretrained(
+                model,
+                adapter_path,
+                is_trainable=False,
+                local_files_only=local_files_only,
+            )
         model.eval()
         return cls(processor, model, settings=settings)
 

@@ -1,0 +1,65 @@
+{
+  "config": {
+    "adapter_path": "outputs/grpo/qwen3_5_0_8b_mini_20step_seed7/adapter",
+    "dataset": "data/generated/pilot_tasks.jsonl",
+    "kinds": [
+      "calculator",
+      "no_tool",
+      "sql"
+    ],
+    "max_model_turns": 3,
+    "max_new_tokens": 256,
+    "max_tool_calls": 2,
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "run_id": "qwen3.5-0.8b-pilot-test-post-grpo-mini-seed7",
+    "seed": 7,
+    "splits": [
+      "test"
+    ]
+  },
+  "metrics": {
+    "average_recorded_tool_calls": 0.6666666666666666,
+    "failed_tool_call_count": 0,
+    "invalid_tool_call_rate": 0.0,
+    "no_tool_task_count": 25,
+    "over_tool_rate": 0.0,
+    "over_tool_task_count": 0,
+    "protocol_error_count": 0,
+    "protocol_error_rate": 0.0,
+    "recorded_tool_call_count": 50,
+    "rejected_tool_call_count": 0,
+    "success_by_kind": {
+      "calculator": {
+        "success_rate": 0.16,
+        "successes": 4,
+        "tasks": 25
+      },
+      "no_tool": {
+        "success_rate": 1.0,
+        "successes": 25,
+        "tasks": 25
+      },
+      "sql": {
+        "success_rate": 0.0,
+        "successes": 0,
+        "tasks": 25
+      }
+    },
+    "task_count": 75,
+    "task_success_count": 29,
+    "task_success_rate": 0.38666666666666666,
+    "termination_counts": {
+      "final_answer": 75
+    },
+    "tool_selection_accuracy": 1.0,
+    "tool_selection_correct_count": 75,
+    "verifier_pass_count": 29,
+    "verifier_pass_rate": 0.38666666666666666
+  },
+  "runtime": {
+    "average_episode_seconds": 2.564,
+    "cuda_peak_memory_mib": 1722.1,
+    "evaluation_seconds": 192.289,
+    "load_seconds": 6.676
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "record_count": 24,
+  "category_counts": {
+    "success": 2,
+    "no_tool_call": 0,
+    "tool_execution_failed": 0,
+    "wrong_tool_result": 22,
+    "invalid_final": 0,
+    "correct_tool_result_bad_final": 0,
+    "protocol_error": 0
+  },
+  "records": [
+    {
+      "task_id": "curriculum-v2-overtime-take-home-000",
+      "category": "wrong_tool_result",
+      "expression": "(14 * 32 + 1.5 * 4) * 0.9",
+      "tool_value": 408.6,
+      "predicted_value": 408.6,
+      "target_value": 478.8
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-001",
+      "category": "wrong_tool_result",
+      "expression": "(15 * 33 + 1.5 * 5) * 0.88",
+      "tool_value": 442.2,
+      "predicted_value": 442.2,
+      "target_value": 534.6
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-002",
+      "category": "wrong_tool_result",
+      "expression": "(16 * 34 + 1.5 * 6) * 0.86",
+      "tool_value": 475.58,
+      "predicted_value": 475.58,
+      "target_value": 591.68
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-003",
+      "category": "wrong_tool_result",
+      "expression": "(17 * 35 + 1.5 * 7) * 0.16",
+      "tool_value": 96.88,
+      "predicted_value": 96.88,
+      "target_value": 649.74
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-004",
+      "category": "wrong_tool_result",
+      "expression": "(18 * 36 + 1.5 * 8) * 0.9",
+      "tool_value": 594.0,
+      "predicted_value": 594.0,
+      "target_value": 777.6
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-005",
+      "category": "success",
+      "expression": "(19 * 37 + 19 * 4 * 1.5) * 0.88",
+      "tool_value": 718.96,
+      "predicted_value": 718.96,
+      "target_value": 718.96
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-006",
+      "category": "wrong_tool_result",
+      "expression": "(20*38+20*5)*1.14",
+      "tool_value": 980.4,
+      "predicted_value": 980.4,
+      "target_value": 782.6
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-007",
+      "category": "wrong_tool_result",
+      "expression": "(21 * 32 + 21 * 32 * 1.5) * 0.16",
+      "tool_value": 268.8,
+      "predicted_value": 268.8,
+      "target_value": 723.24
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-008",
+      "category": "success",
+      "expression": "(22 * 33 + 22 * 7 * 1.5) * 0.9",
+      "tool_value": 861.3,
+      "predicted_value": 861.3,
+      "target_value": 861.3000000000001
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-009",
+      "category": "wrong_tool_result",
+      "expression": "(23 * 34 + 23 * 34 * 1.5) * 0.12",
+      "tool_value": 234.6,
+      "predicted_value": 234.6,
+      "target_value": 931.04
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-010",
+      "category": "wrong_tool_result",
+      "expression": "(24*35+24*1.5*4)*0.84",
+      "tool_value": 826.56,
+      "predicted_value": 826.56,
+      "target_value": 846.24
+    },
+    {
+      "task_id": "curriculum-v2-overtime-take-home-011",
+      "category": "wrong_tool_result",
+      "expression": "(25*36+25*1.5*5)*0.16",
+      "tool_value": 174.0,
+      "predicted_value": 174.0,
+      "target_value": 913.5
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-000",
+      "category": "wrong_tool_result",
+      "expression": "(8*0.20+5*0.50)/9",
+      "tool_value": 0.45555555555555555,
+      "predicted_value": 0.46,
+      "target_value": 31.538461538461537
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-001",
+      "category": "wrong_tool_result",
+      "expression": "(9*0.25+6*0.55)/11",
+      "tool_value": 0.5045454545454545,
+      "predicted_value": 0.5,
+      "target_value": 37.0
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-002",
+      "category": "wrong_tool_result",
+      "expression": "(10*0.30+7*0.60)/17",
+      "tool_value": 0.4235294117647059,
+      "predicted_value": 42.35,
+      "target_value": 42.35294117647059
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-003",
+      "category": "wrong_tool_result",
+      "expression": "(11*0.20+8*0.65)/19",
+      "tool_value": 0.3894736842105263,
+      "predicted_value": 0.39,
+      "target_value": 38.94736842105264
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-004",
+      "category": "wrong_tool_result",
+      "expression": "(12*0.25+9*0.50)/21",
+      "tool_value": 0.35714285714285715,
+      "predicted_value": 35.71,
+      "target_value": 35.714285714285715
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-005",
+      "category": "wrong_tool_result",
+      "expression": "(13*0.30+10*0.55)/23",
+      "tool_value": 0.40869565217391307,
+      "predicted_value": 40.87,
+      "target_value": 40.869565217391305
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-006",
+      "category": "wrong_tool_result",
+      "expression": "(14 * 0.20 + 5 * 0.60) / (14 + 5)",
+      "tool_value": 0.30526315789473685,
+      "predicted_value": 30.53,
+      "target_value": 30.526315789473685
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-007",
+      "category": "wrong_tool_result",
+      "expression": "(15 * 0.25) + (6 * 0.65)",
+      "tool_value": 7.65,
+      "predicted_value": 7.65,
+      "target_value": 36.42857142857143
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-008",
+      "category": "wrong_tool_result",
+      "expression": "(16*0.30+7*0.50)/23",
+      "tool_value": 0.36086956521739133,
+      "predicted_value": 36.09,
+      "target_value": 36.08695652173913
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-009",
+      "category": "wrong_tool_result",
+      "expression": "(17*0.20+8*0.55)/25",
+      "tool_value": 0.312,
+      "predicted_value": 0.312,
+      "target_value": 31.200000000000006
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-010",
+      "category": "wrong_tool_result",
+      "expression": "(18 * 0.25) + (9 * 0.60) / (18 + 9)",
+      "tool_value": 4.7,
+      "predicted_value": 4.7,
+      "target_value": 36.66666666666667
+    },
+    {
+      "task_id": "curriculum-v2-mixture-concentration-011",
+      "category": "wrong_tool_result",
+      "expression": "(19*0.30+10*0.65)/29",
+      "tool_value": 0.4206896551724138,
+      "predicted_value": 0.42,
+      "target_value": 42.068965517241374
+    }
+  ]
+}

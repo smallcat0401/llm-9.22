@@ -1,0 +1,62 @@
+{
+  "record_type": "measured_smoke_failure",
+  "measured_on": "2026-09-23",
+  "environment": {
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0"
+  },
+  "task": {
+    "task_id": "real-model-sql-001",
+    "family_id": "sales-aggregation-sql-v1",
+    "kind": "sql",
+    "split": "test",
+    "allowed_tools": [
+      "sql"
+    ],
+    "ground_truth": {
+      "type": "number",
+      "value": 97.5,
+      "tolerance": 1e-06
+    }
+  },
+  "raw_outputs": [
+    "{\"type\":\"tool_call\",\"name\":\"sql\",\"arguments\":{\"query\":\"SELECT SUM(units * unit_price) FROM sales WHERE region = 'north'\\\"}}"
+  ],
+  "trajectory": {
+    "trajectory_id": "real-model-sql-trajectory-001",
+    "task_id": "real-model-sql-001",
+    "steps": [],
+    "final_answer": "{\"type\":\"tool_call\",\"name\":\"sql\",\"arguments\":{\"query\":\"SELECT SUM(units * unit_price) FROM sales WHERE region = 'north'\\\"}}",
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "seed": 7,
+    "metadata": {
+      "termination_reason": "protocol_error",
+      "protocol_error": "malformed_json",
+      "rejected_tool_calls": 0
+    }
+  },
+  "verification": {
+    "passed": false,
+    "predicted_value": null,
+    "target_value": 97.5,
+    "absolute_error": null,
+    "allowed_error": 1e-06,
+    "error_code": "invalid_answer"
+  },
+  "rollout": {
+    "termination_reason": "protocol_error",
+    "protocol_error": "malformed_json",
+    "task_success": false,
+    "turns": 1
+  },
+  "runtime": {
+    "load_seconds": 5.596,
+    "rollout_seconds": 1.567,
+    "cuda_baseline_memory_mib": 1627.0,
+    "cuda_peak_memory_mib": 1686.2
+  },
+  "diagnosis": "The model produced the correct SQL semantics but malformed JSON escaping at the end of the query string. The strict parser rejected it as designed."
+}
