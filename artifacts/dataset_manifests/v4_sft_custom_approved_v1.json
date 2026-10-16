@@ -1,0 +1,26 @@
+{
+  "dataset": "v4_sft_custom_approved_v1",
+  "status": "frozen",
+  "train_ready": true,
+  "owner_approval_date": "2026-10-06",
+  "owner_review_signal": "owner accepted assistant path audit after excluding one error-first path",
+  "count": 213,
+  "source_counts": {
+    "v3-reviewed": 58,
+    "v4-search-candidate": 114,
+    "v4-manual-zero-pass": 41
+  },
+  "inputs": {
+    "curated_candidates": "data\\review\\v4_sft_paths_curated_v1\\sft_candidates_213.jsonl",
+    "curated_candidates_sha256": "bb07a16e90d0100bb3cc3a2c375b72b437bd39c15b2460f29015d811fe059422",
+    "v4_train_tasks_sha256": "d24a0b360ce7c771d31e05782eabf863a86f43aa349def19a5c0a84ec6423c96",
+    "v3_sft_sha256": "9b3a7f1484308077b071dda98c552ee8c84532a76eec31c4c1fc3d7a7cc974ea",
+    "validation_manifest": "artifacts\\dataset_manifests\\v4_validation_v1.json",
+    "validation_manifest_sha256": "54cb47f94a2771dc9a26fd60c3fea30b929cd76a2b71c27132d3c09529763de5",
+    "test_manifest": "artifacts\\dataset_manifests\\v4_test_v1.json",
+    "test_manifest_sha256": "699e6d4aa54040294216dfa87849823cf0379fbb108762db8495a0b3fb1c8a1d"
+  },
+  "output": "data\\generated\\v4_sft_custom_approved_v1.jsonl",
+  "output_sha256": "52c6f559156f3c8655516602e0d4a97431e200539d1bbda5880c890bdef497ad",
+  "evaluation_limit": "Select checkpoints on validation only; V4 test remains final-only."
+}

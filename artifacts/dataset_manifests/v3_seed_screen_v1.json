@@ -1,0 +1,38 @@
+{
+  "dataset": "v3_seed_screen_v1",
+  "purpose": "pre-generation starting-policy search-gap screen",
+  "not_sft_data": true,
+  "gsm8k_subset_seed": 211,
+  "prior_gsm8k_source_indices_excluded": 200,
+  "summary": {
+    "tasks": 71,
+    "families": 25,
+    "by_split": {
+      "train": 71
+    },
+    "by_kind": {
+      "calculator": 67,
+      "no_tool": 4
+    }
+  },
+  "by_group": {
+    "reviewed_public": 31,
+    "self_written_v2": 20,
+    "fresh_gsm8k_train": 20
+  },
+  "training_eligible": 59,
+  "diagnostic_only": 12,
+  "source_files": {
+    "public_audit": "data\\review\\v3_public_seed_audit_v0.jsonl",
+    "public_audit_sha256": "f3c675c8d6d67cceaed681aa426f5abb8850d935e2708db7e1d0addec1009916",
+    "gsm8k_train": "data\\external\\gsm8k\\train.jsonl",
+    "gsm8k_train_sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+    "excluded_artifacts": [
+      "outputs\\search\\qwen3_5_4b_search_gap_formal_seed71\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_expand_batch2_seed73\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_expand_batch3_seed97\\candidates.jsonl",
+      "data\\generated\\gsm8k_train_validation_seed131.jsonl"
+    ]
+  },
+  "output_sha256": "caee0cca45468395749e1c6fe49a0840b9aed0c179f49fc2b42a8c6a78235132"
+}

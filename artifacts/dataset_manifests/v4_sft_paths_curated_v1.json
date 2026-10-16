@@ -1,0 +1,21 @@
+{
+  "dataset": "v4_sft_paths_curated_v1",
+  "status": "staged_candidate",
+  "train_ready": false,
+  "source": "data\\review\\v4_manual_zero_pass_v1\\v3_v4_search_plus_manual_sft_candidates.jsonl",
+  "source_sha256": "241bb49cafb5cf705c3d8e7c20a8be2034b8fe1da93ef005ae7f82f0eed28749",
+  "train_tasks": "data\\generated\\v4_train_tasks_curated_v2.jsonl",
+  "train_tasks_sha256": "d24a0b360ce7c771d31e05782eabf863a86f43aa349def19a5c0a84ec6423c96",
+  "original_count": 214,
+  "excluded_task_id": "v4-review-curriculum-v2-required-score-002",
+  "exclusion_reason": "first calculator call uses an incorrect formula before self-correction",
+  "owner_decision": "approved exclusion in conversation; other rows not thereby approved for training",
+  "count": 213,
+  "source_counts": {
+    "v3-reviewed": 58,
+    "v4-search-candidate": 114,
+    "v4-manual-zero-pass": 41
+  },
+  "output": "data\\review\\v4_sft_paths_curated_v1\\sft_candidates_213.jsonl",
+  "output_sha256": "bb07a16e90d0100bb3cc3a2c375b72b437bd39c15b2460f29015d811fe059422"
+}

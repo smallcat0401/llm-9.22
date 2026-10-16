@@ -1,0 +1,23 @@
+[probe]
+run_id = "qwen3.5-4b-v4-grpo-reward-probe-seed719"
+model_id = "Qwen/Qwen3.5-4B"
+adapter_path = "outputs/sft/qwen3_5_4b_v4_mixed213_seed113/adapter"
+dataset_path = "data/generated/v4_train_tasks_curated_v2.jsonl"
+expected_dataset_sha256 = "d24a0b360ce7c771d31e05782eabf863a86f43aa349def19a5c0a84ec6423c96"
+expected_task_count = 158
+output_dir = "outputs/grpo_probe/qwen3_5_4b_v4_reward_probe_seed719"
+metrics_path = "artifacts/metrics/qwen3_5_4b_v4_grpo_reward_probe_seed719.json"
+seed = 719
+num_samples = 8
+max_new_tokens = 128
+temperature = 1.4
+top_p = 0.97
+
+# Outcome correctness remains dominant.  The remaining components are bounded
+# diagnostics/supporting rewards and use the previously measured calculator
+# GRPO weights.
+outcome_reward_weight = 1.0
+closeness_reward_weight = 0.25
+format_reward_weight = 0.1
+tool_trace_reward_weight = 0.05
+tool_result_reward_weight = 0.5

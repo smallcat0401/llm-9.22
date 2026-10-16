@@ -1,0 +1,237 @@
+{
+  "dataset": "v4_search_sft_candidates_v0",
+  "status": "pending_semantic_path_review",
+  "protocol": "custom-json-actions-v1",
+  "train_ready": false,
+  "search": {
+    "run_id": "qwen3_5_4b_v4_train_best_of_8_seed509",
+    "task_count": 162,
+    "candidate_count": 1296,
+    "strict_successful_candidates": 459,
+    "strict_successful_tasks": 117,
+    "clean_tool_trajectory_tasks": 115,
+    "strict_success_without_clean_tool_path": 2,
+    "success_count_distribution": {
+      "0": 45,
+      "1": 18,
+      "2": 25,
+      "3": 20,
+      "4": 9,
+      "5": 12,
+      "6": 9,
+      "7": 11,
+      "8": 13
+    }
+  },
+  "family_summary": {
+    "curriculum-v2-cartons-damage": {
+      "tasks": 14,
+      "pass_at_1_count": 3,
+      "pass_at_8_count": 13,
+      "clean_tool_trajectory_tasks": 13
+    },
+    "curriculum-v2-growth-fee": {
+      "tasks": 14,
+      "pass_at_1_count": 12,
+      "pass_at_8_count": 14,
+      "clean_tool_trajectory_tasks": 14
+    },
+    "curriculum-v2-markup-discount": {
+      "tasks": 14,
+      "pass_at_1_count": 10,
+      "pass_at_8_count": 14,
+      "clean_tool_trajectory_tasks": 14
+    },
+    "curriculum-v2-required-score": {
+      "tasks": 14,
+      "pass_at_1_count": 4,
+      "pass_at_8_count": 10,
+      "clean_tool_trajectory_tasks": 8
+    },
+    "curriculum-v2-sales-returns": {
+      "tasks": 14,
+      "pass_at_1_count": 2,
+      "pass_at_8_count": 10,
+      "clean_tool_trajectory_tasks": 10
+    },
+    "curriculum-v2-shared-bill": {
+      "tasks": 14,
+      "pass_at_1_count": 5,
+      "pass_at_8_count": 11,
+      "clean_tool_trajectory_tasks": 11
+    },
+    "v3-public-aggregate_percent_change-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 1,
+      "pass_at_8_count": 4,
+      "clean_tool_trajectory_tasks": 4
+    },
+    "v3-public-aggregate_percent_change_with_loss-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 0,
+      "pass_at_8_count": 5,
+      "clean_tool_trajectory_tasks": 5
+    },
+    "v3-public-average_growth_rate-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 0,
+      "pass_at_8_count": 0,
+      "clean_tool_trajectory_tasks": 0
+    },
+    "v3-public-derived_value_percent_change-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 2,
+      "pass_at_8_count": 4,
+      "clean_tool_trajectory_tasks": 4
+    },
+    "v3-public-difference_of_averages-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 2,
+      "pass_at_8_count": 3,
+      "clean_tool_trajectory_tasks": 3
+    },
+    "v3-public-midpoint_rate_application-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 0,
+      "pass_at_8_count": 1,
+      "clean_tool_trajectory_tasks": 1
+    },
+    "v3-public-multi_period_interest-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 0,
+      "pass_at_8_count": 4,
+      "clean_tool_trajectory_tasks": 4
+    },
+    "v3-public-payout_ratio-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 0,
+      "pass_at_8_count": 3,
+      "clean_tool_trajectory_tasks": 3
+    },
+    "v3-public-ratio_of_aggregates-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 3,
+      "pass_at_8_count": 5,
+      "clean_tool_trajectory_tasks": 5
+    },
+    "v3-public-ratio_of_derived_values-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 4,
+      "pass_at_8_count": 6,
+      "clean_tool_trajectory_tasks": 6
+    },
+    "v3-public-signed_multi_value_average-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 0,
+      "pass_at_8_count": 2,
+      "clean_tool_trajectory_tasks": 2
+    },
+    "v3-public-signed_percent_change-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 1,
+      "pass_at_8_count": 2,
+      "clean_tool_trajectory_tasks": 2
+    },
+    "v3-public-weighted_average-v1": {
+      "tasks": 6,
+      "pass_at_1_count": 4,
+      "pass_at_8_count": 6,
+      "clean_tool_trajectory_tasks": 6
+    }
+  },
+  "v3_rows": 58,
+  "v3_search_rows": 32,
+  "v3_reference_rows": 26,
+  "v4_new": {
+    "examples": 115,
+    "by_kind": {
+      "calculator": 115
+    },
+    "by_family": {
+      "curriculum-v2-sales-returns": 10,
+      "curriculum-v2-markup-discount": 14,
+      "curriculum-v2-required-score": 8,
+      "curriculum-v2-cartons-damage": 13,
+      "curriculum-v2-shared-bill": 11,
+      "curriculum-v2-growth-fee": 14,
+      "v3-public-weighted_average-v1": 6,
+      "v3-public-aggregate_percent_change-v1": 4,
+      "v3-public-aggregate_percent_change_with_loss-v1": 5,
+      "v3-public-derived_value_percent_change-v1": 4,
+      "v3-public-difference_of_averages-v1": 3,
+      "v3-public-midpoint_rate_application-v1": 1,
+      "v3-public-multi_period_interest-v1": 4,
+      "v3-public-payout_ratio-v1": 3,
+      "v3-public-ratio_of_aggregates-v1": 5,
+      "v3-public-ratio_of_derived_values-v1": 6,
+      "v3-public-signed_multi_value_average-v1": 2,
+      "v3-public-signed_percent_change-v1": 2
+    },
+    "with_tool_messages": 115
+  },
+  "proposed_combined": {
+    "examples": 173,
+    "by_kind": {
+      "calculator": 173
+    },
+    "by_family": {
+      "v3-public-weighted_average-v1": 8,
+      "v3-public-aggregate_percent_change-v1": 7,
+      "v3-public-signed_percent_change-v1": 5,
+      "v3-public-signed_multi_value_average-v1": 5,
+      "v3-public-ratio_of_aggregates-v1": 6,
+      "curriculum-v2-sales-returns": 12,
+      "curriculum-v2-markup-discount": 16,
+      "curriculum-v2-required-score": 10,
+      "curriculum-v2-cartons-damage": 15,
+      "curriculum-v2-shared-bill": 13,
+      "curriculum-v2-growth-fee": 16,
+      "v3-gsm8k-public-train-calculator-v1": 19,
+      "v3-public-average_growth_rate-v1": 4,
+      "v3-public-difference_of_averages-v1": 7,
+      "v3-public-derived_value_percent_change-v1": 6,
+      "v3-public-payout_ratio-v1": 4,
+      "v3-public-multi_period_interest-v1": 5,
+      "v3-public-ratio_of_derived_values-v1": 7,
+      "v3-public-aggregate_percent_change_with_loss-v1": 6,
+      "v3-public-midpoint_rate_application-v1": 2
+    },
+    "with_tool_messages": 168
+  },
+  "inputs": {
+    "candidates": {
+      "path": "outputs\\search\\qwen3_5_4b_v4_train_best_of_8_seed509\\candidates.jsonl",
+      "sha256": "d2f916d4d8f394d43c2f6aeb6b9f057cec960532ab7cf82c4d44f96a0924a102"
+    },
+    "metrics": {
+      "path": "outputs\\search\\qwen3_5_4b_v4_train_best_of_8_seed509\\metrics.json",
+      "sha256": "8ec1cced6f0800f73a5335679354c5925676867c7863c8ce0f17de64277c171b"
+    },
+    "v4_train": {
+      "path": "data\\generated\\v4_train_task_candidates_approved_v1.jsonl",
+      "sha256": "bb7ddc0f9ee68f2bc7b9b316a400e4bbbffe8656bdaa871798f4028c98229604"
+    },
+    "v3_sft": {
+      "path": "data\\generated\\v3_mixed_sft_custom_v1.jsonl",
+      "sha256": "9b3a7f1484308077b071dda98c552ee8c84532a76eec31c4c1fc3d7a7cc974ea"
+    },
+    "v4_validation": {
+      "path": "data\\generated\\v4_validation_v1.jsonl",
+      "sha256": "d62dc47ae7027de67c30521327d5f8afb6b88878ffddfe758843820da9093cf0"
+    }
+  },
+  "outputs": {
+    "selected": {
+      "path": "data\\review\\v4_search_sft_candidates_v0\\selected_tool_trajectories.jsonl",
+      "sha256": "87ba2afc7ffec93413ff91efcb3dccd91e42151febde2cbbca644dd10c97b110"
+    },
+    "v4_new": {
+      "path": "data\\review\\v4_search_sft_candidates_v0\\v4_new_sft_candidates.jsonl",
+      "sha256": "ee8d9e20099f708434d9299bad5fd293a6f6ed8fca2ee9d295417a75af269116"
+    },
+    "proposed_combined": {
+      "path": "data\\review\\v4_search_sft_candidates_v0\\v3_plus_v4_sft_candidates.jsonl",
+      "sha256": "2396c34ad08843dc89e7c5f8baf3bb3d13fc9517ef2fd7d7b2eec4bdc4ee805f"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "artifact_type": "validation_checkpoint_selection",
+  "date": "2026-10-05",
+  "selection_rule": [
+    "maximize strict validation task success",
+    "then maximize verifier passes",
+    "then minimize protocol errors",
+    "then minimize average recorded tool calls",
+    "then prefer the earlier epoch"
+  ],
+  "candidate_count": 9,
+  "validation_task_count": 36,
+  "candidates": [
+    {"candidate": "mixed58-epoch3", "strict": 24, "verifier": 24, "protocol_errors": 0, "average_recorded_tool_calls": 1.0, "failed_tool_calls": 0},
+    {"candidate": "reference26-epoch1", "strict": 23, "verifier": 23, "protocol_errors": 0, "average_recorded_tool_calls": 1.0, "failed_tool_calls": 0},
+    {"candidate": "search32-epoch1", "strict": 23, "verifier": 23, "protocol_errors": 3, "average_recorded_tool_calls": 1.3888888888888888, "failed_tool_calls": 0},
+    {"candidate": "search32-epoch3", "strict": 20, "verifier": 20, "protocol_errors": 0, "average_recorded_tool_calls": 0.8888888888888888, "failed_tool_calls": 0},
+    {"candidate": "search32-epoch2", "strict": 19, "verifier": 19, "protocol_errors": 0, "average_recorded_tool_calls": 0.9722222222222222, "failed_tool_calls": 0},
+    {"candidate": "mixed58-epoch2", "strict": 19, "verifier": 19, "protocol_errors": 3, "average_recorded_tool_calls": 0.9722222222222222, "failed_tool_calls": 8},
+    {"candidate": "mixed58-epoch1", "strict": 17, "verifier": 17, "protocol_errors": 0, "average_recorded_tool_calls": 1.0, "failed_tool_calls": 0},
+    {"candidate": "reference26-epoch3", "strict": 17, "verifier": 17, "protocol_errors": 0, "average_recorded_tool_calls": 1.0, "failed_tool_calls": 8},
+    {"candidate": "reference26-epoch2", "strict": 16, "verifier": 16, "protocol_errors": 0, "average_recorded_tool_calls": 1.0, "failed_tool_calls": 0}
+  ],
+  "selected_candidate": "mixed58-epoch3",
+  "selected_adapter_path_on_training_host": "outputs/sft/qwen3_5_4b_v3_mixed58_seed113/adapter",
+  "selection_status": "frozen unique winner among nine adapters",
+  "model_path_alias": {
+    "returned_training_model_id": "Qwen1/Qwen3.5-4B",
+    "frozen_baseline_model_id": "Qwen/Qwen3.5-4B",
+    "resolution": "company host operator confirmed Qwen1 is only the local folder name for the official Qwen/Qwen3.5-4B files",
+    "confirmed_on": "2026-10-05"
+  },
+  "source_archives_sha256": {
+    "dist/artifacts.zip": "e7e778c63939b1f2189a0a8ab3af7a07dfd2cdf7b464f5ae3ca301fbeb1b7737",
+    "dist/eval.zip": "b27248d87eaa398587979855ef632d2477aea0e2894ba3175efd42cefb142df2",
+    "dist/logs.zip": "3074b3512292deae403cf745f3e1817f003d4389d0a063fd27fed1db51e0f8de"
+  }
+}

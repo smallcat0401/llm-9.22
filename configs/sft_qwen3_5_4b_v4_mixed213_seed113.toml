@@ -1,0 +1,28 @@
+[sft]
+run_id = "qwen3.5-4b-v4-mixed213-qlora-seed113"
+model_id = "Qwen/Qwen3.5-4B"
+dataset_path = "data/generated/v4_sft_custom_approved_v1.jsonl"
+output_dir = "outputs/sft/qwen3_5_4b_v4_mixed213_seed113/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_4b_v4_mixed213_seed113.json"
+seed = 113
+sample_count = 213
+max_length = 1536
+
+# Three complete passes through 213 distinct examples. With three gradient
+# accumulation microsteps, each pass ends on an optimizer update.
+max_steps = 639
+learning_rate = 0.0001
+batch_size = 1
+gradient_accumulation_steps = 3
+max_grad_norm = 1.0
+
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.0
+target_modules = [
+  "q_proj", "k_proj", "v_proj", "o_proj",
+  "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "out_proj",
+  "gate_proj", "up_proj", "down_proj",
+]
+
+checkpoint_steps = [213, 426]

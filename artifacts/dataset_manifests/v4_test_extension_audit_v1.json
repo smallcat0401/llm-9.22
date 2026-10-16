@@ -1,0 +1,44 @@
+{
+  "dataset": "v4_test_extension_audit_v1",
+  "status": "pending_owner_review",
+  "evaluation_only": true,
+  "training_eligible": false,
+  "original_frozen_count": 36,
+  "new_candidate_count": 36,
+  "planned_total_if_approved": 72,
+  "new_by_source_group": {
+    "self_written_extension": 32,
+    "public_seed_derived_synthetic": 4
+  },
+  "planned_family_counts": {
+    "v3-eval-test-bonus-deduction-v1": 16,
+    "v3-eval-test-partial-refund-v1": 16,
+    "v3-eval-test-public-bogo-purchase-v1": 2,
+    "v3-eval-test-public-delivery-fee-v1": 2,
+    "v3-eval-test-public-loan-repayment-v1": 2,
+    "v3-eval-test-public-weighted-test-score-v1": 2,
+    "v3-eval-test-route-cost-v1": 16,
+    "v3-eval-test-subscription-overage-v1": 16
+  },
+  "new_wording_patterns_by_family": {
+    "v3-eval-test-subscription-overage-v1": 4,
+    "v3-eval-test-route-cost-v1": 4,
+    "v3-eval-test-partial-refund-v1": 4,
+    "v3-eval-test-bonus-deduction-v1": 4,
+    "v3-eval-test-public-loan-repayment-v1": 1,
+    "v3-eval-test-public-bogo-purchase-v1": 1,
+    "v3-eval-test-public-delivery-fee-v1": 1,
+    "v3-eval-test-public-weighted-test-score-v1": 1
+  },
+  "input_frozen_test": "data\\generated\\v3_test_v1.jsonl",
+  "input_frozen_test_sha256": "9e6613d6f11f3cdc38e90a5b0b6aeddf94b4378b96c5be04116af45e2cf82eae",
+  "previous_pending_audit": "data\\review\\v4_test_extension_audit_v0.jsonl",
+  "previous_pending_audit_sha256": "2928d5e3edca159f78890dba5d75f813ff43f492298db0c5b3d90674e50e3891",
+  "input_train": "data\\generated\\v4_train_tasks_curated_v2.jsonl",
+  "input_train_sha256": "d24a0b360ce7c771d31e05782eabf863a86f43aa349def19a5c0a84ec6423c96",
+  "input_validation": "data\\generated\\v4_validation_v1.jsonl",
+  "input_validation_sha256": "d62dc47ae7027de67c30521327d5f8afb6b88878ffddfe758843820da9093cf0",
+  "output": "data\\review\\v4_test_extension_audit_v1.jsonl",
+  "output_sha256": "02b97f6e65e98be4c3697d765627ad34e636678f10176b366f414aa878531dcd",
+  "review_artifact": "docs\\V4_TEST_EXTENSION_AUDIT_V1_ZH.md"
+}

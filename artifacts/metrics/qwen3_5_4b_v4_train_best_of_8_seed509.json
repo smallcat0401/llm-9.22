@@ -1,0 +1,66 @@
+{
+  "config": {
+    "adapter_path": null,
+    "dataset": "data/generated/v4_train_task_candidates_approved_v1.jsonl",
+    "kinds": ["calculator"],
+    "limit_per_kind": 0,
+    "load_in_4bit": true,
+    "max_model_turns": 3,
+    "max_new_tokens": 256,
+    "max_tool_calls": 2,
+    "model_id": "Qwen/Qwen3.5-4B",
+    "offset_per_kind": 0,
+    "prompt_protocol_version": "v3-sql-scalar-aggregate",
+    "run_id": "qwen3_5_4b_v4_train_best_of_8_seed509",
+    "samples_per_task": 8,
+    "seed": 509,
+    "splits": ["train"],
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.9
+  },
+  "metrics": {
+    "absolute_search_gain": 0.3950617283950617,
+    "candidate_count": 1296,
+    "mean_verified_candidates_per_task": 2.8333333333333335,
+    "pass_at_1": 0.3271604938271605,
+    "pass_at_1_count": 53,
+    "pass_at_k": 0.7222222222222222,
+    "pass_at_k_count": 117,
+    "pass_at_prefix": {
+      "1": {"count": 53, "rate": 0.3271604938271605},
+      "2": {"count": 79, "rate": 0.4876543209876543},
+      "4": {"count": 106, "rate": 0.654320987654321},
+      "8": {"count": 117, "rate": 0.7222222222222222}
+    },
+    "samples_per_task": 8,
+    "success_by_kind": {
+      "calculator": {
+        "pass_at_1": 0.3271604938271605,
+        "pass_at_1_count": 53,
+        "pass_at_k": 0.7222222222222222,
+        "pass_at_k_count": 117,
+        "tasks": 162
+      }
+    },
+    "task_count": 162,
+    "verified_candidate_count": 459,
+    "verified_candidate_yield": 0.3541666666666667
+  },
+  "runtime": {
+    "average_candidate_seconds": 3.111,
+    "cuda_peak_memory_mib": 3369.8,
+    "load_seconds": 34.371,
+    "search_seconds": 4031.968
+  },
+  "search_gate": {
+    "decision_rule": "continue_to_4b_sft_only_if_all_checks_pass",
+    "gain_passed": true,
+    "min_absolute_gain": 0.1,
+    "min_verified_tasks": 30,
+    "observed_absolute_gain": 0.3950617283950617,
+    "observed_verified_tasks": 117,
+    "passed": true,
+    "verified_task_count_passed": true
+  }
+}

@@ -1,0 +1,33 @@
+[grpo]
+run_id = "qwen3.5-4b-v4-outcome53-smoke-seed727"
+model_id = "Qwen2/Qwen3.5-4B"
+adapter_path = "outputs/sft/qwen3_5_4b_v4_mixed213_seed113/adapter"
+dataset_path = "data/generated/v4_grpo_train_outcome_variance_seed719_v1.jsonl"
+sft_dataset_path = "data/generated/v4_sft_custom_approved_v1.jsonl"
+output_dir = "outputs/grpo/qwen3_5_4b_v4_outcome53_smoke_seed727/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_4b_v4_grpo_outcome53_smoke_seed727.json"
+expected_dataset_sha256 = "83962d596d52edad6db84db8d2d6fae7ce81f5ec55b28098f0309cc96f52be9a"
+expected_sft_dataset_sha256 = "52c6f559156f3c8655516602e0d4a97431e200539d1bbda5880c890bdef497ad"
+expected_dataset_task_count = 53
+expected_sft_overlap_count = 51
+allow_sft_task_overlap = true
+seed = 727
+prompt_count = 2
+max_steps = 2
+num_generations = 8
+max_completion_length = 128
+learning_rate = 0.000001
+temperature = 1.4
+top_p = 0.97
+format_reward_weight = 0.1
+closeness_reward_weight = 0.25
+tool_trace_reward_weight = 0.05
+tool_result_reward_weight = 0.5
+task_kind = "calculator"
+enable_calculator_tool = true
+log_completions = true
+num_completions_to_print = 4
+task_ids = [
+  "v4-review-curriculum-v2-required-score-004",
+  "v4-review-curriculum-v2-shared-bill-006",
+]

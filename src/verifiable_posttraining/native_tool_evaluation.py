@@ -246,11 +246,16 @@ def evaluate_native_calculator(
     return tuple(results)
 
 
-def main(argv: Sequence[str] | None = None) -> int:
+def _build_parser() -> argparse.ArgumentParser:
+    """Build the CLI parser; an adapter is optional for starting-policy evals."""
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model-id", default="Qwen/Qwen3.5-0.8B")
     parser.add_argument("--cache-dir")
-    parser.add_argument("--adapter-path", required=True)
+    parser.add_argument(
+        "--adapter-path",
+        help="optional PEFT adapter; omit it to evaluate the starting policy",
+    )
     parser.add_argument("--dataset", default="data/generated/pilot_tasks.jsonl")
     parser.add_argument(
         "--split",
@@ -265,6 +270,16 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--num-samples", type=int, default=1)
     parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--top-p", type=float, default=1.0)
+    parser.add_argument(
+        "--load-in-4bit",
+        action="store_true",
+        help="load the starting model in NF4, then attach the adapter if provided",
+    )
+    return parser
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = _build_parser()
     args = parser.parse_args(argv)
 
     if args.num_samples < 1:
@@ -285,6 +300,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         cache_dir=args.cache_dir,
         adapter_path=args.adapter_path,
         local_files_only=True,
+        load_in_4bit=args.load_in_4bit,
         settings=GenerationSettings(max_new_tokens=args.max_new_tokens),
     )
     load_seconds = time.perf_counter() - started
@@ -345,6 +361,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "run_id": args.run_id,
         "model_id": args.model_id,
         "adapter_path": args.adapter_path,
+        "load_in_4bit": args.load_in_4bit,
         "protocol": "transformers-native-calculator-v2-chat-eos",
         "seed": args.seed,
         "max_new_tokens_per_turn": args.max_new_tokens,

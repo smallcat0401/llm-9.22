@@ -1,0 +1,20 @@
+{
+  "dataset": "v4_validation_public_extension_audit_v0",
+  "status": "pending_owner_review",
+  "evaluation_only": true,
+  "training_eligible": false,
+  "candidate_count": 28,
+  "family_count": 4,
+  "family_counts": {
+    "v3-eval-val-public-ratio-allocation-v1": 7,
+    "v3-eval-val-public-weighted-demand-v1": 7,
+    "v3-eval-val-public-population-flow-v1": 7,
+    "v3-eval-val-public-tank-loss-recovery-v1": 7
+  },
+  "planned_combined_validation_count": 64,
+  "input_frozen_validation": "data\\generated\\v3_validation_v1.jsonl",
+  "input_frozen_validation_sha256": "daa41fda27f3476c6a279993d94b29ca4a3b3d49259f3aaba5505f47ab6b1484",
+  "output": "data\\review\\v4_validation_public_extension_audit_v0.jsonl",
+  "output_sha256": "9e6ed65b9e1c6bb9c0eb8abd414f64915af80323415fdcb899c2b38741b9932a",
+  "review_artifact": "docs\\V4_VALIDATION_EXTENSION_AUDIT_ZH.md"
+}

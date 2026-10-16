@@ -1,0 +1,19 @@
+{
+  "dataset": "v3_zero_pass_revisions_v2",
+  "not_sft_data": true,
+  "output_sha256": "4cd22802d157024410039b3c9b7fc7b5046d9f307bd6116506786526e0a691e8",
+  "purpose": "wording-corrected Best-of-8 re-screen before trajectory writing",
+  "revised_task_count": 11,
+  "source_dataset": "data\\generated\\v3_seed_screen_v1.jsonl",
+  "source_sha256": "caee0cca45468395749e1c6fe49a0840b9aed0c179f49fc2b42a8c6a78235132",
+  "summary": {
+    "by_kind": {
+      "calculator": 11
+    },
+    "by_split": {
+      "train": 11
+    },
+    "families": 6,
+    "tasks": 11
+  }
+}

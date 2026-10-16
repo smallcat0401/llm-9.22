@@ -1,0 +1,42 @@
+{
+  "dataset": "v4_test_v1",
+  "status": "frozen",
+  "evaluation_only": true,
+  "training_eligible": false,
+  "owner_approval_date": "2026-10-06",
+  "owner_review_signal": "review completed in conversation with no requested edits",
+  "review_artifact": "docs\\V4_TEST_EXTENSION_AUDIT_V1_ZH.md",
+  "review_artifact_sha256": "e63172eab201c8faaa23b9901c80e02679e16be9f24b3fe76c7befd05b7551d4",
+  "count": 72,
+  "component_counts": {
+    "frozen_v3_test": 36,
+    "approved_v4_extension": 36
+  },
+  "new_by_source_group": {
+    "self_written_extension": 32,
+    "public_seed_derived_synthetic": 4
+  },
+  "family_counts": {
+    "v3-eval-test-bonus-deduction-v1": 16,
+    "v3-eval-test-partial-refund-v1": 16,
+    "v3-eval-test-public-bogo-purchase-v1": 2,
+    "v3-eval-test-public-delivery-fee-v1": 2,
+    "v3-eval-test-public-loan-repayment-v1": 2,
+    "v3-eval-test-public-weighted-test-score-v1": 2,
+    "v3-eval-test-route-cost-v1": 16,
+    "v3-eval-test-subscription-overage-v1": 16
+  },
+  "inputs": {
+    "v3_test": "data\\generated\\v3_test_v1.jsonl",
+    "v3_test_sha256": "9e6613d6f11f3cdc38e90a5b0b6aeddf94b4378b96c5be04116af45e2cf82eae",
+    "extension_audit": "data\\review\\v4_test_extension_audit_v1.jsonl",
+    "extension_audit_sha256": "02b97f6e65e98be4c3697d765627ad34e636678f10176b366f414aa878531dcd",
+    "v4_train": "data\\generated\\v4_train_tasks_curated_v2.jsonl",
+    "v4_train_sha256": "d24a0b360ce7c771d31e05782eabf863a86f43aa349def19a5c0a84ec6423c96",
+    "v4_validation": "data\\generated\\v4_validation_v1.jsonl",
+    "v4_validation_sha256": "d62dc47ae7027de67c30521327d5f8afb6b88878ffddfe758843820da9093cf0"
+  },
+  "output": "data\\generated\\v4_test_v1.jsonl",
+  "output_sha256": "a0223c4517596007cf40e5cdd30e61e534f5f5dd4855af0f0042d106341be0bc",
+  "interpretation_limit": "Extension tasks share test families with V3 parents; report family and cohort results separately. Test is for one final evaluation after checkpoint selection."
+}

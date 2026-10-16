@@ -1,0 +1,56 @@
+{
+  "config": {
+    "adapter_path": null,
+    "dataset": "data/generated/v4_test_v1.jsonl",
+    "kinds": [
+      "calculator"
+    ],
+    "load_in_4bit": true,
+    "max_model_turns": 3,
+    "max_new_tokens": 256,
+    "max_tool_calls": 2,
+    "model_id": "Qwen/Qwen3.5-4B",
+    "prompt_protocol_version": "v3-sql-scalar-aggregate",
+    "run_id": "qwen3.5-4b-v4-final-starting-policy-custom-test-seed937-local",
+    "seed": 937,
+    "splits": [
+      "test"
+    ]
+  },
+  "metrics": {
+    "average_recorded_tool_calls": 1.0138888888888888,
+    "failed_tool_call_count": 0,
+    "invalid_tool_call_rate": 0.0,
+    "no_tool_task_count": 0,
+    "over_tool_rate": 0.0,
+    "over_tool_task_count": 0,
+    "protocol_error_count": 27,
+    "protocol_error_rate": 0.375,
+    "recorded_tool_call_count": 73,
+    "rejected_tool_call_count": 0,
+    "success_by_kind": {
+      "calculator": {
+        "success_rate": 0.3055555555555556,
+        "successes": 22,
+        "tasks": 72
+      }
+    },
+    "task_count": 72,
+    "task_success_count": 22,
+    "task_success_rate": 0.3055555555555556,
+    "termination_counts": {
+      "final_answer": 45,
+      "protocol_error": 27
+    },
+    "tool_selection_accuracy": 0.9166666666666666,
+    "tool_selection_correct_count": 66,
+    "verifier_pass_count": 36,
+    "verifier_pass_rate": 0.5
+  },
+  "runtime": {
+    "average_episode_seconds": 5.265,
+    "cuda_peak_memory_mib": 3343.8,
+    "evaluation_seconds": 379.116,
+    "load_seconds": 33.817
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "dataset": "v4_seed_derived_self_written_approved_v1",
+  "status": "owner_approved_task_candidates",
+  "is_sft_dataset": false,
+  "requires_verified_trajectories_before_sft": true,
+  "owner_approval_date": "2026-10-05",
+  "review_artifact": "docs/V4_SEED_DERIVED_AUDIT_ZH.md",
+  "count": 84,
+  "family_counts": {
+    "curriculum-v2-sales-returns": 14,
+    "curriculum-v2-markup-discount": 14,
+    "curriculum-v2-required-score": 14,
+    "curriculum-v2-cartons-damage": 14,
+    "curriculum-v2-shared-bill": 14,
+    "curriculum-v2-growth-fee": 14
+  },
+  "output": "data\\generated\\v4_seed_derived_self_written_approved_v1.jsonl",
+  "output_sha256": "d0df4b73780055fd5239fcb20094dc7ed397bd7f80b0bc054a7631fd45d8900f"
+}

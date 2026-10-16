@@ -58,6 +58,44 @@ analysis API instead.
 
 ## Current next step
 
+The company-GPU V3 4B QLoRA runs and all nine frozen-validation evaluations
+completed on 2026-10-05.  Under the preregistered rule, Mixed58 epoch 3 is the
+unique adapter winner at 24/36 strict successes, 24/36 verifier passes, zero
+protocol errors, and exactly one recorded tool call per task.  Its performance
+is heterogeneous: tiered commission is 8/8, restricted grant 7/8, fixed basket
+change 7/8, rework yield 1/8, and three of four singleton public families fail.
+The returned training metadata names `Qwen1/Qwen3.5-4B`, whereas the frozen
+baseline names `Qwen/Qwen3.5-4B`; the company host operator confirmed on
+2026-10-05 that `Qwen1` is only the local folder name for the official model
+files.  The model-path discrepancy is therefore resolved and Mixed58 epoch 3
+is frozen as the V3 winner.  The owner chose to continue expanding the seed
+curriculum, so the V3 frozen test must remain sealed: using observed test
+failures to design V4 training data would contaminate it.  Treat the already
+analyzed V3 validation as development diagnostics, expand only train-side new
+families, and freeze a new family-disjoint V4 validation before retraining.  The
+still-sealed V3 test may be used once at the end only if V4 train families remain
+template/family-disjoint from it; otherwise freeze a new final test.  See
+`docs/V3_4B_VALIDATION_RESULTS_ZH.md` and
+`artifacts/metrics/qwen3_5_4b_v3_validation_selection_v1.json`.
+
+The reviewed V3 branch now has 58 custom-protocol calculator SFT examples: 32
+search-discovered and 26 explicit reference-program examples.  Its new
+family-disjoint evaluation protocol is frozen at 36 validation and 36 test
+tasks.  The Qwen3.5-4B 4-bit starting-policy validation baseline is measured at
+16/36 strict successes and 18/36 verifier passes, with 10 malformed-JSON
+protocol errors and zero tool-execution failures.  The V3 test remains unopened.
+Matched Search-SFT, Reference-SFT, and Mixed-SFT 4B QLoRA configurations are
+now prepared for rented hardware, with three dataset passes, shared seed and
+hyperparameters, and epoch checkpoints.  A one-example, one-step local 4B QLoRA
+compatibility run completed on the RTX 4060: loss moved from 0.070946 to
+0.016092, the adapter was saved, and peak CUDA allocation was 7,695.8 MiB for
+a 625-token sequence.  This validates the training path but leaves too little
+8GB headroom for the 1,065-token maximum formal data.  The next step is the
+three controlled runs on rented hardware, with a short environment smoke first.
+Select the branch/checkpoint only on the frozen validation set, and open the
+frozen test only after selection.  The preregistered settings and tie-breakers
+are documented in `docs/V3_QLORA_PLAN_ZH.md`.
+
 The Qwen3.5-4B inference-only Search-Gap Gate is now complete on the local RTX
 4060. On 100 paired condition-specific GSM8K-train tasks with eight samples per
 task, strict trajectory pass@1 was 10/100 and pass@8 was 43/100 (+33 percentage

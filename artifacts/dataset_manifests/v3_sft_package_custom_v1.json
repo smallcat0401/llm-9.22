@@ -1,0 +1,122 @@
+{
+  "inputs": [
+    {
+      "path": "outputs\\search\\qwen3_5_4b_v3_seed_best_of_8_v1\\verified_trajectories.jsonl",
+      "sha256": "74b43d4e1018107147002d216d55c9982c71269f57cc63d0529be9e6bbe7bdd2"
+    },
+    {
+      "path": "outputs\\search\\qwen3_5_4b_v3_zero_pass_revisions_best_of_8_v2\\verified_trajectories.jsonl",
+      "sha256": "701d767c0865f6b399771cf5f5637c37c454128469f203b5ab5deee671411143"
+    },
+    {
+      "path": "outputs\\search\\qwen3_5_4b_v3_rounding_followup_best_of_8_v1\\verified_trajectories.jsonl",
+      "sha256": "03bdd6f8524aa684589b5c9b5ece4d03dd70c6e096c538a46d66075249ab30dc"
+    },
+    {
+      "path": "data\\generated\\v3_seed_screen_v1.jsonl",
+      "sha256": "caee0cca45468395749e1c6fe49a0840b9aed0c179f49fc2b42a8c6a78235132"
+    },
+    {
+      "path": "data\\generated\\v3_zero_pass_revisions_v2.jsonl",
+      "sha256": "4cd22802d157024410039b3c9b7fc7b5046d9f307bd6116506786526e0a691e8"
+    }
+  ],
+  "mixed": {
+    "by_family": {
+      "curriculum-v2-cartons-damage": 2,
+      "curriculum-v2-growth-fee": 2,
+      "curriculum-v2-markup-discount": 2,
+      "curriculum-v2-required-score": 2,
+      "curriculum-v2-sales-returns": 2,
+      "curriculum-v2-shared-bill": 2,
+      "v3-gsm8k-public-train-calculator-v1": 19,
+      "v3-public-aggregate_percent_change-v1": 3,
+      "v3-public-aggregate_percent_change_with_loss-v1": 1,
+      "v3-public-average_growth_rate-v1": 4,
+      "v3-public-derived_value_percent_change-v1": 2,
+      "v3-public-difference_of_averages-v1": 4,
+      "v3-public-midpoint_rate_application-v1": 1,
+      "v3-public-multi_period_interest-v1": 1,
+      "v3-public-payout_ratio-v1": 1,
+      "v3-public-ratio_of_aggregates-v1": 1,
+      "v3-public-ratio_of_derived_values-v1": 1,
+      "v3-public-signed_multi_value_average-v1": 3,
+      "v3-public-signed_percent_change-v1": 3,
+      "v3-public-weighted_average-v1": 2
+    },
+    "by_kind": {
+      "calculator": 58
+    },
+    "examples": 58,
+    "with_tool_messages": 53
+  },
+  "outputs": {
+    "mixed_sft": {
+      "path": "data\\generated\\v3_mixed_sft_custom_v1.jsonl",
+      "sha256": "9b3a7f1484308077b071dda98c552ee8c84532a76eec31c4c1fc3d7a7cc974ea"
+    },
+    "reference_sft": {
+      "path": "data\\generated\\v3_reference_program_sft_custom_v1.jsonl",
+      "sha256": "132bd9dc881f5b87872d40f8febd9af44cf0ce80288177011401da713bd76829"
+    },
+    "search_sft": {
+      "path": "data\\generated\\v3_search_discovered_sft_custom_v1.jsonl",
+      "sha256": "5f4defa21c66afbc7d38e8bec02cde081e350bd64fa1d7326bcf28c174d247fb"
+    },
+    "selected_trajectories": {
+      "path": "data\\generated\\v3_search_selected_trajectories_v1.jsonl",
+      "sha256": "76b7c192bec9cebbe8926848b363c9133f6a4b039a5e84a461d75c019b3669ee"
+    }
+  },
+  "package": "v3-reviewed-sft-custom-protocol-v1",
+  "protocol": "custom-json-actions-v1",
+  "reference": {
+    "by_family": {
+      "v3-gsm8k-public-train-calculator-v1": 11,
+      "v3-public-aggregate_percent_change-v1": 1,
+      "v3-public-aggregate_percent_change_with_loss-v1": 1,
+      "v3-public-average_growth_rate-v1": 3,
+      "v3-public-derived_value_percent_change-v1": 1,
+      "v3-public-difference_of_averages-v1": 3,
+      "v3-public-midpoint_rate_application-v1": 1,
+      "v3-public-multi_period_interest-v1": 1,
+      "v3-public-payout_ratio-v1": 1,
+      "v3-public-ratio_of_derived_values-v1": 1,
+      "v3-public-signed_multi_value_average-v1": 1,
+      "v3-public-weighted_average-v1": 1
+    },
+    "by_kind": {
+      "calculator": 26
+    },
+    "examples": 26,
+    "trajectory_source": "reference-program",
+    "with_tool_messages": 26
+  },
+  "search": {
+    "by_family": {
+      "curriculum-v2-cartons-damage": 2,
+      "curriculum-v2-growth-fee": 2,
+      "curriculum-v2-markup-discount": 2,
+      "curriculum-v2-required-score": 2,
+      "curriculum-v2-sales-returns": 2,
+      "curriculum-v2-shared-bill": 2,
+      "v3-gsm8k-public-train-calculator-v1": 8,
+      "v3-public-aggregate_percent_change-v1": 2,
+      "v3-public-average_growth_rate-v1": 1,
+      "v3-public-derived_value_percent_change-v1": 1,
+      "v3-public-difference_of_averages-v1": 1,
+      "v3-public-ratio_of_aggregates-v1": 1,
+      "v3-public-signed_multi_value_average-v1": 2,
+      "v3-public-signed_percent_change-v1": 3,
+      "v3-public-weighted_average-v1": 1
+    },
+    "by_kind": {
+      "calculator": 32
+    },
+    "direct_answer": 5,
+    "examples": 32,
+    "tool_assisted": 27,
+    "trajectory_source": "search-discovered",
+    "with_tool_messages": 27
+  }
+}

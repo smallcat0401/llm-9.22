@@ -1,0 +1,28 @@
+{
+  "dataset": "v4_public_seed_relations_approved_v1",
+  "status": "owner_approved_task_candidates",
+  "is_sft_dataset": false,
+  "contains_trajectory_data": false,
+  "requires_verified_trajectories_before_sft": true,
+  "owner_approval_date": "2026-10-06",
+  "review_artifact": "docs/V4_PUBLIC_SEED_RELATIONS_AUDIT_ZH.md",
+  "count": 78,
+  "family_count": 13,
+  "family_counts": {
+    "v3-public-weighted_average-v1": 6,
+    "v3-public-aggregate_percent_change-v1": 6,
+    "v3-public-aggregate_percent_change_with_loss-v1": 6,
+    "v3-public-average_growth_rate-v1": 6,
+    "v3-public-derived_value_percent_change-v1": 6,
+    "v3-public-difference_of_averages-v1": 6,
+    "v3-public-midpoint_rate_application-v1": 6,
+    "v3-public-multi_period_interest-v1": 6,
+    "v3-public-payout_ratio-v1": 6,
+    "v3-public-ratio_of_aggregates-v1": 6,
+    "v3-public-ratio_of_derived_values-v1": 6,
+    "v3-public-signed_multi_value_average-v1": 6,
+    "v3-public-signed_percent_change-v1": 6
+  },
+  "output": "data\\generated\\v4_public_seed_relations_approved_v1.jsonl",
+  "output_sha256": "1b13b73d1f8e5800bacf95522fefdae13d3c8ef76f4f2eb540c27bbec8136e65"
+}

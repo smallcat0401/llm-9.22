@@ -1,0 +1,56 @@
+{
+  "dataset": "v4_train_task_candidates_approved_v1",
+  "status": "owner_approved_task_candidates",
+  "is_sft_dataset": false,
+  "contains_trajectory_data": false,
+  "requires_verified_trajectories_before_sft": true,
+  "count": 162,
+  "family_count": 19,
+  "split_counts": {
+    "train": 162
+  },
+  "kind_counts": {
+    "calculator": 162
+  },
+  "component_counts": {
+    "self_written_seed_derived": 84,
+    "public_relation_synthetic_tables": 78
+  },
+  "components": [
+    {
+      "dataset": "v4_seed_derived_self_written_approved_v1",
+      "output": "data\\generated\\v4_seed_derived_self_written_approved_v1.jsonl",
+      "sha256": "d0df4b73780055fd5239fcb20094dc7ed397bd7f80b0bc054a7631fd45d8900f",
+      "count": 84
+    },
+    {
+      "dataset": "v4_public_seed_relations_approved_v1",
+      "output": "data\\generated\\v4_public_seed_relations_approved_v1.jsonl",
+      "sha256": "1b13b73d1f8e5800bacf95522fefdae13d3c8ef76f4f2eb540c27bbec8136e65",
+      "count": 78
+    }
+  ],
+  "family_counts": {
+    "curriculum-v2-sales-returns": 14,
+    "curriculum-v2-markup-discount": 14,
+    "curriculum-v2-required-score": 14,
+    "curriculum-v2-cartons-damage": 14,
+    "curriculum-v2-shared-bill": 14,
+    "curriculum-v2-growth-fee": 14,
+    "v3-public-weighted_average-v1": 6,
+    "v3-public-aggregate_percent_change-v1": 6,
+    "v3-public-aggregate_percent_change_with_loss-v1": 6,
+    "v3-public-average_growth_rate-v1": 6,
+    "v3-public-derived_value_percent_change-v1": 6,
+    "v3-public-difference_of_averages-v1": 6,
+    "v3-public-midpoint_rate_application-v1": 6,
+    "v3-public-multi_period_interest-v1": 6,
+    "v3-public-payout_ratio-v1": 6,
+    "v3-public-ratio_of_aggregates-v1": 6,
+    "v3-public-ratio_of_derived_values-v1": 6,
+    "v3-public-signed_multi_value_average-v1": 6,
+    "v3-public-signed_percent_change-v1": 6
+  },
+  "output": "data\\generated\\v4_train_task_candidates_approved_v1.jsonl",
+  "output_sha256": "bb7ddc0f9ee68f2bc7b9b316a400e4bbbffe8656bdaa871798f4028c98229604"
+}

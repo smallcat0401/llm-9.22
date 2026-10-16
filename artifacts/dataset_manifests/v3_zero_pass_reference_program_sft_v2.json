@@ -1,0 +1,19 @@
+{
+  "dataset": "v3-zero-pass-reference-program-v2",
+  "example_count": 26,
+  "inputs": [
+    {
+      "path": "data\\generated\\v3_seed_screen_v1.jsonl",
+      "sha256": "caee0cca45468395749e1c6fe49a0840b9aed0c179f49fc2b42a8c6a78235132"
+    },
+    {
+      "path": "data\\generated\\v3_zero_pass_revisions_v2.jsonl",
+      "sha256": "4cd22802d157024410039b3c9b7fc7b5046d9f307bd6116506786526e0a691e8"
+    }
+  ],
+  "output_sha256": "ace23ab46820dc972fd3ac87c3c778f5feea04bcf2f1334f26e4f50554d141db",
+  "purpose": "audited reference-program SFT branch for V3 zero-pass train tasks",
+  "search_discovered": false,
+  "task_count": 26,
+  "trajectory_source": "reference-program"
+}

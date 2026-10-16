@@ -1,0 +1,36 @@
+{
+  "dataset": "v3_eval_seed_audit_v0",
+  "status": "pending_human_review",
+  "not_frozen_evaluation_data": true,
+  "candidate_count": 24,
+  "split_counts": {
+    "validation": 12,
+    "test": 12
+  },
+  "source_counts": {
+    "self_written": 16,
+    "public": 8
+  },
+  "source_files": {
+    "gsm8k_train": "data\\external\\gsm8k\\train.jsonl",
+    "gsm8k_train_sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+    "gsm8k_test": "data\\external\\gsm8k\\test.jsonl",
+    "gsm8k_test_sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "exclusion_artifacts": [
+      "data\\generated\\gsm8k_train_validation_seed131.jsonl",
+      "data\\generated\\gsm8k_external_eval_seed7.jsonl",
+      "data\\generated\\qwen3_5_4b_sft_train_path_aligned_merged112.jsonl",
+      "data\\generated\\v3_seed_screen_v1.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_gap_probe_seed71\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_gap_formal_seed71\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_expand_batch2_seed73\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_expand_batch3_seed97\\candidates.jsonl"
+    ]
+  },
+  "outputs": {
+    "jsonl": "data\\review\\v3_eval_seed_audit_v0.jsonl",
+    "jsonl_sha256": "c9beb8ea8304bdaed54d3fc1f61fb53d89e11520ae235a2becbef38e0a482990",
+    "markdown": "docs\\V3_EVAL_SEED_AUDIT_ZH.md",
+    "markdown_sha256": "ba239d3ff2e0fdee0d1bd1182fec3b430f4664cdaa5656fc15861b9296e61a12"
+  }
+}

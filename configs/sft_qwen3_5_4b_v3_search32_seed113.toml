@@ -1,0 +1,32 @@
+[sft]
+run_id = "qwen3.5-4b-v3-search32-qlora-seed113"
+model_id = "Qwen/Qwen3.5-4B"
+dataset_path = "data/generated/v3_search_discovered_sft_custom_v1.jsonl"
+output_dir = "outputs/sft/qwen3_5_4b_v3_search32_seed113/adapter"
+metrics_path = "artifacts/metrics/qwen3_5_4b_v3_search32_seed113.json"
+seed = 113
+sample_count = 32
+
+# One reviewed reference trajectory is 1,065 tokens.  Keep the same limit for
+# every branch so sequence filtering cannot become a hidden treatment change.
+max_length = 1280
+
+# Batch size 1 is conservative for 4B QLoRA.  With accumulation 2, checkpoints
+# at 32 and 64 micro-steps are exactly one and two complete dataset passes.
+# The final adapter at 96 micro-steps is pass three.
+max_steps = 96
+learning_rate = 0.0001
+batch_size = 1
+gradient_accumulation_steps = 2
+max_grad_norm = 1.0
+
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.0
+target_modules = [
+  "q_proj", "k_proj", "v_proj", "o_proj",
+  "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "out_proj",
+  "gate_proj", "up_proj", "down_proj",
+]
+
+checkpoint_steps = [32, 64]

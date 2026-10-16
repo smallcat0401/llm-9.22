@@ -1,6 +1,7 @@
 import unittest
 
 from verifiable_posttraining.native_tool_evaluation import (
+    _build_parser,
     evaluate_native_calculator,
     parse_native_response,
     run_native_calculator_episode,
@@ -18,6 +19,13 @@ class ScriptedNativePolicy:
 
 
 class NativeToolEvaluationTests(unittest.TestCase):
+    def test_cli_adapter_is_optional_for_starting_policy_evaluation(self) -> None:
+        args = _build_parser().parse_args(
+            ["--output-dir", "out", "--run-id", "starting-policy"]
+        )
+
+        self.assertIsNone(args.adapter_path)
+
     def test_malformed_parser_output_is_a_failure_not_an_exception(self):
         class Tokenizer:
             eos_token_id = 2

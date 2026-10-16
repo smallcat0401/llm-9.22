@@ -1,0 +1,73 @@
+{
+  "dataset": "v4-zero-pass-assistant-authored-reference-v1",
+  "train_ready": false,
+  "review_status": "pending_owner_review",
+  "original_train_tasks": 162,
+  "excluded_task_ids": [
+    "v4-review-public-midpoint_rate_application-000",
+    "v4-review-public-midpoint_rate_application-003",
+    "v4-review-public-multi_period_interest-002",
+    "v4-review-public-multi_period_interest-004"
+  ],
+  "curated_train_tasks": 158,
+  "zero_pass_tasks": 45,
+  "assistant_authored_trajectories": 41,
+  "prior_staged_sft": 173,
+  "combined_staged_sft": 214,
+  "by_family": {
+    "curriculum-v2-cartons-damage": 1,
+    "curriculum-v2-required-score": 4,
+    "curriculum-v2-sales-returns": 4,
+    "curriculum-v2-shared-bill": 3,
+    "v3-public-aggregate_percent_change-v1": 2,
+    "v3-public-aggregate_percent_change_with_loss-v1": 1,
+    "v3-public-average_growth_rate-v1": 6,
+    "v3-public-derived_value_percent_change-v1": 2,
+    "v3-public-difference_of_averages-v1": 3,
+    "v3-public-midpoint_rate_application-v1": 3,
+    "v3-public-payout_ratio-v1": 3,
+    "v3-public-ratio_of_aggregates-v1": 1,
+    "v3-public-signed_multi_value_average-v1": 4,
+    "v3-public-signed_percent_change-v1": 4
+  },
+  "sources": {
+    "tasks": {
+      "path": "data\\generated\\v4_train_task_candidates_approved_v1.jsonl",
+      "sha256": "bb7ddc0f9ee68f2bc7b9b316a400e4bbbffe8656bdaa871798f4028c98229604"
+    },
+    "search_candidates": {
+      "path": "outputs\\search\\qwen3_5_4b_v4_train_best_of_8_seed509\\candidates.jsonl",
+      "sha256": "d2f916d4d8f394d43c2f6aeb6b9f057cec960532ab7cf82c4d44f96a0924a102"
+    },
+    "prior_sft": {
+      "path": "data\\review\\v4_search_sft_candidates_v0\\v3_plus_v4_sft_candidates.jsonl",
+      "sha256": "2396c34ad08843dc89e7c5f8baf3bb3d13fc9517ef2fd7d7b2eec4bdc4ee805f"
+    },
+    "validation": {
+      "path": "data\\generated\\v4_validation_v1.jsonl",
+      "sha256": "d62dc47ae7027de67c30521327d5f8afb6b88878ffddfe758843820da9093cf0"
+    }
+  },
+  "outputs": {
+    "curated_tasks": {
+      "path": "data\\generated\\v4_train_tasks_curated_v2.jsonl",
+      "sha256": "d24a0b360ce7c771d31e05782eabf863a86f43aa349def19a5c0a84ec6423c96"
+    },
+    "manual_trajectories": {
+      "path": "data\\review\\v4_manual_zero_pass_v1\\assistant_authored_trajectories.jsonl",
+      "sha256": "d324d35263c6a29804e50d9f446f3e02ec051f66e47604da801f94a0f1283f4c"
+    },
+    "manual_sft": {
+      "path": "data\\review\\v4_manual_zero_pass_v1\\manual_sft_custom.jsonl",
+      "sha256": "ca3642d15e29279f65bb2a80fb7cfdaa5a2b01837ea90cf41ce43bea7b6a6c82"
+    },
+    "combined_staged_sft": {
+      "path": "data\\review\\v4_manual_zero_pass_v1\\v3_v4_search_plus_manual_sft_candidates.jsonl",
+      "sha256": "241bb49cafb5cf705c3d8e7c20a8be2034b8fe1da93ef005ae7f82f0eed28749"
+    },
+    "review": {
+      "path": "data\\review\\v4_manual_zero_pass_v1\\manual_program_review.jsonl",
+      "sha256": "3c99a6201afb69db6301e31929a56f704011894d716c8b3543bd1ef810b348b9"
+    }
+  }
+}

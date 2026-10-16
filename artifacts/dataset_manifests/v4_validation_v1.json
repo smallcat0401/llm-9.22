@@ -1,0 +1,36 @@
+{
+  "dataset": "v4_validation_v1",
+  "status": "frozen",
+  "evaluation_only": true,
+  "training_eligible": false,
+  "owner_approval_date": "2026-10-06",
+  "owner_review_signal": "review completed in conversation with no requested edits",
+  "review_artifact": "docs/V4_VALIDATION_EXTENSION_AUDIT_ZH.md",
+  "count": 64,
+  "component_counts": {
+    "frozen_v3_validation": 36,
+    "approved_v4_extension": 28
+  },
+  "family_counts": {
+    "v3-eval-val-tiered-commission-v1": 8,
+    "v3-eval-val-restricted-grant-v1": 8,
+    "v3-eval-val-fixed-basket-change-v1": 8,
+    "v3-eval-val-rework-yield-v1": 8,
+    "v3-eval-val-public-ratio-allocation-v1": 8,
+    "v3-eval-val-public-weighted-demand-v1": 8,
+    "v3-eval-val-public-population-flow-v1": 8,
+    "v3-eval-val-public-tank-loss-recovery-v1": 8
+  },
+  "inputs": {
+    "v3_validation": "data\\generated\\v3_validation_v1.jsonl",
+    "v3_validation_sha256": "daa41fda27f3476c6a279993d94b29ca4a3b3d49259f3aaba5505f47ab6b1484",
+    "extension_audit": "data\\review\\v4_validation_public_extension_audit_v0.jsonl",
+    "extension_audit_sha256": "9e6ed65b9e1c6bb9c0eb8abd414f64915af80323415fdcb899c2b38741b9932a",
+    "v4_train": "data\\generated\\v4_train_task_candidates_approved_v1.jsonl",
+    "v4_train_sha256": "bb7ddc0f9ee68f2bc7b9b316a400e4bbbffe8656bdaa871798f4028c98229604",
+    "v3_test_manifest_sha256": "9e6613d6f11f3cdc38e90a5b0b6aeddf94b4378b96c5be04116af45e2cf82eae"
+  },
+  "output": "data\\generated\\v4_validation_v1.jsonl",
+  "output_sha256": "d62dc47ae7027de67c30521327d5f8afb6b88878ffddfe758843820da9093cf0",
+  "interpretation_limit": "V3 validation rows were already used for model selection; this set is not a fresh holdout"
+}

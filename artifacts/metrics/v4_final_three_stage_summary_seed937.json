@@ -1,0 +1,76 @@
+{
+  "run_date": "2026-10-08",
+  "dataset": "data/generated/v4_test_v1.jsonl",
+  "dataset_sha256": "a0223c4517596007cf40e5cdd30e61e534f5f5dd4855af0f0042d106341be0bc",
+  "task_count": 72,
+  "seed": 937,
+  "decoding": "greedy",
+  "starting_policy": "Qwen/Qwen3.5-4B",
+  "comparison_limit": "Starting-policy results were added post hoc on local RTX 4060 Windows; SFT and GRPO results were produced on the company Linux GPU. Configuration, frozen data, prompt protocol, seed, and decoding match, but execution environments differ.",
+  "custom_protocol": {
+    "starting_policy": {
+      "task_success_count": 22,
+      "verifier_pass_count": 36,
+      "protocol_error_count": 27,
+      "tool_selection_correct_count": 66
+    },
+    "sft": {
+      "task_success_count": 38,
+      "verifier_pass_count": 38,
+      "protocol_error_count": 3,
+      "tool_selection_correct_count": 72
+    },
+    "grpo": {
+      "task_success_count": 36,
+      "verifier_pass_count": 36,
+      "protocol_error_count": 3,
+      "tool_selection_correct_count": 72
+    },
+    "paired_changes": {
+      "starting_to_sft": {"gains": 21, "regressions": 5, "unchanged": 46, "net": 16},
+      "starting_to_grpo": {"gains": 19, "regressions": 5, "unchanged": 48, "net": 14},
+      "sft_to_grpo": {"gains": 0, "regressions": 2, "unchanged": 70, "net": -2}
+    }
+  },
+  "native_protocol": {
+    "starting_policy": {
+      "task_success_count": 15,
+      "tool_called_count": 51,
+      "tool_succeeded_count": 51,
+      "tool_result_correct_count": 19,
+      "outcome_success_count": 15,
+      "typed_final_count": 24
+    },
+    "sft": {
+      "task_success_count": 30,
+      "tool_called_count": 72,
+      "tool_succeeded_count": 72,
+      "tool_result_correct_count": 30,
+      "outcome_success_count": 30,
+      "typed_final_count": 47
+    },
+    "grpo": {
+      "task_success_count": 32,
+      "tool_called_count": 72,
+      "tool_succeeded_count": 72,
+      "tool_result_correct_count": 32,
+      "outcome_success_count": 32,
+      "typed_final_count": 52
+    },
+    "paired_changes": {
+      "starting_to_sft": {"gains": 15, "regressions": 0, "unchanged": 57, "net": 15},
+      "starting_to_grpo": {"gains": 17, "regressions": 0, "unchanged": 55, "net": 17},
+      "sft_to_grpo": {"gains": 2, "regressions": 0, "unchanged": 70, "net": 2}
+    }
+  },
+  "recommended_checkpoint": "V4 SFT adapter",
+  "selection_reason": "The pre-specified custom protocol is primary: SFT scored 38/72 and GRPO scored 36/72. Native is diagnostic and favored GRPO 32/72 versus SFT 30/72.",
+  "source_metrics": {
+    "starting_custom": "artifacts/metrics/qwen3_5_4b_v4_final_starting_policy_custom_test_seed937_local.json",
+    "starting_native": "artifacts/metrics/qwen3_5_4b_v4_final_starting_policy_native_test_seed937_local.json",
+    "sft_custom": "dist/test1/test1/artifacts/metrics/qwen3_5_4b_v4_final_sft_custom_test_seed937.json",
+    "sft_native": "dist/test1/test1/artifacts/metrics/qwen3_5_4b_v4_final_sft_native_test_seed937.json",
+    "grpo_custom": "dist/test1/test1/artifacts/metrics/qwen3_5_4b_v4_final_grpo_custom_test_seed937.json",
+    "grpo_native": "dist/test1/test1/artifacts/metrics/qwen3_5_4b_v4_final_grpo_native_test_seed937.json"
+  }
+}

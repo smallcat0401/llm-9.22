@@ -1,0 +1,66 @@
+{
+  "config": {
+    "adapter_path": null,
+    "batch_size": 1,
+    "checkpoint_steps": [],
+    "dataset_path": "data/generated/v3_search_discovered_sft_custom_v1.jsonl",
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0001,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "lora_rank": 16,
+    "max_grad_norm": 1.0,
+    "max_length": 1280,
+    "max_steps": 1,
+    "metrics_path": "artifacts/metrics/qwen3_5_4b_v3_local_smoke_seed113.json",
+    "model_id": "Qwen/Qwen3.5-4B",
+    "output_dir": "outputs/sft/qwen3_5_4b_v3_local_smoke_seed113/adapter",
+    "run_id": "qwen3.5-4b-v3-local-smoke-seed113",
+    "sample_count": 1,
+    "seed": 113,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "in_proj_qkv",
+      "in_proj_z",
+      "in_proj_b",
+      "in_proj_a",
+      "out_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "dataset_path": "data/generated/v3_search_discovered_sft_custom_v1.jsonl",
+  "elapsed_seconds": 57.14133189999848,
+  "final_loss": 0.016092073172330856,
+  "initial_loss": 0.07094619423151016,
+  "loss_reduction": 0.054854121059179306,
+  "loss_reduction_fraction": 0.773179190982119,
+  "model_id": "Qwen/Qwen3.5-4B",
+  "peak_cuda_memory_mib": 7695.822265625,
+  "run_id": "qwen3.5-4b-v3-local-smoke-seed113",
+  "saved_checkpoints": {},
+  "selected_by_kind": {
+    "calculator": 1
+  },
+  "selected_example_ids": [
+    "sft-v3-public-cb26a8ffa95b-arithmetic"
+  ],
+  "sequence_lengths": [
+    625
+  ],
+  "starting_adapter": null,
+  "status": "completed",
+  "step_losses": [
+    0.07094619423151016
+  ],
+  "supervised_tokens": [
+    71
+  ],
+  "total_parameters": 2622558720,
+  "trainable_parameters": 32464896,
+  "training_method": "QLoRA NF4"
+}

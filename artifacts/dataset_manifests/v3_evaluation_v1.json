@@ -1,0 +1,60 @@
+{
+  "dataset": "v3_evaluation_v1",
+  "status": "frozen",
+  "evaluation_only": true,
+  "seed_audit": "docs/V3_EVAL_SEED_AUDIT_ZH.md",
+  "owner_approval_date": "2026-10-05",
+  "examples_per_synthetic_family": 8,
+  "counts": {
+    "validation": 36,
+    "test": 36,
+    "by_source": {
+      "synthetic": 64,
+      "public": 8
+    }
+  },
+  "family_ids": {
+    "validation": [
+      "v3-eval-val-fixed-basket-change-v1",
+      "v3-eval-val-public-population-flow-v1",
+      "v3-eval-val-public-ratio-allocation-v1",
+      "v3-eval-val-public-tank-loss-recovery-v1",
+      "v3-eval-val-public-weighted-demand-v1",
+      "v3-eval-val-restricted-grant-v1",
+      "v3-eval-val-rework-yield-v1",
+      "v3-eval-val-tiered-commission-v1"
+    ],
+    "test": [
+      "v3-eval-test-bonus-deduction-v1",
+      "v3-eval-test-partial-refund-v1",
+      "v3-eval-test-public-bogo-purchase-v1",
+      "v3-eval-test-public-delivery-fee-v1",
+      "v3-eval-test-public-loan-repayment-v1",
+      "v3-eval-test-public-weighted-test-score-v1",
+      "v3-eval-test-route-cost-v1",
+      "v3-eval-test-subscription-overage-v1"
+    ]
+  },
+  "inputs": {
+    "training_sft": "data\\generated\\v3_mixed_sft_custom_v1.jsonl",
+    "training_sft_sha256": "9b3a7f1484308077b071dda98c552ee8c84532a76eec31c4c1fc3d7a7cc974ea",
+    "gsm8k_train_sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+    "gsm8k_test_sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "exclusion_artifacts": [
+      "data\\generated\\gsm8k_train_validation_seed131.jsonl",
+      "data\\generated\\gsm8k_external_eval_seed7.jsonl",
+      "data\\generated\\qwen3_5_4b_sft_train_path_aligned_merged112.jsonl",
+      "data\\generated\\v3_seed_screen_v1.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_gap_probe_seed71\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_gap_formal_seed71\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_expand_batch2_seed73\\candidates.jsonl",
+      "outputs\\search\\qwen3_5_4b_search_expand_batch3_seed97\\candidates.jsonl"
+    ]
+  },
+  "outputs": {
+    "validation": "data\\generated\\v3_validation_v1.jsonl",
+    "validation_sha256": "daa41fda27f3476c6a279993d94b29ca4a3b3d49259f3aaba5505f47ab6b1484",
+    "test": "data\\generated\\v3_test_v1.jsonl",
+    "test_sha256": "9e6613d6f11f3cdc38e90a5b0b6aeddf94b4378b96c5be04116af45e2cf82eae"
+  }
+}

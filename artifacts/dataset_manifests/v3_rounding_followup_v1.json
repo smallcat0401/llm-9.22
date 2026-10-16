@@ -1,0 +1,18 @@
+{
+  "dataset": "v3_rounding_followup_v1",
+  "not_sft_data": true,
+  "output_sha256": "9c8ade5afe670202a3853e5c73024e2f661f1d45613202ff1ed67a57ce8c0ce8",
+  "purpose": "single-task rounding clarification before SFT attribution",
+  "source_dataset": "data\\generated\\v3_seed_screen_v1.jsonl",
+  "source_sha256": "caee0cca45468395749e1c6fe49a0840b9aed0c179f49fc2b42a8c6a78235132",
+  "summary": {
+    "by_kind": {
+      "calculator": 1
+    },
+    "by_split": {
+      "train": 1
+    },
+    "families": 1,
+    "tasks": 1
+  }
+}

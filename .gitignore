@@ -30,6 +30,7 @@ outputs/
 wandb/
 artifacts/raw/
 artifacts/checkpoints/
+dist/
 *.safetensors
 *.bin
 *.pt
@@ -40,4 +41,12 @@ data/generated/*
 !data/generated/qwen3_5_4b_sft_train_path_aligned_merged112.jsonl
 !data/generated/gsm8k_external_eval_seed7.jsonl
 !data/generated/gsm8k_train_validation_seed131.jsonl
+!data/generated/v3_validation_v1.jsonl
+!data/generated/v3_test_v1.jsonl
+!data/generated/v4_train_task_candidates_approved_v1.jsonl
+!data/generated/v4_train_tasks_curated_v2.jsonl
+!data/generated/v4_validation_v1.jsonl
+!data/generated/v4_test_v1.jsonl
+!data/generated/v4_sft_custom_approved_v1.jsonl
+!data/generated/v4_grpo_train_outcome_variance_seed719_v1.jsonl
 data/external/

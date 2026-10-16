@@ -35,6 +35,11 @@ class GRPOSmokeConfig:
     sft_dataset_path: str
     output_dir: str
     metrics_path: str
+    expected_dataset_sha256: str = ""
+    expected_sft_dataset_sha256: str = ""
+    expected_dataset_task_count: int = 0
+    expected_sft_overlap_count: int | None = None
+    allow_sft_task_overlap: bool = False
     seed: int = 7
     prompt_count: int = 8
     max_steps: int = 2
@@ -83,6 +88,16 @@ class GRPOSmokeConfig:
             raise ValueError("task_ids must be unique")
         if self.task_ids and len(self.task_ids) != self.prompt_count:
             raise ValueError("task_ids length must equal prompt_count")
+        if self.expected_dataset_task_count < 0:
+            raise ValueError("expected_dataset_task_count must be non-negative")
+        if self.expected_sft_overlap_count is not None and self.expected_sft_overlap_count < 0:
+            raise ValueError("expected_sft_overlap_count must be non-negative")
+        for name in ("expected_dataset_sha256", "expected_sft_dataset_sha256"):
+            value = getattr(self, name)
+            if value and (len(value) != 64 or any(character not in "0123456789abcdef" for character in value)):
+                raise ValueError(f"{name} must be a lowercase SHA-256 hex digest")
+        if self.allow_sft_task_overlap and not self.expected_dataset_sha256:
+            raise ValueError("allow_sft_task_overlap requires a frozen dataset hash")
 
 
 def load_grpo_smoke_config(path: str | Path) -> GRPOSmokeConfig:
@@ -100,26 +115,77 @@ def _stable_key(seed: int, task_id: str) -> str:
     return hashlib.sha256(f"{seed}:{task_id}".encode()).hexdigest()
 
 
+def _sha256(path: str | Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def build_grpo_smoke_rows(config: GRPOSmokeConfig) -> tuple[dict[str, Any], ...]:
-    """Use train/no-tool tasks not already present in the SFT demonstrations."""
+    """Build the configured train prompt set under explicit SFT-overlap rules.
+
+    The default preserves the historical held-out-prompt behavior.  Formal
+    outcome-variance GRPO may opt into SFT prompt overlap only when the input
+    dataset is pinned by SHA-256; this is recorded as replay-on-train, not new
+    data or an independent generalization test.
+    """
+
+    if config.expected_dataset_sha256:
+        actual = _sha256(config.dataset_path)
+        if actual != config.expected_dataset_sha256:
+            raise ValueError(
+                f"GRPO dataset hash mismatch: {actual} != {config.expected_dataset_sha256}"
+            )
+    if config.expected_sft_dataset_sha256:
+        actual = _sha256(config.sft_dataset_path)
+        if actual != config.expected_sft_dataset_sha256:
+            raise ValueError(
+                "SFT dataset hash mismatch: "
+                f"{actual} != {config.expected_sft_dataset_sha256}"
+            )
 
     sft_task_ids = {
         str(example["metadata"]["task_id"])
         for example in load_sft_examples(config.sft_dataset_path)
     }
-    candidates = [
+    dataset_tasks = load_tasks_jsonl(config.dataset_path)
+    if (
+        config.expected_dataset_task_count
+        and len(dataset_tasks) != config.expected_dataset_task_count
+    ):
+        raise ValueError(
+            "unexpected GRPO dataset task count: "
+            f"{len(dataset_tasks)} != {config.expected_dataset_task_count}"
+        )
+    eligible = [
         task
-        for task in load_tasks_jsonl(config.dataset_path)
+        for task in dataset_tasks
         if task.split is Split.TRAIN
         and task.kind is TaskKind(config.task_kind)
-        and task.task_id not in sft_task_ids
     ]
+    overlap_ids = {task.task_id for task in eligible} & sft_task_ids
+    if (
+        config.expected_sft_overlap_count is not None
+        and len(overlap_ids) != config.expected_sft_overlap_count
+    ):
+        raise ValueError(
+            "unexpected GRPO/SFT task overlap: "
+            f"{len(overlap_ids)} != {config.expected_sft_overlap_count}"
+        )
+    candidates = (
+        eligible
+        if config.allow_sft_task_overlap
+        else [task for task in eligible if task.task_id not in sft_task_ids]
+    )
     by_id = {task.task_id: task for task in candidates}
     if config.task_ids:
         missing = [task_id for task_id in config.task_ids if task_id not in by_id]
         if missing:
             raise ValueError(
-                "configured task_ids are unavailable, not train/no-tool, or already in SFT: "
+                "configured task_ids are unavailable, wrong-kind/non-train, or disallowed by "
+                "the SFT-overlap policy (for example, already in SFT): "
                 + ", ".join(missing)
             )
         selected = [by_id[task_id] for task_id in config.task_ids]
@@ -127,7 +193,7 @@ def build_grpo_smoke_rows(config: GRPOSmokeConfig) -> tuple[dict[str, Any], ...]
         candidates.sort(key=lambda task: _stable_key(config.seed, task.task_id))
         selected = candidates[: config.prompt_count]
     if len(selected) < config.prompt_count:
-        raise ValueError("not enough held-out train/no-tool tasks for GRPO smoke")
+        raise ValueError("not enough eligible train tasks for configured GRPO prompt count")
     return tuple(
         {
             "prompt": [
@@ -281,19 +347,38 @@ def run_grpo_smoke(
     output_dir.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(output_dir)
     processor.tokenizer.save_pretrained(output_dir)
+    selected_task_ids = [row["task_id"] for row in rows]
+    sft_task_ids = {
+        str(example["metadata"]["task_id"])
+        for example in load_sft_examples(config.sft_dataset_path)
+    }
+    log_history = trainer.state.log_history
+    reward_std_entries = [entry for entry in log_history if "reward_std" in entry]
     metrics = {
         "run_id": config.run_id,
         "status": "completed",
         "model_id": config.model_id,
         "starting_adapter": config.adapter_path,
-        "selected_task_ids": [row["task_id"] for row in rows],
+        "selected_task_ids": selected_task_ids,
+        "selected_sft_overlap_task_ids": [
+            task_id for task_id in selected_task_ids if task_id in sft_task_ids
+        ],
+        "dataset_sha256": _sha256(config.dataset_path),
+        "sft_dataset_sha256": _sha256(config.sft_dataset_path),
         "trainable_parameters": trainable_parameters,
         "changed_trainable_tensors": changed_tensors,
         "max_parameter_delta": max_parameter_delta,
         "peak_cuda_memory_mib": torch.cuda.max_memory_allocated() / (1024**2),
         "elapsed_seconds": elapsed,
         "train_metrics": dict(train_result.metrics),
-        "log_history": trainer.state.log_history,
+        "log_history": log_history,
+        "observed_reward_variance_steps": len(reward_std_entries),
+        "nonzero_reward_variance_steps": sum(
+            float(entry["reward_std"]) > 0 for entry in reward_std_entries
+        ),
+        "zero_reward_variance_steps": sum(
+            float(entry["reward_std"]) == 0 for entry in reward_std_entries
+        ),
         "reward_weights": {
             "numeric_outcome": 1.0,
             "numeric_closeness": config.closeness_reward_weight,

@@ -1,0 +1,436 @@
+{
+  "record_count": 36,
+  "category_counts": {
+    "success": 14,
+    "no_tool_call": 3,
+    "tool_execution_failed": 0,
+    "wrong_tool_result": 9,
+    "invalid_final": 0,
+    "correct_tool_result_bad_final": 0,
+    "protocol_error": 10
+  },
+  "by_family": {
+    "v3-eval-val-tiered-commission-v1": {
+      "record_count": 8,
+      "category_counts": {
+        "success": 8,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 0,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    },
+    "v3-eval-val-restricted-grant-v1": {
+      "record_count": 8,
+      "category_counts": {
+        "success": 1,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 0,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 7
+      }
+    },
+    "v3-eval-val-fixed-basket-change-v1": {
+      "record_count": 8,
+      "category_counts": {
+        "success": 0,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 7,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 1
+      }
+    },
+    "v3-eval-val-rework-yield-v1": {
+      "record_count": 8,
+      "category_counts": {
+        "success": 5,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 1,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 2
+      }
+    },
+    "v3-eval-val-public-ratio-allocation-v1": {
+      "record_count": 1,
+      "category_counts": {
+        "success": 0,
+        "no_tool_call": 1,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 0,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    },
+    "v3-eval-val-public-weighted-demand-v1": {
+      "record_count": 1,
+      "category_counts": {
+        "success": 0,
+        "no_tool_call": 1,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 0,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    },
+    "v3-eval-val-public-population-flow-v1": {
+      "record_count": 1,
+      "category_counts": {
+        "success": 0,
+        "no_tool_call": 1,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 0,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    },
+    "v3-eval-val-public-tank-loss-recovery-v1": {
+      "record_count": 1,
+      "category_counts": {
+        "success": 0,
+        "no_tool_call": 0,
+        "tool_execution_failed": 0,
+        "wrong_tool_result": 1,
+        "invalid_final": 0,
+        "correct_tool_result_bad_final": 0,
+        "protocol_error": 0
+      }
+    }
+  },
+  "records": [
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-000",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "420 + (4000 * 0.03) + ((6800 - 4000) * 0.05) - 35",
+      "tool_value": 645.0,
+      "predicted_value": 645.0,
+      "target_value": 645.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-001",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "500 + (6000 * 0.025) + ((9200 - 6000) * 0.04) - 48",
+      "tool_value": 730.0,
+      "predicted_value": 730.0,
+      "target_value": 730.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-002",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "580 + (8000 * 0.03) + ((11600 - 8000) * 0.05) - 61",
+      "tool_value": 939.0,
+      "predicted_value": 939.0,
+      "target_value": 939.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-003",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "660 + (10000 * 0.025) + ((14000 - 10000) * 0.04) - 74",
+      "tool_value": 996.0,
+      "predicted_value": 996.0,
+      "target_value": 996.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-004",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "740 + (12000 * 0.03) + ((16400 - 12000) * 0.05) - 87",
+      "tool_value": 1233.0,
+      "predicted_value": 1233.0,
+      "target_value": 1233.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-005",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "820 + (14000 * 0.025) + ((18800 - 14000) * 0.04) - 100",
+      "tool_value": 1262.0,
+      "predicted_value": 1262.0,
+      "target_value": 1262.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-006",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "900 + (16000 * 0.03) + ((21200 - 16000) * 0.05) - 113",
+      "tool_value": 1527.0,
+      "predicted_value": 1527.0,
+      "target_value": 1527.0
+    },
+    {
+      "task_id": "v3-eval-val-tiered-commission-v1-007",
+      "family_id": "v3-eval-val-tiered-commission-v1",
+      "category": "success",
+      "expression": "980 + (18000 * 0.025) + ((23600 - 18000) * 0.04) - 126",
+      "tool_value": 1528.0,
+      "predicted_value": 1528.0,
+      "target_value": 1528.0
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-000",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(18 * 6 * 22) + 1450",
+      "tool_value": 3826.0,
+      "predicted_value": null,
+      "target_value": 3637.32
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-001",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(14 * 28) + 980 + 540",
+      "tool_value": 1912.0,
+      "predicted_value": null,
+      "target_value": 2683.2
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-002",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(20 * 7 * 23) + 1560",
+      "tool_value": 4780.0,
+      "predicted_value": null,
+      "target_value": 4391.8
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-003",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(16 * 6 * 29 + 1100) * 0.21 + 170",
+      "tool_value": 985.64,
+      "predicted_value": 985.64,
+      "target_value": 3483.36
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-004",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(22 * 6 * 24) + 1670",
+      "tool_value": 4838.0,
+      "predicted_value": null,
+      "target_value": 4410.4
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-005",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "success",
+      "expression": "(18 * 5 * 30 + 1220) * 0.8 + 630 - 190",
+      "tool_value": 3576.0,
+      "predicted_value": 3576.0,
+      "target_value": 3576.0
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-006",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(24 * 7 * 25) + 1780",
+      "tool_value": 5980.0,
+      "predicted_value": null,
+      "target_value": 5284.2
+    },
+    {
+      "task_id": "v3-eval-val-restricted-grant-v1-007",
+      "family_id": "v3-eval-val-restricted-grant-v1",
+      "category": "protocol_error",
+      "expression": "(20 * 31 * 6 + 1340) * 0.19 + 210",
+      "tool_value": 1171.4,
+      "predicted_value": 3888.6,
+      "target_value": 4563.6
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-000",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(12*9.20 + 7*14.50 + 20) - (12*8.00 + 7*15.00 + 20) / (12*8.00 + 7*15.00 + 20) * 100",
+      "tool_value": 131.9,
+      "predicted_value": 131.9,
+      "target_value": 4.93
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-001",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(9*11.40 + 11*8.10 + 16) - (9*12.00 + 11*7.50 + 16)",
+      "tool_value": 1.2,
+      "predicted_value": 0.58,
+      "target_value": 0.58
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-002",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(13*8.50 + 8*16.00 + 22) - (13*9.70 + 8*15.50 + 22)",
+      "tool_value": -11.6,
+      "predicted_value": -4.45,
+      "target_value": 4.45
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-003",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(10*11.90 + 12*8.60 + 18) - (10*12.50 + 12*8.00 + 18) / (10*12.50 + 12*8.00 + 18) * 100",
+      "tool_value": 140.2,
+      "predicted_value": 140.2,
+      "target_value": 0.5
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-004",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(14*10.20 + 9*16.50 + 24) - (14*9.00 + 9*17.00 + 24) / (14*9.00 + 9*17.00 + 24) * 100",
+      "tool_value": 215.3,
+      "predicted_value": 215.3,
+      "target_value": 4.06
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-005",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "protocol_error",
+      "expression": "(11*12.40 + 13*9.10 + 20) - (11*13.00 + 13*8.50 + 20)",
+      "tool_value": 1.2,
+      "predicted_value": null,
+      "target_value": 0.44
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-006",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(15*10.70 + 10*17.50 + 26) - (15*9.50 + 10*18.00 + 26) / (15*9.50 + 10*18.00 + 26) * 100",
+      "tool_value": 261.5,
+      "predicted_value": 261.5,
+      "target_value": 3.73
+    },
+    {
+      "task_id": "v3-eval-val-fixed-basket-change-v1-007",
+      "family_id": "v3-eval-val-fixed-basket-change-v1",
+      "category": "wrong_tool_result",
+      "expression": "(12*13.50 + 14*9.00 + 22) - (12*12.90 + 14*9.60 + 22)",
+      "tool_value": -1.2,
+      "predicted_value": -0.39,
+      "target_value": 0.39
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-000",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "protocol_error",
+      "expression": "5 * 240 * (1 - 0.08) + (5 * 240 * 0.08) * 0.75",
+      "tool_value": 1176.0,
+      "predicted_value": 1176.0,
+      "target_value": 1176.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-001",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "success",
+      "expression": "4 * 350 * (1 - 0.06) + (4 * 350 * 0.06 * (2/3))",
+      "tool_value": 1372.0,
+      "predicted_value": 1372.0,
+      "target_value": 1372.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-002",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "success",
+      "expression": "5 * 300 * (1 - 0.08) + (5 * 300 * 0.08) * 0.75",
+      "tool_value": 1470.0,
+      "predicted_value": 1470.0,
+      "target_value": 1470.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-003",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "success",
+      "expression": "4 * 375 * (1 - 0.06) + (4 * 375 * 0.06 * (2/3))",
+      "tool_value": 1470.0,
+      "predicted_value": 1470.0,
+      "target_value": 1470.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-004",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "protocol_error",
+      "expression": "5 * 360 * (1 - 0.08) + (5 * 360 * 0.08 * 0.75)",
+      "tool_value": 1764.0,
+      "predicted_value": 1764.0,
+      "target_value": 1764.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-005",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "success",
+      "expression": "4 * 400 * (1 - 0.06) + (4 * 400 * 0.06 * (2/3))",
+      "tool_value": 1568.0,
+      "predicted_value": 1568.0,
+      "target_value": 1568.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-006",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "wrong_tool_result",
+      "expression": "5 * 420 * (1 - 0.08) * 0.75",
+      "tool_value": 1449.0,
+      "predicted_value": 1449.0,
+      "target_value": 2058.0
+    },
+    {
+      "task_id": "v3-eval-val-rework-yield-v1-007",
+      "family_id": "v3-eval-val-rework-yield-v1",
+      "category": "success",
+      "expression": "4 * 425 * (1 - 0.06 + (0.06 * 2/3))",
+      "tool_value": 1666.0,
+      "predicted_value": 1666.0,
+      "target_value": 1666.0
+    },
+    {
+      "task_id": "v3-eval-val-gsm8k-6154",
+      "family_id": "v3-eval-val-public-ratio-allocation-v1",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 15.0,
+      "target_value": 10.0
+    },
+    {
+      "task_id": "v3-eval-val-gsm8k-0839",
+      "family_id": "v3-eval-val-public-weighted-demand-v1",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 157.0,
+      "target_value": 584.0
+    },
+    {
+      "task_id": "v3-eval-val-gsm8k-4495",
+      "family_id": "v3-eval-val-public-population-flow-v1",
+      "category": "no_tool_call",
+      "expression": null,
+      "tool_value": null,
+      "predicted_value": 190000.0,
+      "target_value": 165000.0
+    },
+    {
+      "task_id": "v3-eval-val-gsm8k-4967",
+      "family_id": "v3-eval-val-public-tank-loss-recovery-v1",
+      "category": "wrong_tool_result",
+      "expression": "350000 - (32000 * 5) - (10000 * 10) + (40000 * 3)",
+      "tool_value": 210000.0,
+      "predicted_value": 140000.0,
+      "target_value": 140000.0
+    }
+  ]
+}

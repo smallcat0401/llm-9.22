@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import argparse
-from dataclasses import asdict
+from dataclasses import asdict, replace
 import json
 from pathlib import Path
 import time
@@ -964,6 +964,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     grpo_smoke.add_argument("--config", default="configs/grpo_smoke.toml")
     grpo_smoke.add_argument("--cache-dir")
+    grpo_smoke.add_argument("--model-id")
+    grpo_smoke.add_argument("--adapter-path")
     return parser
 
 
@@ -1060,6 +1062,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
     elif args.command == "grpo-smoke":
         config = load_grpo_smoke_config(args.config)
+        if args.model_id is not None:
+            config = replace(config, model_id=args.model_id)
+        if args.adapter_path is not None:
+            config = replace(config, adapter_path=args.adapter_path)
         metrics = run_grpo_smoke(config, cache_dir=args.cache_dir)
         print(
             json.dumps(
