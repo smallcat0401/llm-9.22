@@ -35,7 +35,7 @@ README = """# 起始策略 native 评测续跑修复
 ```bash
 unzip -o /path/to/v4_4b_final_starting_policy_native_hotfix_v1.zip -d .
 export HF_HUB_CACHE=/data/huggingface-cache
-export MODEL_ID=/data/jiang_yiben/models/v4_4b_train_validation_bundle_v1_bk/Qwen2/Qwen3.5-4B
+export MODEL_ID=/path/to/local/Qwen3.5-4B
 bash scripts/run_v4_company_final_starting_policy_native_resume.sh
 ```
 
